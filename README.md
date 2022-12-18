@@ -4,36 +4,18 @@ This repository contains teaching materials from hbctraining but has been modifi
 
 # Introduction to the command line interface (shell/bash/Unix/Linux)
 
-| Audience | Computational skills required | Duration |
-:----------|:-------------|:----------|
-| Biologists | None | 3-session online workshop (~7.5 hours of trainer-led time)|
-
 ### Description
 
-This repository has teaching materials for a 1-day Introduction to shell workshop. This workshop focuses on teaching basic skills to use the command line interface, specifically `bash`, the lessons include `for` loops, shell scripting, positional parameters. This workshop is a prerequisite to a workshop on [RNA-seq analysis](https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/).
-
-**Note for Trainers:** Please note that the schedule linked below assumes that learners will spend between 3-4 hours on reading through, and completing exercises from selected lessons between classes. The online component of the workshop focuses on more exercises and discussion/Q & A.
-
-> These materials were developed for a trainer-led workshop, but are also amenable to self-guided learning.
+This repository contains teaching materials for Introduction to Command Line. We will focus on understanding the basic skills required to use the command line interface, specifically `bash`. Then we will focus on `for` loops, shell scripting, and positional parameters.
 
 ### Learning Objectives
 
 1.	Navigate around the command line interface (bash/shell)
 2.	Create and manipulate text files 
-3.	Submit jobs to a high-performance computing cluster
-
-### Lessons
-* [Workshop schedule (trainer-led learning)](schedule/)
-* [Self-learning](schedule/links-to-lessons.md)
+3.	Submit jobs to the VACC an high-performance computing cluster
 
 ### Installation Requirements
-***Mac users:***
-No installation requirements.  
-***Windows users:***
-[GitBash](https://git-scm.com/download/win)  
-
-### Dataset
-[Introduction to Shell: Dataset](https://www.dropbox.com/s/t3lkyz1pz021222/unix_lesson.tar.gz?dl=1)
+All students will be using terminal with [VACC-OOD](https://vacc-ondemand.uvm.edu)
 
 ---
 
