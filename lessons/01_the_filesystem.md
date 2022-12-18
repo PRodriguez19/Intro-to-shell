@@ -14,9 +14,9 @@ date: "September 28, 2020"
 
 ## Introduction to Vermont Advance Computing Center 
 
-We will spend most of our time learning about the basics of the shell command-line interface (CLI) by exploring experimental data on the **VACC** cluster. First, please note that more information can always be found at the [Vermont Advanced Computing Center website](https://www.uvm.edu/vacc). 
+We will spend most of our time learning about the basics of the shell command-line interface (CLI) by exploring experimental data on the **VACC** cluster. Please note that more information can always be found at the [Vermont Advanced Computing Center website](https://www.uvm.edu/vacc). 
 
-The VACC includes three clusters: BlackDiamond, Bluemoon, and DeepGreen. 
+The VACC includes three clusters: BlackDiamond, Bluemoon, and DeepGreen. We will use the **Bluemoon** cluster for any downstream analysis. 
 
 So, we will need to log in to this remote compute cluster first before we can start with the basics. Let's take a quick look at the basic architecture of a cluster environment and some cluster-specific jargon prior to logging in.
 
