@@ -1,7 +1,7 @@
 ---
-Lesson: "Intro to VACC and Part I of BASH scripting"
-date: "January 19, 2023"
-class: "mmg232"
+Class: "MMG232"
+Lesson: "Intro to VACC & Part I of BASH scripting"
+Date: "January 19, 2023"
 ---
 
 ## Learning Objectives
@@ -12,19 +12,26 @@ class: "mmg232"
 - Copy, remove and move files 
 
 
-## Introduction to Vermont Advance Computing Center 
+## Introduction to Vermont Advance Computing Center Cluster
 
-We will spend most of our time learning about the basics of the shell command-line interface (CLI) by exploring experimental data on the **VACC** cluster. Please note that more information can always be found at the [Vermont Advanced Computing Center website](https://www.uvm.edu/vacc). 
+We will spend most of our time learning about the basics of the shell command-line interface (CLI) by exploring experimental data on the **VACC** cluster. 
 
+### What is a cluster?  
 Let's take a quick look at the basic architecture of a cluster environment and some cluster-specific jargon prior to logging in.
 
 <p align="center">
 <img src ="../img/compute_cluster.png" width="500">
 </p>
 
-The above image reflects the many computers that make up a **"cluster"** of computers. Each individual computer in the cluster is usually a lot more powerful than any laptop or desktop computer we are used to working with, and is referred to as a **"node"** (instead of computer). Each node has a designated role, either for logging in or for performing computational analysis/work. A given cluster will usually have a few login nodes and several compute nodes.
+The image above reflects the many computers that make up a **"cluster"** . Each individual computer in the cluster is usually a lot more powerful than any laptop or desktop computer we are used to working with, and is referred to as a **"node"** (instead of computer). Therefore, a "cluster" is a large system consisting of 100s-1000s of nodes. Each node has a designated role, either for logging in or for performing computational analysis/work. A given cluster will usually have a few login nodes and several compute nodes.
 
-**As of March 2022, the VACC provides three clusters:** 
+Common characteristics of a Cluster: 
++ Large memory
++ Storage shared across nodes 
++ High speed interconnection network; suitable for high-throughput applications 
++ Shared by many users (*Slurm is used to schedule jobs and manage compute nodes. We will discuss this more at length later in the course*)
+
+**As of March 2022, the VACC provides three Clusters:** 
 |   | Cluster|
 |-----:|---------------|
 |  1|     BlackDiamond          | 
@@ -37,28 +44,41 @@ We will primarly use the **Bluemoon** cluster for any downstream analysis.
 <img src ="../img/bluemoon-logo.png" width="500">
 </p>
 
-## Logging in to VACC
+Please note that more information can always be found at the [Vermont Advanced Computing Center website](https://www.uvm.edu/vacc). 
 
-For the duration of this course, each student will be provided with their own personal VACC account. 
+## VACC-OOD Overview 
+For the duration of this course, each student will be provided with their own personal VACC account.  
+**Any commuting using your personal VACC account for MMG232, you will be done using the [VACC-OOD website](vacc-ondemand.uvm.edu/).**
 
-**To access your VACC account, you will be using the [VACC-OOD website](vacc-ondemand.uvm.edu/).**
+### What is Open OnDemand (OOD)?  
+Open OnDemand (OOD) is an open source web portal for high performance computing (HPC) that provides users with an *easy-to-use* web interface to HPC clusters. 
 
+Benefits of using OOD: 
+1. Web-based, no additional software needs to be installed on your local machine
+2. The easiest way to run graphical user interface (GUI) applications remotely on a cluster 
+3. Typical computing with command-line requires a *high learning curve* whereas OOD is easy to use and simple to learn 
+
+GUI applications offered by VACC-OOD: 
+
++ Equipped with **Terminal**: this is used to perform tasks on the command line (shell), both locally and on remote machines. 
+<p align="center">
+<img src ="../img/terminal.png" width="500">
+</p>
+
++ RStudio: an integrated development environment for R 
+<p align="center">
+<img src ="../img/RStudio-Logo.png" width="500">
+</p>
+
+## Logging in to VACC-OOD 
 Step-by-step instructions for first-time users:  
 1.   
 2.   
 3. 
 
 
-
-## VACC-OOD Overview 
-
-Macs have a utility application called "**Terminal**" for performing tasks on the command line (shell), both locally and on remote machines. We will be using it to log into O2. 
-
-Please find and open the Terminal utility on your computers using the *Spotlight Search* at the top right hand corner of your screen.
-
-
 #### Let's log in! 
-
+*Quick note: How to log-in without VACC-OOD*  
 Everyone should have their Terminal (or Git BASH Terminal) window open. Using this Terminal window, you can interact with your own computer using bash commands! You see the "$" symbol? That is where you write the "commands" that will be executed by shell (bash in this case) and your computer's kernel. The "$" is called the **"command prompt"**. 
 
 <p align="center">
