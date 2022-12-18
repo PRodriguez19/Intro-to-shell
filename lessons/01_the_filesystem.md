@@ -1,7 +1,7 @@
 ---
-title: "The Shell"
-author: "Sheldon  McKay, Mary Piper, Radhika Khetani, Meeta Mistry, Jihe Liu"
-date: "September 28, 2020"
+Lesson: "Intro to VACC and Part I of BASH scripting"
+date: "January 19, 2023"
+class: "mmg232"
 ---
 
 ## Learning Objectives
@@ -16,41 +16,46 @@ date: "September 28, 2020"
 
 We will spend most of our time learning about the basics of the shell command-line interface (CLI) by exploring experimental data on the **VACC** cluster. Please note that more information can always be found at the [Vermont Advanced Computing Center website](https://www.uvm.edu/vacc). 
 
-The VACC includes three clusters: BlackDiamond, Bluemoon, and DeepGreen. We will use the **Bluemoon** cluster for any downstream analysis. 
-
-So, we will need to log in to this remote compute cluster first before we can start with the basics. Let's take a quick look at the basic architecture of a cluster environment and some cluster-specific jargon prior to logging in.
+Let's take a quick look at the basic architecture of a cluster environment and some cluster-specific jargon prior to logging in.
 
 <p align="center">
-<img src ="/Users/princess/Documents/GitHub/Intro-to-shell-flipped/img/compute_cluster.png" width="500">
+<img src ="../img/compute_cluster.png" width="500">
 </p>
 
-The above image reflects the many computers that make up a **"cluster"** of computers. Each individual computer in the cluster is usually a lot more powerful than any laptop or desktop computer we are used to working with, and is referred to as a **"node"** (instead of computer). Each node has a designated role, either for logging in or for performing computational analysis/work. **A given cluster will usually have a few login nodes and several compute nodes.**
+The above image reflects the many computers that make up a **"cluster"** of computers. Each individual computer in the cluster is usually a lot more powerful than any laptop or desktop computer we are used to working with, and is referred to as a **"node"** (instead of computer). Each node has a designated role, either for logging in or for performing computational analysis/work. A given cluster will usually have a few login nodes and several compute nodes.
 
-The data on a cluster is also stored differently than what we are used to with our laptops and desktops, in that it is not computer- or node-specific storage, but all of the data is available to all the nodes in a cluster. This ensures that you don't have to worry about which node is working on your analysis. 
+**As of March 2022, the VACC provides three clusters:** 
+|   | Cluster|
+|-----:|---------------|
+|  1|     BlackDiamond          | 
+|  2|     Bluemoon        |
+| 3 |      DeepGreen         |
 
-### Logging in to VACC
+We will primarly use the **Bluemoon** cluster for any downstream analysis. 
 
-#### VACC accounts
+<p align="center">
+<img src ="../img/bluemoon-logo.png" width="500">
+</p>
 
-For this workshop we will be using training accounts to log in. These have been created for us by the [HMS Research Computing](https://rc.hms.harvard.edu/) (HMS-RC) team, they are the folks that manage the O2 cluster. We will be providing each of you with your own *training* account associated with a password for the duration of this workshop.
+## Logging in to VACC
 
-> If you are interested in getting your own personal account on O2, please follow the instructions [provided here](https://wiki.rc.hms.harvard.edu/display/O2/Frequently+Asked+Questions+and+Answers#FrequentlyAskedQuestionsandAnswers-Accountsandloggingin) after this workshop.
+For the duration of this course, each student will be provided with their own personal VACC account. 
 
-#### Tool(s) to access remote computers/clusters
+**To access your VACC account, you will be using the [VACC-OOD website](vacc-ondemand.uvm.edu/).**
 
-**With Mac OS**
+Step-by-step instructions for first-time users:  
+1.   
+2.   
+3. 
+
+
+
+## VACC-OOD Overview 
 
 Macs have a utility application called "**Terminal**" for performing tasks on the command line (shell), both locally and on remote machines. We will be using it to log into O2. 
 
 Please find and open the Terminal utility on your computers using the *Spotlight Search* at the top right hand corner of your screen.
 
-**With Windows OS**
-
-By default, there is no built-in Terminal that uses the bash shell on the Windows OS. So, we will be using a downloaded program called "**Git BASH**" which is part of the [Git for Windows](https://git-for-windows.github.io/) tool set. **Git BASH is a shell/bash emulator.** What this means is that it shows you a very similar interface to, and provides you the functionality of, the Terminal utility found on the Mac and Linux Operating systems.
-
-Please find and open Git BASH.
-
-> **Tip** - Windows users can use another program called [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) instead of a *bash emulator* to log in to remote machines, but it is a little more involved and has different capabilities. We encourage you to take a look at it, but we will not be covering it in this workshop.
 
 #### Let's log in! 
 
@@ -607,8 +612,15 @@ rm          # remove/delete
 
 ---
 
+## Citation
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
 
 * *The materials used in this lesson were derived from work that is Copyright © Data Carpentry (http://datacarpentry.org/). 
 All Data Carpentry instructional material is made available under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
 * *Adapted from the lesson by Tracy Teal. Original contributors: Paul Wilson, Milad Fatenejad, Sasha Wood and Radhika Khetani for Software Carpentry (http://software-carpentry.org/)*
+
+original authors: Sheldon  McKay, Mary Piper, Radhika Khetani, Meeta Mistry, Jihe Liu
+
+date posted: September 28, 2020
+
+---
