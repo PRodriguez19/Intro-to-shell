@@ -5,30 +5,32 @@ date: "September 28, 2020"
 ---
 
 ## Learning Objectives
-- Log in to a high-performance computing cluster 
+- Log into the VACC, a high-performance computing cluster 
 - Navigate around the Unix file system
 - Differentiate between full and relative paths
 - List files in a directory
 - Copy, remove and move files 
 
 
-## Setting up
+## Introduction to Vermont Advance Computing Center 
 
-We will spend most of our time learning about the basics of the shell command-line interface (CLI) by exploring experimental data on the **O2** cluster. So, we will need to log in to this remote compute cluster first before we can start with the basics.
+We will spend most of our time learning about the basics of the shell command-line interface (CLI) by exploring experimental data on the **VACC** cluster. First, please note that more information can always be found at the [Vermont Advanced Computing Center website](https://www.uvm.edu/vacc). 
 
-Let's take a quick look at the basic architecture of a cluster environment and some cluster-specific jargon prior to logging in.
+The VACC includes three clusters: BlackDiamond, Bluemoon, and DeepGreen. 
+
+So, we will need to log in to this remote compute cluster first before we can start with the basics. Let's take a quick look at the basic architecture of a cluster environment and some cluster-specific jargon prior to logging in.
 
 <p align="center">
-<img src="../img/compute_cluster.png" width="500">
+<img src ="/Users/princess/Documents/GitHub/Intro-to-shell-flipped/img/compute_cluster.png" width="500">
 </p>
 
 The above image reflects the many computers that make up a **"cluster"** of computers. Each individual computer in the cluster is usually a lot more powerful than any laptop or desktop computer we are used to working with, and is referred to as a **"node"** (instead of computer). Each node has a designated role, either for logging in or for performing computational analysis/work. **A given cluster will usually have a few login nodes and several compute nodes.**
 
-The data on a cluster is also stored differently than what we are used to with our laptops and desktops, in that it is not computer- or node-specific storage, but all of the data is available to all the nodes in a cluster. This ensures that you don't have to worry about which node is working on your analysis. ***We will be going into more depth about the cluster architecture, storage systems and best practices on the last day of this workshop.***
+The data on a cluster is also stored differently than what we are used to with our laptops and desktops, in that it is not computer- or node-specific storage, but all of the data is available to all the nodes in a cluster. This ensures that you don't have to worry about which node is working on your analysis. 
 
-### Logging in to O2
+### Logging in to VACC
 
-#### O2 accounts
+#### VACC accounts
 
 For this workshop we will be using training accounts to log in. These have been created for us by the [HMS Research Computing](https://rc.hms.harvard.edu/) (HMS-RC) team, they are the folks that manage the O2 cluster. We will be providing each of you with your own *training* account associated with a password for the duration of this workshop.
 
