@@ -1,6 +1,6 @@
 # MMG232: Teaching Materials 
 
-This repository contains teaching materials from [hbctraining] (https://github.com/hbctraining) but has been modified to support teaching students enrolled in MMG232: Advanced Bioinformatics at the University of Vermont. The full citation for this work is provided below.
+This repository contains teaching materials from [hbctraining](https://github.com/hbctraining) but has been modified to support teaching students enrolled in MMG232: Advanced Bioinformatics at the University of Vermont. The full citation for this work is provided below.
 
 # Introduction to the command line interface (shell/bash/Unix/Linux)
 
