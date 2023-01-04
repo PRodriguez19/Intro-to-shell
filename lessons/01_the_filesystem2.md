@@ -1,16 +1,35 @@
+---
+Class: "MMG232"
+Lesson: "Intro to VACC & Command Line"
+Date: "January 19, 2023"
+---
+
+## Learning Objectives
+-  
+- 
+- 
+- 
+
+## To Start: 
++ Log-in to VACC-OOD using personal account 
++ Navigate into `unix_lesson` folder 
++ List contents of `unix_lesson` folder 
+
+## Shortcut: Tab Completion
+Typing out file or directory names can waste a lot of time and its easy to make typing mistakes. Instead we should get in the habbit of using tab complete as a shortcut. When you start typing out the name of a directory or file, then hit the `tab` key, this will prompt the shell to fill the rest of the missing directory or file name. Let's put this into practice below. 
+
 ## The Unix directory file structure (a.k.a. where am I?) 
 
-Let's practice moving around a bit. Let's go into the raw_fastq directory and see what is in there.
+Go into the `raw_fastq` directory and see what is in there. Type cd followed by raw_`tab`
 
 ```bash
 $ cd raw_fastq/
 
-$ ls -l
 ```
 
-Great, we have now traversed some sub-directories, but where are we in the context of our pre-designated "home" directory that contains the `unix_lesson` directory?!
+But where are we in the context of our pre-designated "home" directory that contains the `unix_lesson` directory?
 
-### The "root" directory!
+### The "root" directory
 
 Like on any computer you have used before, the file structure within a Unix/Linux system is hierarchical, like an upside down tree with the "/" directory, called "root" as the starting point of this tree-like structure:
 
@@ -22,11 +41,7 @@ Like on any computer you have used before, the file structure within a Unix/Linu
 
 That `/` or root is the 'top' level.
 
-When you log in to a remote computer you land on one of the branches of that tree, i.e. your pre-designated "home" directory that usually has your login name as its name (e.g. `/home/rsk27`).
-
-> **Tip** - On mac OS, which is a UNIX-based OS, the root level is also "/". 
->
-> **Tip** - On a windows OS, it is drive specific; "C:\" is considered the default root, but it changes to "D:/", if you are on that drive.
+When you log in to a remote computer you land on one of the branches of that tree, i.e. your pre-designated "home" directory that usually has your login name as its name (e.g. `/users/username`).
 
 ### Paths 
 
@@ -40,9 +55,13 @@ The command to check our current location is `pwd`, this command does not take a
 $ pwd
 ```
 
-In the output here, each folder is separated from its "parent" or "child" folder by a "/", and the output starts with the root `/` directory. So, you are now able to determine the location of `raw_fastq` directory relative to the root directory!
+<p align="center">
+<img src="../img/pwd.png" width="600">
+</p>
 
-But which is your pre-designated home folder? No matter where you have navigated to in the file system, just typing in `cd` will bring you to your home directory. 
+In the output above, each folder is separated from its "parent" or "child" folder by a "/", and the output starts with the root `/` directory. So, now you are able to determine the location of `raw_fastq` directory relative to the root directory. 
+
+But what is your pre-designated home folder? No matter where you have navigated to in the file system, just typing in `cd` will bring you back to your home directory. 
 
 ```bash
 $ cd
@@ -54,21 +73,14 @@ What is your present working directory now?
 $ pwd
 ```
 
-This should now display a shorter string of directories starting with root. This is the full address to your home directory, also referred to as "**full path**". **The "full" here refers to the fact that the path starts with the root, which means you know which branch of the tree you are on in reference to the root.**
+```
+/users/p/d/pdrodrig
+```
 
-Take a look at your command prompt now, does it show you the name of this directory (your username?)? 
+This should now display a shorter string of directories starting with root. This is the full address to your home directory, also referred to as "**full path**". The "full" here refers to the fact that the path starts with the root, which means you know which branch of the tree you are on in reference to the root.
 
-*No, it doesn't. Instead of the directory name it shows you a `~`.*
 
-Why is this so? 
-
-*This is because `~` = full path to home directory for the user.*
-
-Can we just type `~` instead of `/home/username`?
-
-*Yes, we can!*
-
-#### Using paths with commands
+### Using paths with commands
 
 You can do a lot more with the idea of stringing together *parent/child* directories. Let's say we want to look at the contents of the `raw_fastq` folder, but do it from our current directory (the home directory. We can use the list command and follow it up with the path to the folder we want to list!
 
@@ -77,6 +89,11 @@ $ cd
 
 $ ls -l ~/unix_lesson/raw_fastq
 ```
+Solution
+<p align="center">
+<img src="../img/paths.png" width="600">
+</p>
+
 
 Now, what if we wanted to change directories from `~` (home) to `raw_fastq` in a single step?
 
@@ -86,21 +103,22 @@ $ cd ~/unix_lesson/raw_fastq
 
 Voila! You have moved 2 levels of directories in one command.
 
-What if we want to move back up and out of the `raw_fastq` directory? Can we just type `cd unix_lesson`? Try it and see what happens.
+What if we want to move back up a level back into the `unix_lesson` directory? Type `cd unix_lesson`? Try it and see what happens.
 
 *Unfortunately, that won't work because when you say `cd unix_lesson`, shell is looking for a folder called `unix_lesson` within your current directory, i.e. `raw_fastq`.*
 
 Can you think of an alternative? 
 
-*You can use the full path to unix_lesson!*
++ You can use the full path to `unix_lesson`
++ You can do cd .. (allows you to move one folder up)
 
 ```bash
-$ cd ~/unix_lesson
+$ cd .. 
 ```
 
 ****
 
-**Exercises**
+**Quick Exercise**
 
 1. First, move to your home directory.
 2. Then, list the contents of the `reference_data` directory that is within the `unix_lesson` directory.
