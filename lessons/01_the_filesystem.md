@@ -1,7 +1,7 @@
 ---
 Class: "MMG232"
 Lesson: "Intro to VACC & Command Line"
-Date: "January 19, 2023"
+Date: "January 17, 2023"
 ---
 
 ## Learning Objectives
@@ -189,25 +189,10 @@ genomics_data/  other/  raw_fastq/  README.txt  reference_data/
 
 Anything with a "/" after its name is a directory. Things with an asterisk "*" after them are programs.  If there are no "decorations" after the name, it's a normal text file.
 
-You can also use the argument `-l` to show the directory contents in a long-listing format that provides a lot more information:
-
-```bash
-$ ls -l
-```
-
-```
-total 7
-drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 genomics_data
-drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 other
-drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 raw_fastq
--rwxrwxrwx 1 pdrodrig pi-jdragon  377 Jan  4 11:13 README.txt
-drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 reference_data
-```
-
 Each line of output represents a file or a directory. The directory lines start with `d`. 
 
 ### How to get more information for arguments
-Most commands will take additional arguments that control their behavior. How do we know what available arguments go with a particular command? The most commonly used shell commands have a manual available in the shell that can be accessed using the `man` command. Let's try this command with `ls`:
+Most commands will take additional arguments that control their behavior. How do we know what arguments are available for a particular command? The most commonly used shell commands have a manual available that can be accessed using the `man` command. Let's try this command with `ls`:
 
 ```bash
 $ man ls
@@ -234,3 +219,22 @@ This will open the manual page for `ls` and you will lose the command prompt. It
 > **Tip** - If the manual page within the Terminal is hard to read , the manual exists online too. For example, here is the linux manual page for `cp`. https://man7.org/linux/man-pages/man1/cp.1.html In addition to the arguments, you can also find good examples online; ***Google is your friend.***
 ***
 
+**Challenge**
+
+* Use the `-l` option for the `ls` command to display more information for each item in the directory. What is is one piece of additional information this long format gives you that you don't see with the bare `ls` command? 
+
+<details><summary>SOLUTION</summary>
+<p>
+
+```
+total 7
+drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 genomics_data
+drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 other
+drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 raw_fastq
+-rwxrwxrwx 1 pdrodrig pi-jdragon  377 Jan  4 11:13 README.txt
+drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 reference_data
+```
+Each line of output represents a file or a directory. The directory lines start with `d`. It also includes the name of the owner of the file, when the file was last modified, and whether the current user has permission to read and write the file. 
+
+</p>
+</details>
