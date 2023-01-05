@@ -4,13 +4,12 @@ Lesson: "Intro to VACC & Command Line"
 Date: "Tuesday, January 17, 2023"
 ---
 
-## Learning Objectives
+## Learning Objectives for Today's Lesson
 - Difference between CLI vs GUI 
 - Log into the VACC, a high-performance computing cluster 
 - Copy data into your home directory 
 - List files in a directory
-
-
+***
 ## Introduction to Command Line 
 Command line interface (CLI) and graphical user interface (GUI) are different ways of interacting with a computer's operating system. Most people are familiar with the GUI as it is the default interface for most software. When using a GUI, you see visual representations of files, folders, applications, etc. However, when using the CLI, you will work largely with text representation of files, folders, input, and output. The shell is a program that presents a command line interface that allows you to control your computer by typing instructions with a keyboard. 
 
@@ -81,7 +80,7 @@ GUI applications offered by VACC-OOD:
 3. You should be viewing the following dashboard
 
 <p align="center">
-<img src ="../img/dashboard.png" width="500">
+<img src ="../img/dashboard.png" width="700">
 </p>
 
 ## How to log-in without VACC-OOD (Advanced users)
@@ -91,7 +90,7 @@ If you already had a VACC account and/or are currently working towards generatin
 To do so, first open your terminal locally on your computer. 
 
 <p align="center">
-<img src="../img/terminal1.png" width="500">
+<img src="../img/terminal1.png" width="300">
 </p>
 
 You see the "$" symbol? That is where you write the "commands" that will be executed by shell (bash in this case) and your computer's kernel. The "$" is called the **"command prompt"**. 
@@ -132,8 +131,8 @@ The command prompt on VACC will have some characters before the `$`, something l
 
 ***Once again, the dollar sign is a prompt, which shows us that the shell is waiting for input. Moving forward, when typing commands, either from these lessons or from other sources, do not type in the prompt, only the command that follows it.***
 
-
-## Copying example data folder
+***
+## Exercise: Copying example data folder 
 
 Now that we are logged-in to the VACC, the first thing to do is to check if there are any files in the data folder we are currently in. When you log in to a cluster, you will land within a folder designated specifically for your use, and is referred to as your "home directory".
 
@@ -168,7 +167,8 @@ You should see "unix_lesson" show up as the output of `ls`. This is a folder we 
 <img src="../img/unix_lesson.png" width="500">
 </p>
 
-## Starting with the shell
+***
+## Exercise: Listing contents of data folder 
 
 Let's look at what is inside the folder "unix_lesson" and explore this further. We are use to clicking on a folder name to open it, however, now we are forced to change our mindset and open a folder or "directory" differently within the shell environment. 
 
@@ -191,7 +191,7 @@ genomics_data  other  raw_fastq  README.txt  reference_data
 ```
 Notice that `ls` has printed the name of the files and directories in the current directory in alphabetical order, arranged neatly into columns. 
 
-## Arguments
+### Arguments
 
 There are five items listed when you run `ls`, but how do you know if these are files or directories with more items inside? 
 
@@ -223,34 +223,30 @@ This will open the manual page for `ls` and you will lose the command prompt. It
 
 ***
 
-**Exercise**
+### Class Participation Assignment #1 
+For these "short" assignments you will have 24 hours to submit via Blackboard. **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
 
-* Open up the manual page for the `cp` command. Skim through some of the information. 
-    * Do you think this format of information display is useful for you?
+### Directions for Students: 
+Open a new Microsoft Word Document. The first four lines should be formatted  
++ Your name
++ MMG232
++ Today's date
++ Class Participation Assignment #1   
+
+Task 1: 
+* On Terminal, open the manual page for the `cp` command. Skim through the information. 
+
+Questions to Answer for Task 1: 
+     + ind what -u option does and what it stands for. 
     
-* Quit the `man` buffer and come back to your command prompt.  
+* Quit the `man` buffer page and come back to your command prompt.  
 
 > **Tip** - Shell commands can get extremely complicated. No one can possibly learn all of these arguments, of course. So you will probably find yourself referring to the manual page frequently.
 >
 > **Tip** - If the manual page within the Terminal is hard to read , the manual exists online too. For example, here is the linux manual page for `cp`. https://man7.org/linux/man-pages/man1/cp.1.html In addition to the arguments, you can also find good examples online; ***Google is your friend.***
-***
 
-**Challenge**
 
-* Use the `-l` option for the `ls` command to display more information for each item in the directory. What is is one piece of additional information this long format gives you that you don't see with the bare `ls` command? 
+Task 2: 
 
-<details><summary>SOLUTION</summary>
-<p>
+* Use the `-l` option for the `ls` command to display more information for each item in the directory. What additional information is provided that you don't see with the bare `ls` command? 
 
-```
-total 7
-drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 genomics_data
-drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 other
-drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 raw_fastq
--rwxrwxrwx 1 pdrodrig pi-jdragon  377 Jan  4 11:13 README.txt
-drwxrwxrwx 2 pdrodrig pi-jdragon 4096 Jan  4 11:13 reference_data
-```
-Each line of output represents a file or a directory. The directory lines start with `d`. It also includes the name of the owner of the file, when the file was last modified, and whether the current user has permission to read and write the file. 
-
-</p>
-</details>

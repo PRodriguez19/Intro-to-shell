@@ -1,16 +1,18 @@
 ---
-Week: "1: 
+Week: "1" 
 Lesson: "Intro to VACC & Command Line Part II"
 Date: "Thursday, January 19, 2023"
 ---
 ## Starting Exercise: 
-If you are able to complete the following on your own, then you have successfully learned the lesson of January 17th. If not, please revisit lesson. All lessons will build upon each other therefore, it is crucial to keep up with the course content. 
+If you are able to complete the below tasks on your own, then you have successfully learned the lessons of Tuesday, January 17th. If not, please revisit the lesson titled **01_week1_mmg232.md**. All lessons will build upon each other therefore, it is crucial to keep up with the course content. 
 
 + Log-in to VACC-OOD  
 + Navigate into `unix_lesson` folder 
 + List contents of `unix_lesson` folder 
 
-## Learning Objectives 
+***
+
+## Learning Objectives for Today's Lesson
 -  
 - 
 - 
