@@ -75,14 +75,26 @@ GUI applications offered by VACC-OOD:
 <img src ="../img/RStudio-Logo.png" width="500">
 </p>
 
-## Log-in to VACC-OOD step-by-step instructions:  
-1.   
-2.   
-3. 
- 
-## Below are instructions on how to log-in *without* VACC-OOD
+## How to log-in to VACC-OOD (You should always do this!):  
+1.  Use the [VACC-OOD](https://vacc-ondemand.uvm.edu) link to access the site https://vacc-ondemand.uvm.edu
+2.   Add your uvm netid and password 
+3. You should be viewing the following dashboard
 
-Open your terminal locally on your computer. You see the "$" symbol? That is where you write the "commands" that will be executed by shell (bash in this case) and your computer's kernel. The "$" is called the **"command prompt"**. 
+<p align="center">
+<img src ="../img/dashboard.png" width="500">
+</p>
+
+## How to log-in without VACC-OOD (Advanced users)
+
+If you already had a VACC account and/or are currently working towards generating and analyzing your own NGS dataset, you may want to learn to log-in without VACC-OOD. 
+
+To do so, first open your terminal locally on your computer. 
+
+<p align="center">
+<img src="../img/terminal1.png" width="500">
+</p>
+
+You see the "$" symbol? That is where you write the "commands" that will be executed by shell (bash in this case) and your computer's kernel. The "$" is called the **"command prompt"**. 
 
 <p align="center">
 <img src="../img/login1.png" width="700">
@@ -90,7 +102,7 @@ Open your terminal locally on your computer. You see the "$" symbol? That is whe
 
 To connect to the login node on VACC:
 
-1. Type in the `ssh` command at the command prompt followed by a space, and then type your username (e.g. pdrodrig) plus the address of the cluster `@vacc-user1.uvm.edu`. There is no space between the username and the "@" symbol (see below).
+1. Type in the `ssh` command at the command prompt followed by a space, and then type your username (e.g. uvm net id) plus the address of the cluster `@vacc-user1.uvm.edu`.
 
 ```bash
 ssh username@vacc-user1.uvm.edu
@@ -121,7 +133,7 @@ The command prompt on VACC will have some characters before the `$`, something l
 ***Once again, the dollar sign is a prompt, which shows us that the shell is waiting for input. Moving forward, when typing commands, either from these lessons or from other sources, do not type in the prompt, only the command that follows it.***
 
 
-### Copying example data folder
+## Copying example data folder
 
 Now that we are logged-in to the VACC, the first thing to do is to check if there are any files in the data folder we are currently in. When you log in to a cluster, you will land within a folder designated specifically for your use, and is referred to as your "home directory".
 
@@ -132,10 +144,10 @@ $ ls
 ```
 > **Tip** - `ls` stands for "**l**i**s**t" and it lists the contents of a directory. 
 
-**Question for students: What folders are you seeing in your home directory?**  
+**Question for students: What folders are you currently seeing in your home directory?**  
 Ask for a screenshot 
 
-Now let's bring in a data folder from a different location on the cluster to our designated area by using the `cp` command. **Copy and paste the following command** all the way from `cp` and including the period symbol at the end `.`
+Now let's bring in a data folder from a different location on the cluster to our home directory by using the `cp` command. **Copy and paste the following command** all the way from `cp` and including the period symbol at the end `.`
 
 ```bash
 $ cp -r /users/p/d/pdrodrig/MMG232/unix_lesson/ .
@@ -152,9 +164,13 @@ ls
 
 You should see "unix_lesson" show up as the output of `ls`. This is a folder we should all have in our home directory. 
 
+<p align="center">
+<img src="../img/unix_lesson.png" width="500">
+</p>
+
 ## Starting with the shell
 
-Let's look at what is inside the folder "unix_lesson" and explore further. First, instead of clicking on the folder name to open it and look at its contents, we have to change the folder we are in. When working with any programming tools, **folders are called directories**. We will be using folder and directory interchangeably moving forward.
+Let's look at what is inside the folder "unix_lesson" and explore this further. We are use to clicking on a folder name to open it, however, now we are forced to change our mindset and open a folder or "directory" differently within the shell environment. 
 
 To look inside the `unix_lesson` directory, we need to change which directory we are *in*. To do this we can use the `cd` command, which stands for "change directory". 
 
@@ -162,7 +178,7 @@ To look inside the `unix_lesson` directory, we need to change which directory we
 $ cd unix_lesson
 ```
 
-Did you notice a change in your command prompt? The "~" symbol from before should have been replaced by the string `unix_lesson`. This means that our `cd` command ran successfully and we are now *in* the new directory. Let's see what is in here by listing the contents:
+Notice the change in your command prompt. The "~" symbol from before should have been replaced by the string `unix_lesson`. This means that our `cd` command ran successfully and we are now *in* the new directory. Let's see what is in here by listing the contents:
 
 ```bash
 $ ls
@@ -175,9 +191,9 @@ genomics_data  other  raw_fastq  README.txt  reference_data
 ```
 Notice that `ls` has printed the name of the files and directories in the current directory in alphabetical order, arranged neatly into columns. 
 
-### Arguments
+## Arguments
 
-There are five items listed when you run `ls`, but what types of files are they? Or are these files actually directories with more items inside? 
+There are five items listed when you run `ls`, but how do you know if these are files or directories with more items inside? 
 
 To answer this question, we can modify the default behavior of `ls` by adding an **"argument"** to get more information. 
 

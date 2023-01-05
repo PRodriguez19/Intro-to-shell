@@ -354,6 +354,7 @@ Connection to o2.hms.harvard.edu closed.
 HSPH-Radhikas-MacBook-Pro:~ rsk394$ 
 ```
 
+*** 
 ## Commands
 
 ```
@@ -375,6 +376,9 @@ rm          # remove/delete
 .           # current directory
 ..          # parent directory
 ```
+*** 
+## Homework Assignment #1 
+
 
 ---
 
