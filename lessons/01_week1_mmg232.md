@@ -20,6 +20,7 @@ Command line interface (CLI) and graphical user interface (GUI) are different wa
 ## How to access the shell
 On a Mac or Linux machine, you can access a shell through a program called "Terminal" locally on your laptop. But to make things easier, we will be using terminal on the open source web portal called Vermont Advance Computing Center - Open OnDemand (VACC-OOD). Once on terminal, you will be learning the basics of shell programming available under the Bourne Again Shell (bash). 
 
+*** 
 # Introduction to Vermont Advance Computing Center Cluster 
 First, what is the Vermont Advance Computing Center? To answer this, let's take a quick look at the basic architecture of a cluster environment.
 
@@ -70,7 +71,7 @@ GUI applications offered by VACC-OOD:
 
 + RStudio: an integrated development environment for R 
 <p align="center">
-<img src ="../img/RStudio-Logo.png" width="500">
+<img src ="../img/RStudio-Logo.png" width="300">
 </p>
 
 ## How to log-in to VACC-OOD (You should always do this!):  
@@ -123,10 +124,6 @@ Once logged in, you should see a new command prompt:
 <img src="../img/login3.png" width="700">
 </p>
 
-```bash
-[username@vacc-user1 ~]$ 
-```
-
 The command prompt on VACC will have some characters before the `$`, something like `[username@vacc-user1 ~]`, this is telling you your username and the name of the login node you have connected to. 
 
 ***Once again, the dollar sign is a prompt, which shows us that the shell is waiting for input. Moving forward, when typing commands, either from these lessons or from other sources, do not type in the prompt, only the command that follows it.***
@@ -165,7 +162,7 @@ ls
 You should see "unix_lesson" show up as the output of `ls`. This is a folder we should all have in our home directory. 
 
 <p align="center">
-<img src="../img/unix_lesson.png" width="500">
+<img src="../img/unix_lesson.png" width="700">
 </p>
 
 ***
@@ -228,7 +225,7 @@ This will open the manual page for `ls` and you will lose the command prompt. It
 For these "short" assignments you will have 24 hours to submit via Blackboard. **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
 
 ### Directions for Students: 
-Open a new Microsoft Word Document. The first four lines should be formatted as the following:  
+Open a new Microsoft Word Document to answer questions 1-3. The first four lines of your document should contain the following:  
 + Your name
 + MMG232
 + Today's date
@@ -238,8 +235,8 @@ Open a new Microsoft Word Document. The first four lines should be formatted as 
 * On Terminal, open the manual page for the `cp` command. Skim through the information. 
 
 Questions to Answer for Task 1:   
-A)  What does the -u option stand for and what does it do?   
-B)  Which option would you use to explain what is being done (i.e. verbose)?   
+1)  What does the -u option stand for and what does it do?   
+2)  Which option would you use to explain what is being done (i.e. verbose)?   
     
 * Quit the `man` buffer page and come back to your command prompt.  
 
@@ -252,5 +249,5 @@ B)  Which option would you use to explain what is being done (i.e. verbose)?
 * Use the `-l` option for the `ls` command to display more information for each item in the `unix_lesson` folder. 
 
 Question to Answer for Task 2:   
-C) Submit a screenshot of your screen and underneath describe what additional information is provided that you don't see with the bare `ls` command. 
+3) Submit a screenshot of your screen and underneath describe what additional information is provided that you don't see with the bare `ls` command. 
 
