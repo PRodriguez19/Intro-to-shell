@@ -4,25 +4,24 @@ Lesson: "Intro to VACC & Command Line"
 Date: "Tuesday, January 17, 2023"
 ---
 
-## Learning Objectives for Today's Lesson
-- Difference between CLI vs GUI 
+# Learning Objectives for Today's Lesson
 - Log into the VACC, a high-performance computing cluster 
-- Copy data into your home directory 
-- List files in a directory
+- Basics in navigation in CLI 
+     + Copy data into your home directory 
+     + List files in a directory
 ***
-## Introduction to Command Line 
-Command line interface (CLI) and graphical user interface (GUI) are different ways of interacting with a computer's operating system. Most people are familiar with the GUI as it is the default interface for most software. When using a GUI, you see visual representations of files, folders, applications, etc. However, when using the CLI, you will work largely with text representation of files, folders, input, and output. The shell is a program that presents a command line interface that allows you to control your computer by typing instructions with a keyboard. 
+# Introduction to Command Line 
+Command line interface (CLI) and graphical user interface (GUI) are different ways of interacting with a computer's operating system. Most people are familiar with the GUI as it is the default interface for most software. When using a GUI, you see visual representations of files, folders, applications, etc. However, when using the CLI, you will work largely with text representation of files, folders, input, and output. The shell is a program that presents a command line interface that allows you to control your computer by typing instructions with a keyboard. Using command line, you will be able to create new files, edit the contents of those files, delete files, and much more. 
 
 <p align="center">
 <img src ="../img/GUI-vs-CUI-min.jpg" width="500">
 </p>
 
 ## How to access the shell
-On a Mac or Linux machine, you can access a shell through a program called "Terminal" on your laptop. But to make things easier, we will be using terminal on the open source web portal called Vermont Advance Computing Center - Open OnDemand (VACC-OOD). 
+On a Mac or Linux machine, you can access a shell through a program called "Terminal" locally on your laptop. But to make things easier, we will be using terminal on the open source web portal called Vermont Advance Computing Center - Open OnDemand (VACC-OOD). Once on terminal, you will be learning the basics of shell programming available under the Bourne Again Shell (bash). 
 
-## What is the Vermont Advance Computing Center Cluster? 
-
-Let's take a quick look at the basic architecture of a cluster environment.
+# Introduction to Vermont Advance Computing Center Cluster 
+First, what is the Vermont Advance Computing Center? To answer this, let's take a quick look at the basic architecture of a cluster environment.
 
 <p align="center">
 <img src ="../img/compute_cluster.png" width="500">
@@ -106,6 +105,7 @@ To connect to the login node on VACC:
 ```bash
 ssh username@vacc-user1.uvm.edu
 ```
+> ssh means secure shell, and this is a method of securely communicating with another computer. 
 
 2. Press the return/enter key and you should receive a prompt for your password. Type in your password and note that **the cursor will not move as you type** it in! This is normal and know that the computer is receiving and transmitting your typed password to the remote system, i.e. the VACC cluster.
 
@@ -132,6 +132,7 @@ The command prompt on VACC will have some characters before the `$`, something l
 ***Once again, the dollar sign is a prompt, which shows us that the shell is waiting for input. Moving forward, when typing commands, either from these lessons or from other sources, do not type in the prompt, only the command that follows it.***
 
 ***
+# Navigating the File System
 ## Exercise: Copying example data folder 
 
 Now that we are logged-in to the VACC, the first thing to do is to check if there are any files in the data folder we are currently in. When you log in to a cluster, you will land within a folder designated specifically for your use, and is referred to as your "home directory".
@@ -223,30 +224,33 @@ This will open the manual page for `ls` and you will lose the command prompt. It
 
 ***
 
-### Class Participation Assignment #1 
+## Class Participation Assignment #1 
 For these "short" assignments you will have 24 hours to submit via Blackboard. **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
 
 ### Directions for Students: 
-Open a new Microsoft Word Document. The first four lines should be formatted  
+Open a new Microsoft Word Document. The first four lines should be formatted as the following:  
 + Your name
 + MMG232
 + Today's date
 + Class Participation Assignment #1   
 
-Task 1: 
+### Task 1: 
 * On Terminal, open the manual page for the `cp` command. Skim through the information. 
 
-Questions to Answer for Task 1: 
-     + ind what -u option does and what it stands for. 
+Questions to Answer for Task 1:   
+A)  What does the -u option stand for and what does it do?   
+B)  Which option would you use to explain what is being done (i.e. verbose)?   
     
 * Quit the `man` buffer page and come back to your command prompt.  
 
 > **Tip** - Shell commands can get extremely complicated. No one can possibly learn all of these arguments, of course. So you will probably find yourself referring to the manual page frequently.
->
+
 > **Tip** - If the manual page within the Terminal is hard to read , the manual exists online too. For example, here is the linux manual page for `cp`. https://man7.org/linux/man-pages/man1/cp.1.html In addition to the arguments, you can also find good examples online; ***Google is your friend.***
 
 
-Task 2: 
+### Task 2: 
+* Use the `-l` option for the `ls` command to display more information for each item in the `unix_lesson` folder. 
 
-* Use the `-l` option for the `ls` command to display more information for each item in the directory. What additional information is provided that you don't see with the bare `ls` command? 
+Question to Answer for Task 2:   
+C) Submit a screenshot of your screen and underneath describe what additional information is provided that you don't see with the bare `ls` command. 
 
