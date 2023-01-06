@@ -132,7 +132,7 @@ The command prompt on VACC will have some characters before the `$`, something l
 # Navigating the File System
 ## Exercise: Copying example data folder 
 
-Now that we are logged-in to the VACC, the first thing to do is to check if there are any files in the data folder we are currently in. When you log in to a cluster, you will land within a folder designated specifically for your use, and is referred to as your "home directory".
+Now that we are logged-in to the VACC, lets explore. The first thing to do is to check if there are any files in the data folder we are currently in. When you log in to a cluster, you will land within a folder designated specifically for your use, and is referred to as your "home directory". We will begin introducing a few commands that are used to list, create, inspect, rename, and delete files and/or directories. 
 
 Let's list the contents of our home directory using a command called `ls`.
 

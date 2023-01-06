@@ -3,54 +3,53 @@ Week: "1"
 Lesson: "Intro to VACC & Command Line Part II"
 Date: "Thursday, January 19, 2023"
 ---
-## Starting Exercise: 
+# Starting Exercise: 
 If you are able to complete the below tasks on your own, then you have successfully learned the lessons of Tuesday, January 17th. If not, please revisit the lesson titled **01_week1_mmg232.md**. All lessons will build upon each other therefore, it is crucial to keep up with the course content. 
 
-+ Log-in to VACC-OOD  
++ Log-in to VACC-OOD and open terminal 
 + Navigate into `unix_lesson` folder 
 + List contents of `unix_lesson` folder 
 
 ***
 
-## Learning Objectives for Today's Lesson
--  
+# Learning Objectives for Today's Lesson
+-  Understand the organization of the Filesystem 
 - 
 - 
 - 
 
-## Shortcut: Tab Completion
-Typing out file or directory names can waste a lot of time and its easy to make typing mistakes. Instead we should get in the habbit of using tab complete as a shortcut. When you start typing out the name of a directory or file, then hit the `tab` key, this will prompt the shell to fill the rest of the missing directory or file name. Let's put this into practice below. 
-
-## The Unix directory file structure (a.k.a. where am I?) 
-
-Go into the `raw_fastq` directory and see what is in there. Type cd followed by raw_`tab`
-
-```bash
-$ cd raw_fastq/
-
-```
-
-But where are we in the context of our pre-designated "home" directory that contains the `unix_lesson` directory?
-
-### The "root" directory
-
-Like on any computer you have used before, the file structure within a Unix/Linux system is hierarchical, like an upside down tree with the "/" directory, called "root" as the starting point of this tree-like structure:
+*** 
+# Navigating the Filesystem
+A filesystem organizes a computer's files and directories into a tree structure. 
 
 <p align="center">
 <img src="../img/directory_structure.png" width="600">
 </p>
 
-> **Tip** - Yes, the root folder's actual name is just **`/`** (a forward slash).
++ The first directory in the filesystem is the **root directory**. It is the parent of all other directories and files in the filesystem. That `/` or root is the 'top' level.
++ Each parent directory contains child directories and/or files. 
++ Each child directory can also contain more files
 
-That `/` or root is the 'top' level.
+> Note: When you log in to a remote computer you land on one of the branches of that tree, i.e. your pre-designated "home" directory that usually has your login name as its name (e.g. `/users/username`).
 
-When you log in to a remote computer you land on one of the branches of that tree, i.e. your pre-designated "home" directory that usually has your login name as its name (e.g. `/users/username`).
+To navigate the file system with ease we will now introduce **tab completion**. 
 
-### Paths 
+## Shortcut: Tab Completion
+Typing out file or directory names can waste a lot of time and its easy to make typing mistakes. Instead we should get in the habbit of using tab complete as a shortcut. The `tab` key is located on the left side of your keyboard, right above the `caps lock` key. When you start typing out the first few characters of a directory name, then hit the `tab` key, Shell will try to fill in the rest of the directory name. Let's put this into practice now. 
 
-Now let's learn more about the "addresses" of directories, called **"path"** and move around the file system.
+## Exercise 
+Navigate into the `raw_fastq` directory and see what's inside. **Remeber to use tab!**
 
-Let's check to see what directory we are in. The command prompt tells us which directory we are in, but it doesn't give information about where the `raw_fastq` directory is with respect to our "home" directory or the `/` directory.
+```bash
+$ cd raw_fastq/
+```
+
+Question: Where is `raw_fastq` in relation to our home directory?
+
+## Paths 
+To answer this, let's learn more about the "addresses" of directories, called **"path"** and move around the file system.
+
+Let's check to see what directory we currently are in. The command prompt tells us which directory we are in, but it doesn't give information about where the `raw_fastq` directory is with respect to our "home" directory or the `/` directory.
 
 The command to check our current location is `pwd`, this command does not take any arguments and it returns the path or address of your **p**resent **w**orking **d**irectory (the folder you are in currently).
 
@@ -64,23 +63,24 @@ $ pwd
 
 In the output above, each folder is separated from its "parent" or "child" folder by a "/", and the output starts with the root `/` directory. So, now you are able to determine the location of `raw_fastq` directory relative to the root directory. 
 
-But what is your pre-designated home folder? No matter where you have navigated to in the file system, just typing in `cd` will bring you back to your home directory. 
+But what if you would like to navigate back to your home directory? No worries, just type `cd` and this will bring you back to your home directory. 
 
 ```bash
 $ cd
 ```
 
-What is your present working directory now?
+After doing this what is your present working directory now?
 
 ```bash
 $ pwd
 ```
 
+It should look something like this: 
 ```
 /users/p/d/pdrodrig
 ```
 
-This should now display a shorter string of directories starting with root. This is the full address to your home directory, also referred to as "**full path**". The "full" here refers to the fact that the path starts with the root, which means you know which branch of the tree you are on in reference to the root.
+This should display a shorter string of directories starting with root. This is the full address to your home directory, also referred to as "**full path**". The "full" here refers to the fact that the path starts with the root, which means you know which branch of the tree you are on in reference to the root.
 
 
 ### Using paths with commands
@@ -90,23 +90,25 @@ You can do a lot more with the idea of stringing together *parent/child* directo
 ```bash
 $ cd
 
-$ ls -l ~/unix_lesson/raw_fastq
+$ ls ~/unix_lesson/raw_fastq
 ```
-Solution
-<p align="center">
-<img src="../img/paths.png" width="600">
-</p>
 
+```
+Irrel_kd_1.subset.fq	Irrel_kd_3.subset.fq	Mov10_oe_2.subset.fq
+Irrel_kd_2.subset.fq	Mov10_oe_1.subset.fq	Mov10_oe_3.subset.fq
+```
 
-Now, what if we wanted to change directories from `~` (home) to `raw_fastq` in a single step?
+Now, what if we wanted to change directories from `~` (home) to `raw_fastq` in a single step? 
 
 ```bash
 $ cd ~/unix_lesson/raw_fastq
 ```
+> Note: You can always copy-and-paste, but I do suggest typing it yourself to memorize the commands. 
 
-Voila! You have moved 2 levels of directories in one command.
+Good job, you have moved 2 levels of directories with one command! 
 
-What if we want to move back up a level back into the `unix_lesson` directory? Type `cd unix_lesson`? Try it and see what happens.
+Now, what if we want to move back up a level back into the `unix_lesson` directory?   
+Type `cd unix_lesson` and see what happens.
 
 *Unfortunately, that won't work because when you say `cd unix_lesson`, shell is looking for a folder called `unix_lesson` within your current directory, i.e. `raw_fastq`.*
 
@@ -121,27 +123,10 @@ $ cd ..
 
 ****
 
-**Quick Exercise**
+## File Names 
+Probably one of the most frustrating parts of bioinformatics is the lack of consistency with how files are labeled. Files often have obsure names that is only relevant to the researcher, or have names that are **very** similar to each other. But nonetheless we will continue! 
 
-1. First, move to your home directory.
-2. Then, list the contents of the `reference_data` directory that is within the `unix_lesson` directory.
-
-****
-
-#### Tab completion
-
-Typing out full directory names can be time-consuming and error-prone. One way to avoid that is to use **tab completion**. The `tab` key is located on the left side of your keyboard, right above the `caps lock` key. When you start typing out the first few characters of a directory name, then hit the `tab` key, Shell will try to fill in the rest of the directory name. 
-
-For example, first type `cd` to get back to your home directly, then type `cd uni`, followed by pressing the `tab` key:
-
-```bash
-$ cd
-$ cd uni<tab>
-```
-
-The shell will fill in the rest of the directory name for `unix_lesson`. 
-
-Now, let's go into `raw_fastq`, then type `ls Mov10_oe_`, followed by pressing the `tab` key once:
+Let's go into the `raw_fastq`, then type `ls Mov10_oe_`, followed by pressing the `tab` key once:
 
 ```bash
 $ cd raw_fastq/
@@ -154,7 +139,10 @@ The reason is that there are multiple files in the `raw_fastq` directory that st
 
 ```bash
 $ ls Mov10_oe_<tab><tab>
+
+$ Mov10_oe_1.subset.fq  Mov10_oe_2.subset.fq  Mov10_oe_3.subset.fq
 ```
+
 
 Now you can select the one you are interested in listed, and enter the number and hit tab again to fill in the complete name of the file.
 
@@ -184,7 +172,7 @@ This time we are not using the `~/` before `unix_lesson`. In this case we are us
 > $ cd ~/unix_lesson/raw_fastq
 > ```
 
-There is also a handy shortcut for the relative path to a parent directory, 2 periods `..`. Let's say we wanted to move from the `raw_fastq` folder to its parent folder.
+Remember there is also a handy shortcut for the relative path to a parent directory, 2 periods `..`. Let's say we wanted to move from the `raw_fastq` folder to its parent folder.
 
 ```bash
 cd ..
@@ -207,7 +195,7 @@ $ tree
 
 If you are aware of the directory structure, you can string together as long a list of directories as you like using either **relative** or **full** paths.
 
-#### Synopsis of Full versus Relative paths
+### Synopsis of Full versus Relative paths
 
 **A full path always starts with a `/`, a relative path does not.**
 
@@ -217,8 +205,9 @@ You can usually use either a full path or a relative path depending on what is m
 
 Over time, it will become easier for you to keep a mental note of the structure of the directories that you are using and how to quickly navigate among them.
 
+***
 
-## Copying, creating, moving and removing data
+# Copying, creating, moving and removing data
 
 Now we can move around within the directory structure using the command line. But what if we want to do things like copy files or move them from one directory to another, rename them? 
 
@@ -361,15 +350,28 @@ HSPH-Radhikas-MacBook-Pro:~ rsk394$
 ## Commands
 
 ```
-cd          # change directory
-ls          # list contents
-man         # manual for a command
-pwd         # check present working directory
+cd          # Change Directory
+               +   used to move throughout the filesystem of a computer 
+
+ls          # List 
+              +   list the contents of a directory
+
+pwd         # Print Working Directory   
+              +  displays the file path from the root directory to the current working directory 
+
 tree        # prints a tree of the file structure
-cp          # copy
-mkdir       # make new directory
-mv          # move or rename 
-rm          # remove/delete
+
+cp          # Copy
+              +   used to copy files or directories 
+
+mkdir       # Make Directory
+              +   used to make a new directory 
+
+mv          # Move 
+              +   move a file into a directory 
+
+rm          # Remove
+              +   used to delete files and directories 
 ```
 
 ## Shortcuts
@@ -377,10 +379,11 @@ rm          # remove/delete
 ```
 ~           # home directory
 .           # current directory
-..          # parent directory
+..          # navigate into the parent directory of the current directory 
 ```
+
 *** 
-## Homework Assignment #1 
+# Homework Assignment #1 
 
 
 ---
