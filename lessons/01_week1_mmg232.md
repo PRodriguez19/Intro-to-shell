@@ -43,7 +43,7 @@ Common characteristics of a Cluster:
 |  2|     Bluemoon        |
 | 3 |      DeepGreen         |
 
-We will primarly use the **Bluemoon** cluster for any downstream analysis. 
+We will primarily use the **Bluemoon** cluster for any downstream analysis. 
 
 <p align="center">
 <img src ="../img/bluemoon-logo.png" width="500">

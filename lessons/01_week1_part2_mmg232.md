@@ -14,7 +14,7 @@ If you are able to complete the below tasks on your own, then you have successfu
 
 # Learning Objectives for Today's Lesson
 -  Understand the organization of the Filesystem 
-- 
+-  Distinguish between Full versus Relative paths
 - 
 - 
 
@@ -35,10 +35,9 @@ A filesystem organizes a computer's files and directories into a tree structure.
 To navigate the file system with ease we will now introduce **tab completion**. 
 
 ## Shortcut: Tab Completion
-Typing out file or directory names can waste a lot of time and its easy to make typing mistakes. Instead we should get in the habbit of using tab complete as a shortcut. The `tab` key is located on the left side of your keyboard, right above the `caps lock` key. When you start typing out the first few characters of a directory name, then hit the `tab` key, Shell will try to fill in the rest of the directory name. Let's put this into practice now. 
+Typing out file or directory names can waste a lot of time and its easy to make typing mistakes. Instead we should get in the habit of using tab complete as a shortcut. The `tab` key is located on the left side of your keyboard, right above the `caps lock` key. When you start typing out the first few characters of a directory name, then hit the `tab` key, Shell will try to fill in the rest of the directory name. Let's put this into practice now. 
 
-## Exercise 
-Navigate into the `raw_fastq` directory and see what's inside. **Remeber to use tab!**
+Navigate into the `raw_fastq` directory and see what's inside. **Remember to use tab!**
 
 ```bash
 $ cd raw_fastq/
@@ -46,7 +45,7 @@ $ cd raw_fastq/
 
 Question: Where is `raw_fastq` in relation to our home directory?
 
-## Paths 
+## Paths
 To answer this, let's learn more about the "addresses" of directories, called **"path"** and move around the file system.
 
 Let's check to see what directory we currently are in. The command prompt tells us which directory we are in, but it doesn't give information about where the `raw_fastq` directory is with respect to our "home" directory or the `/` directory.
@@ -121,10 +120,8 @@ Can you think of an alternative?
 $ cd .. 
 ```
 
-****
-
-## File Names 
-Probably one of the most frustrating parts of bioinformatics is the lack of consistency with how files are labeled. Files often have obsure names that is only relevant to the researcher, or have names that are **very** similar to each other. But nonetheless we will continue! 
+### File Names 
+Probably one of the most frustrating parts of bioinformatics is the lack of consistency with how files are labeled. Files often have obscure names that is only relevant to the researcher, or have names that are **very** similar to each other. But nonetheless we will continue! 
 
 Let's go into the `raw_fastq`, then type `ls Mov10_oe_`, followed by pressing the `tab` key once:
 
@@ -154,7 +151,7 @@ $ ls Mov10_oe_1<tab>
 
 **Tab completion is your friend!** It helps prevent spelling mistakes, and speeds up the process of typing in the full command. We encourage you to use this when working on the command line. 
 
-#### Relative paths
+## Relative paths
 
 We have talked about **full** paths so far, but there is a way to specify paths to folders and files without having to worry about the root directory. And you have used this before when we were learning about the `cd` command.
 
@@ -195,7 +192,7 @@ $ tree
 
 If you are aware of the directory structure, you can string together as long a list of directories as you like using either **relative** or **full** paths.
 
-### Synopsis of Full versus Relative paths
+## Synopsis of Full versus Relative paths
 
 **A full path always starts with a `/`, a relative path does not.**
 
@@ -209,7 +206,7 @@ Over time, it will become easier for you to keep a mental note of the structure 
 
 # Copying, creating, moving and removing data
 
-Now we can move around within the directory structure using the command line. But what if we want to do things like copy files or move them from one directory to another, rename them? 
+Now we can move around within the directory structure using the command line. But what if we want to do things like copy files or move them from one directory to another, or rename them? 
 
 Let's move into the `raw_fastq` directory, this contains some fastq files which are the output of sequencing. 
 
@@ -219,7 +216,7 @@ cd ~/unix_lesson/raw_fastq
 
 > **Tip** - These files are referred to as "raw" data since it has not been changed or analyzed after being generated.
 
-### Copying
+## Copying
 
 Let's use the copy (`cp`) command to make a copy of one of the files in this folder, `Mov10_oe_1.subset.fq`, and call the copied file `Mov10_oe_1.subset-copy.fq`. 
 The copy command has the following syntax: 
@@ -236,7 +233,7 @@ $ ls -l
 
 The copy command can also be used for copying over whole directories, but the `-r` argument has to be added after the `cp` command. The `-r` stands for "recursively copy everything from the directory and its sub-directories". [We used it earlier when we copied over the `unix_lesson` directory to our home directories](#copying-example-data-folder).
 
-### Creating
+## Creating
 
 Next, let's create a directory called `fastq_backup` and we can move the copy of the fastq file into that directory. 
 
@@ -248,7 +245,7 @@ $ mkdir fastq_backup
 
 > **Tip** - File/directory/program names with spaces in them do not work well in Unix, use characters like hyphens or underscores instead. Using underscores instead of spaces is called "snake_case". Alternatively, some people choose to skip spaces and rather just capitalize the first letter of each new word (i.e. MyNewFile). This alternative technique is called "CamelCase".
 
-### Moving
+## Moving
 
 We can now move our copied fastq file in to the new directory. We can move files around using the move command, `mv`, syntax: 
 
@@ -266,7 +263,7 @@ Let's check if the move command worked like we wanted:
 $ ls -l fastq_backup
 ```
 
-### Renaming
+## Renaming
 
 The `mv` command has a second functionality, it is what you would use to rename files too. The syntax is identical to when we used `mv` for moving, but this time instead of giving a directory as its destination, we just give a new name as its destination. 
 
@@ -288,7 +285,7 @@ $ ls
 * When using `mv`, shell will **not** ask if you are sure that you want to "replace existing file" or similar unless you use the -i option. 
 * Once replaced, it is not possible to get the replaced file back!
 
-### Removing
+## Removing
 
 We find out that we did not need to create backups of our fastq files manually as backups were generated by our collaborator; in the interest of saving space on the cluster, we want to delete the contents of the `fastq-backup` folder and the folder itself. 
 
@@ -336,7 +333,7 @@ $ rm -ri fastq_backup
 
 ## Exiting from the cluster
 
-To close the interactive session on the cluser as well as to disconnect from the cluster, the command is `exit`. So, you are going to have to run the exit command twice.
+To close the interactive session on the cluster as well as to disconnect from the cluster, the command is `exit`. So, you are going to have to run the exit command twice.
 
 ```
 [rc_training01@compute-a-16-166 ~]$ exit
