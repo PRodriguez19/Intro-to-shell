@@ -225,7 +225,7 @@ This will open the manual page for `ls` and you will lose the command prompt. It
 For these "short" assignments you will have 24 hours to submit via Blackboard. **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
 
 ### Directions for Students: 
-Open a new Microsoft Word Document to answer questions 1-3. The first four lines of your document should contain the following:  
+Open a new Microsoft Word Document to submit answers to questions 1-3. The first four lines of your document should contain the following:  
 + Your name
 + MMG232
 + Today's date

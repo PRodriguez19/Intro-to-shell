@@ -15,8 +15,7 @@ If you are able to complete the below tasks on your own, then you have successfu
 # Learning Objectives for Today's Lesson
 -  Understand the organization of the Filesystem 
 -  Distinguish between Full versus Relative paths
-- 
-- 
+-  Copying, creating, moving and removing data
 
 *** 
 # Navigating the Filesystem
@@ -32,7 +31,7 @@ A filesystem organizes a computer's files and directories into a tree structure.
 
 > Note: When you log in to a remote computer you land on one of the branches of that tree, i.e. your pre-designated "home" directory that usually has your login name as its name (e.g. `/users/username`).
 
-To navigate the file system with ease we will now introduce **tab completion**. 
+To navigate the file system with ease we will now introduce the concept of **tab completion**. 
 
 ## Shortcut: Tab Completion
 Typing out file or directory names can waste a lot of time and its easy to make typing mistakes. Instead we should get in the habit of using tab complete as a shortcut. The `tab` key is located on the left side of your keyboard, right above the `caps lock` key. When you start typing out the first few characters of a directory name, then hit the `tab` key, Shell will try to fill in the rest of the directory name. Let's put this into practice now. 
