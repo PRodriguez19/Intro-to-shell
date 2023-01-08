@@ -84,7 +84,7 @@ This should display a shorter string of directories starting with root. This is 
 
 ### Using paths with commands
 
-You can do a lot more with the idea of stringing together *parent/child* directories. Let's say we want to look at the contents of the `raw_fastq` folder, but do it from our current directory (the home directory. We can use the list command and follow it up with the path to the folder we want to list!
+You can do a lot more with the idea of stringing together *parent/child* directories. Let's say we want to look at the contents of the `raw_fastq` folder, but do it from our current directory (the home directory). We can use the list command and follow it up with the path to the folder we want to list!
 
 ```bash
 $ cd
@@ -102,7 +102,7 @@ Now, what if we wanted to change directories from `~` (home) to `raw_fastq` in a
 ```bash
 $ cd ~/unix_lesson/raw_fastq
 ```
-> Note: You can always copy-and-paste, but I do suggest typing it yourself to memorize the commands. 
+> Note: You can always copy-and-paste commands, but I do suggest typing it yourself to practice. 
 
 Good job, you have moved 2 levels of directories with one command! 
 
@@ -121,7 +121,7 @@ $ cd ..
 ```
 
 ### File Names 
-Probably one of the most frustrating parts of bioinformatics is the lack of consistency with how files are labeled. Files often have obscure names that is only relevant to the researcher, or have names that are **very** similar to each other. But nonetheless we will continue! 
+Probably one of the most frustrating parts of bioinformatics is the lack of consistency with how files are labeled. Files often have obscure names that is only relevant to the researcher, or have names that are **very** similar to one another. But nonetheless we will continue! 
 
 Let's go into the `raw_fastq`, then type `ls Mov10_oe_`, followed by pressing the `tab` key once:
 
@@ -130,9 +130,9 @@ $ cd raw_fastq/
 $ ls Mov10_oe_<tab>
 ```
 
-**Nothing happens!!**
+**Notice that nothing happens!!**
 
-The reason is that there are multiple files in the `raw_fastq` directory that start with `Mov10_oe_`. As a result, shell does not know which one to fill in. When you hit `tab` a second time again, the shell will then list all the possible choices.
+The reason is there are multiple files in the `raw_fastq` directory that start with `Mov10_oe_`. As a result, shell does not know which one to fill in. When you hit `tab` a second time again, the shell will then list all the possible choices.
 
 ```bash
 $ ls Mov10_oe_<tab><tab>
@@ -192,13 +192,28 @@ $ tree
 
 If you are aware of the directory structure, you can string together as long a list of directories as you like using either **relative** or **full** paths.
 
+
 ## Synopsis of Full versus Relative paths
 
 **A full path always starts with a `/`, a relative path does not.**
 
 A relative path is like getting directions from someone on the street. They tell you to "go right at the Stop sign, and then turn left on Main Street". That works great if you're standing there together, but not so well if you're trying to tell someone how to get there from another country. A full path is like GPS coordinates. It tells you exactly where something is no matter where you are right now.
 
-You can usually use either a full path or a relative path depending on what is most convenient. If we are in the home directory, it is more convenient to just enter the relative path since it involves less typing.
+You can usually use either a full path or a relative path depending on what is most convenient. If we are in the home directory, it is more convenient to just enter the relative path since it involves less typing. However, when using some programs, full paths are required. 
+
+### Example using Full Paths:   
+It can get really complex, real fast!  
+
+```
+/users/p/d/pdrodrig/software/bin/samtools merge WT_Ikaros_rep2_merged.bam /gpfs2/scratch/jrboyd/pipelines/cutruntools/output_mm10_cutnrun_bcell_stim_032621/aligned.aug10/sorted/WTU_Ikaros_H100_rep1_2_S23_L002_aligned_reads.bam /users/p/d/pdrodrig/cutnrun_bcell/unmerged_bams/WT_H100_IK_rep1.IK2_S2_L001_aligned_reads.bam;
+```
+> Lets break this down! 
+
++ Program + argument = samtools merge  
++ New file name = merge WT_Ikaros_rep2_merged.bam 
++ 1st file = WTU_Ikaros_H100_rep1_2_S23_L002_aligned_reads.bam
++ 2nd file = WT_H100_IK_rep1.IK2_S2_L001_aligned_reads.bam
+
 
 Over time, it will become easier for you to keep a mental note of the structure of the directories that you are using and how to quickly navigate among them.
 
@@ -231,7 +246,7 @@ $ cp Mov10_oe_1.subset.fq Mov10_oe_1.subset-copy.fq
 $ ls -l
 ```
 
-The copy command can also be used for copying over whole directories, but the `-r` argument has to be added after the `cp` command. The `-r` stands for "recursively copy everything from the directory and its sub-directories". [We used it earlier when we copied over the `unix_lesson` directory to our home directories](#copying-example-data-folder).
+The copy command can also be used for copying over whole directories, but the `-r` argument has to be added after the `cp` command. The `-r` stands for "recursively copy everything from the directory and its sub-directories". We used it earlier when we copied over the `unix_lesson` directory to our home directories.
 
 ## Creating
 
@@ -287,7 +302,7 @@ $ ls
 
 ## Removing
 
-We find out that we did not need to create backups of our fastq files manually as backups were generated by our collaborator; in the interest of saving space on the cluster, we want to delete the contents of the `fastq-backup` folder and the folder itself. 
+We found out that we did not need to create backups of our fastq files manually as backups were already generated by our collaborator. So in the interest of saving space on the cluster, we want to delete the contents of the `fastq-backup` folder and the folder itself. 
 
 ```bash
 $ rm  Mov10_oe_1.subset-backup.fq
@@ -323,14 +338,6 @@ $ rm -ri fastq_backup
 
 ***
 
-**Exercise**
-
-1. Create a new folder in `unix_lesson` called `selected_fastq`
-2. Copy over the Irrel_kd_2.subset.fq and Mov10_oe_2.subset.fq from `raw_fastq` to the `~/unix_lesson/selected_fastq` folder
-3. Rename the `selected_fastq` folder and call it `exercise1`
-
-***
-
 ## Exiting from the cluster
 
 To close the interactive session on the cluster as well as to disconnect from the cluster, the command is `exit`. So, you are going to have to run the exit command twice.
@@ -344,6 +351,23 @@ HSPH-Radhikas-MacBook-Pro:~ rsk394$
 ```
 
 *** 
+
+## Class Participation Assignment #2 
+For these "short" assignments you will have 24 hours to submit via Blackboard. **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
+
+### Directions for Students: 
+Open a new Microsoft Word Document and submit a screenshot of steps 1-3 in the order described on your terminal using your VACC account. The first four lines of your document should contain the following:  
++ Your name
++ MMG232
++ Today's date
++ Class Participation Assignment #2 
+
+1. Create a new folder in `unix_lesson` called `selected_fastq`
+2. Copy over the Irrel_kd_2.subset.fq and Mov10_oe_2.subset.fq from `raw_fastq` to the `~/unix_lesson/selected_fastq` folder
+3. Rename the `selected_fastq` folder and call it `exercise1`
+
+*** 
+
 ## Commands
 
 ```
@@ -378,12 +402,7 @@ rm          # Remove
 .           # current directory
 ..          # navigate into the parent directory of the current directory 
 ```
-
-*** 
-# Homework Assignment #1 
-
-
----
+***
 
 ## Citation
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
