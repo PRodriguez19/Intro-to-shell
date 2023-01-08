@@ -17,6 +17,9 @@ This repository contains teaching materials for Introduction to Command Line. We
 ### Installation Requirements
 All students will be using terminal with [VACC-OOD](https://vacc-ondemand.uvm.edu)
 
+### To begin see schedule 
+* [Class schedule](schedule/)
+
 ---
 
 ### Citation
