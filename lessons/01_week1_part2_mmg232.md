@@ -354,7 +354,7 @@ HSPH-Radhikas-MacBook-Pro:~ rsk394$
 
 *** 
 
-## Class Participation Assignment #2 
+## Homework Assignment #2 (20 points)
 For these "short" assignments you will have 24 hours to submit via Blackboard. **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
 
 ### Directions for Students: 

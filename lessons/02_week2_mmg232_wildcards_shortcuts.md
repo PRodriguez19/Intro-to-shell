@@ -183,11 +183,22 @@ $ # Run some random words, then hit "Ctrl + C". Observe what happens
 
 ****
 
-**Exercise**
+## Homework Assignment #3 (20 points)
+For these "short" assignments you will have 24 hours to submit via Blackboard. **Late assignments will not be accepted.**  
 
-1.  Checking the output of the `history` command, how many commands have you typed in so far?
-2.  Use the <button>up</button> arrow key to check the command you typed before the `history` command. What is it? Does it make sense?
-3.  Type `ls'` - Oh no! How do you escape this? 
+### Directions for Students: 
+Open a new Microsoft Word Document and submit answers to questions 1-3. The first four lines of your document should contain the following:  
++ Your name
++ MMG232
++ Today's date
++ Class Participation Assignment #2 
+
+1.  Type `ls'` - Oh no! How would you escape this so you are able to get the output of `history` ? 
+
+> Submit a screenshot of your terminal screen for this question only. Your answer must include the command used to "escape". 
+
+2. Now, you should be able to check the output of the `history` command. How many commands have you typed in so far after going through this exercise? 
+3.  Use the <button>up</button> arrow key to check the command you typed before the `ls'` (Question #1). What was it? 
 
 ****
 
