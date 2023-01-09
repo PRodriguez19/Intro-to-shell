@@ -1,74 +1,31 @@
-# Workshop Schedule
+# Class Schedule 
 
-## Day 1
+## Tuesday, January 17th 
 
-| Time |  Topic  | Instructor |
-|:-----------:|:----------:|:--------:|
-| 9:30 - 10:10 | [Workshop introduction](../lectures/Intro_to_workshop.pdf) | Jihe |
-| 10:10 - 11:40 | [Introduction to Shell](../lessons/01_the_filesystem.md) | Will |
-| 11:40 - 12:00 | Overview of self-learning materials and homework submission | Will |
+| Time |  Topic  | 
+|:-----------:|:----------:|
+| ~ 30 mins |  Syllabus & [Intro to MMG232](../lectures/Intro_to_workshop.pdf) | 
+| ~30 mins | [Introduction to Shell](../lessons/01_week1_mmg232.md) | 
 
-### Before the next class:
 
-I. Please **study the contents** and **work through all the code** within the following lessons:
+## Before the next class:
 
-  1. [Wildcards and shortcuts in Shell](../lessons/02_wildcards_shortcuts.md)
-      <details>
-       <summary><i>Click here for a preview of this lesson</i></summary>
-         <br>Perhaps you are interested in only listing the files that have a <code>.txt</code> extension or you want to navigate to your home directory quickly. There are many shortcuts in Shell that will help you do these types of tasks. <br><br>This lesson will cover:<br>
-             - Utilizing wildcards for selecting multiple files<br>
-             - Implementing shortcuts for moving around the Shell quickly<br><br>
-        </details>
-        
-  2. [Examining and creating files](../lessons/03_working_with_files.md)
-      <details>
-       <summary><i>Click here for a preview of this lesson</i></summary>
-         <br>Now that you can navigate around the Shell environment, you are likely interested to know how to view and edit your files.<br><br>This lesson will cover:<br>
-             - Viewing your files<br>
-             - Editing your files using <code>vim</code><br><br>
-        </details>
-        
-  3. [Searching and redirection](../lessons/04_searching_files.md)
-      <details>
-       <summary><i>Click here for a preview of this lesson</i></summary>
-         <br>You will encounter large files that need a search function to find the information you are looking for. You might also be interested in writing the output of that search to a file or use it as the input to another function.<br><br>This lesson will cover:<br>
-             - Searching files using <code>grep</code><br>
-             - Writing the output of a command to a file<br>
-             - Redirecting the output of a command to an additional command<br><br>
-        </details>
-        
-  4. [Shell scripts and variables in Shell](../lessons/05_shell-scripts_variable.md)
-      <details>
-       <summary><i>Click here for a preview of this lesson</i></summary>
-         <br>Being able to reproduce your work is critically important for good science and writing your commands to a Shell script is a simple way to do this. Additionally, when writing shell scripts you will find it helpful to use variables to hold information, such as paths, in order to avoid typos and improve the readability of your script.<br><br>This lesson will cover:<br>
-             - Creating Shell scripts<br>
-             - Assigning variables in Shell<br><br>
-        </details>
-
-> **NOTE:** To run through the code above, you will need to be **logged into O2** and **working on a compute node** (i.e. your command prompt should have the word `compute` in it).
-> 1. Log in using `ssh rc_trainingXX@o2.hms.harvard.edu` and enter your password (replace the "XX" in the username with the number you were [assigned in class](https://docs.google.com/spreadsheets/d/1kBlYowhjjHJC9ZovmbBULmbqozKpprM17vZ2wPlhNg0/edit?usp=sharing)). 
-> 2. Once you are on the login node, use `srun --pty -p interactive -t 0-2:30 --mem 1G /bin/bash` to get on a compute node.
-> 3. Proceed once your command prompt has the word `compute` in it.
-> 4. If you log out between lessons (using the `exit` command twice), please follow points 1. and 2. above to log back in and get on a compute node when you restart with the self learning.
-
-II. **Complete the exercises**:
-   * Each lesson above contain exercises; please go through each of them.
-   * **Copy over** your the answers for the exercises into a plain text file on your local computer, using Notepad++, TextWrangler or similar. 
-     * *Please do not copy all of the content from your Terminal, just the answers.*
-   * **Upload the text file** to [Dropbox](https://www.dropbox.com/request/EPXHenHsIMlmukwECYgG) the **day before the next class**.
+Please complete the Class Participation Assignment #1:
+   * **Remember to Copy over** your the answers to a Microsoft Word Document on your local computer. 
+   * **Upload the text file** to [Blackboard](https://bb.uvm.edu/) before the next class. Late assignments will not be accepted. 
 
 ### Questions?
-* ***If you get stuck due to an error*** while runnning code in the lesson, [email us](mailto:hbctraining@hsph.harvard.edu) 
-* Post any **conceptual questions** that you would like to have **reviewed in class** [here](https://PollEv.com/hbctraining945).
+* Please email me if you have questions or would like to schedule a meeting: princess.rodriguez@med.uvm.edu  
+Office: Given Courtyard S357  
+Office phone number: 802-656-1718 (Monday-Friday; 8am to 5pm)
 
 ***
 
-## Day 2
+## Thursday, January 19th 
 
-| Time |  Topic  | Instructor |
-|:-----------:|:----------:|:--------:|
-| 9:30 - 10:45 | Self-learning lessons review | Will |
-| 10:45 - 12:00 | [Loops and automation](../lessons/06_loops_and_automation.md) | Jihe |
+| Time |  Topic  | 
+|:-----------:|:----------:|
+| ~ 45 mins |  [Intro to MMG232](../lectures/Intro_to_workshop.pdf) | 
 
 ### Before the next class:
 
@@ -108,7 +65,7 @@ II. **Complete the exercises**:
 
 ***
 
-## Day 3
+## Tuesday, January 24th 
 
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
