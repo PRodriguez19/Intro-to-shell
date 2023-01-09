@@ -36,12 +36,11 @@ Please complete the Class Participation Assignment #2:
 
 ## Tuesday, January 24th 
 
-
-
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~ 50 mins |  [Introduction to Shell Part II ](../lessons/01_week1_part1_mmg232.md) |
-| ~ 10 mins |  Class Participation Assignment #2  |
+| ~ 10 mins |  [Intro to RNA-Seq & FASTQ](../lectures/Intro_to_workshop.pdf) | 
+| ~ 30 mins |  [The Shell: Wild cards](../lessons/02_week2_mmg232_wildcards_shortcuts.md) |
+| ~ 30 mins |  [Working with files](../lessons/02_week2_mmg232_wildcards_shortcuts.md) |
 
 ### Before the next class:
 

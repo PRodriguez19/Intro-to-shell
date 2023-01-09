@@ -33,7 +33,10 @@ A filesystem organizes a computer's files and directories into a tree structure.
 
 To navigate the file system with ease we will now introduce the concept of **tab completion**. 
 
-## Shortcut: Tab Completion
+## Shortcut: Tab Completion 
+<kbd>tab</kbd>    
+<kbd>caps lock</kbd>
+
 Typing out file or directory names can waste a lot of time and its easy to make typing mistakes. Instead we should get in the habit of using tab complete as a shortcut. The `tab` key is located on the left side of your keyboard, right above the `caps lock` key. When you start typing out the first few characters of a directory name, then hit the `tab` key, Shell will try to fill in the rest of the directory name. Let's put this into practice now. 
 
 Navigate into the `raw_fastq` directory and see what's inside. **Remember to use tab!**
@@ -393,15 +396,6 @@ mv          # Move
 rm          # Remove
               +   used to delete files and directories 
 ```
-
-## Shortcuts
-
-```
-~           # home directory
-.           # current directory
-..          # navigate into the parent directory of the current directory 
-```
-***
 
 ## Citation
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
