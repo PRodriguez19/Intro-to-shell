@@ -1,23 +1,23 @@
 # MMG232: Teaching Materials 
 
-This repository contains teaching materials from [hbctraining](https://github.com/hbctraining) but has been modified to support teaching students enrolled in MMG232: Advanced Bioinformatics at the University of Vermont. The full citation for this work is provided below.
+This repository contains teaching materials from [hbctraining](https://github.com/hbctraining) but has been modified to support students enrolled in MMG232: Advanced Bioinformatics at the University of Vermont. The full citation for this work is provided below.
 
 # Introduction to the command line interface (shell/bash/Unix/Linux)
 
-### Description
+## Description
 
-This repository contains teaching materials for Introduction to Command Line. We will focus on understanding the basic skills required to use the command line interface, specifically `bash`. Then we will focus on `for` loops, shell scripting, and positional parameters.
+This repository contains teaching materials for Introduction to Command Line. We will focus on understanding the basic skills required to use the command line interface, specifically `bash`. 
 
-### Learning Objectives
+## Learning Objectives
 
 1.	Navigate around the command line interface (bash/shell)
 2.	Create and manipulate text files 
 3.	Submit jobs to the VACC an high-performance computing cluster
 
-### Installation Requirements
+## Installation Requirements
 All students will be using terminal with [VACC-OOD](https://vacc-ondemand.uvm.edu)
 
-### To begin see schedule 
+## To begin see schedule 
 * [Class schedule](schedule/)
 
 ---
