@@ -2,7 +2,7 @@
 
 This repository contains teaching materials from [hbctraining](https://github.com/hbctraining) but has been modified to support students enrolled in MMG232: Advanced Bioinformatics at the University of Vermont. The full citation for this work is provided below. 
 
-# Unit 1: Introduction to the command line interface (shell/bash/Unix/Linux)
+# Unit 1: Introduction to the command line interface 
 
 ## Description
 
@@ -15,7 +15,7 @@ This repository contains all teaching materials for Unit 1: Introduction to Comm
 3.	Get comfortable with using the VACC, an high-performance computing cluster (HPC)
 
 ## Installation Requirements
-All students will be using Vermont Advanced Computing Core - Open OnDemand Website [VACC-OOD] (https://vacc-ondemand.uvm.edu)   
+All students will be using Vermont Advanced Computing Core - Open OnDemand Website [VACC-OOD](https://vacc-ondemand.uvm.edu)   
 
 Full link: https://vacc-ondemand.uvm.edu 
 
