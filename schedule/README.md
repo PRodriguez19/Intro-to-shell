@@ -44,7 +44,7 @@ Please complete the Class Participation Assignment #2:
 
 ### Before the next class:
 
-Please complete the Class Participation Assignment #2:
+Please complete the Class Participation Assignment #3:
    * **Remember to Copy over** your the answers to a Microsoft Word Document. 
   * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.
 

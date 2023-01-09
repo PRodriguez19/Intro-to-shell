@@ -9,7 +9,9 @@ Date: "Tuesday, January 17, 2023"
 - Basics in navigation in CLI 
      + Copy data into your home directory 
      + List files in a directory
+
 ***
+
 # Introduction to Command Line 
 Command line interface (CLI) and graphical user interface (GUI) are different ways of interacting with a computer's operating system. Most people are familiar with the GUI as it is the default interface for most software. When using a GUI, you see visual representations of files, folders, applications, etc. However, when using the CLI, you will work largely with text representation of files, folders, input, and output. The shell is a program that presents a command line interface that allows you to control your computer by typing instructions with a keyboard. Using command line, you will be able to create new files, edit the contents of those files, delete files, and much more. 
 
@@ -21,7 +23,7 @@ Command line interface (CLI) and graphical user interface (GUI) are different wa
 On a Mac or Linux machine, you can access a shell through a program called "Terminal" locally on your laptop. But to make things easier, we will be using terminal on the open source web portal called Vermont Advance Computing Center - Open OnDemand (VACC-OOD). Once on terminal, you will be learning the basics of shell programming available under the Bourne Again Shell (bash). 
 
 *** 
-# Introduction to Vermont Advance Computing Center Cluster 
+# Introduction to Vermont Advance Computing Center Cluster (VACC)
 First, what is the Vermont Advance Computing Center? To answer this, let's take a quick look at the basic architecture of a cluster environment.
 
 <p align="center">
@@ -37,11 +39,10 @@ Common characteristics of a Cluster:
 + Shared by many users (*Slurm is used to schedule jobs and manage compute nodes. We will discuss this more at length later in the course*)
 
 **As of March 2022, the VACC provides three Clusters:** 
-|   | Cluster|
-|-----:|---------------|
-|  1|     BlackDiamond          | 
-|  2|     Bluemoon        |
-| 3 |      DeepGreen         |
+
++ BlackDiamond 
++ Bluemoon
++ DeepGreen 
 
 We will primarily use the **Bluemoon** cluster for any downstream analysis. 
 
@@ -51,10 +52,10 @@ We will primarily use the **Bluemoon** cluster for any downstream analysis.
 
 Please note that more information can always be found at the [Vermont Advanced Computing Center website](https://www.uvm.edu/vacc). 
 
-## VACC-OOD Overview 
+# VACC-OOD Overview 
 For the duration of this course, each student will be provided with their own personal VACC account that they can use to access VACC-Open OnDemand (OOD).   
 
-### What is Open OnDemand (OOD)?  
+## What is Open OnDemand (OOD)?  
 Open OnDemand (OOD) is an open source web portal for high performance computing (HPC) that provides users with an *easy-to-use* web interface to HPC clusters. 
 
 Benefits of using OOD: 
@@ -130,7 +131,7 @@ The command prompt on VACC will have some characters before the `$`, something l
 
 ***
 # Navigating the File System
-## Exercise: Copying example data folder 
+## Copying example data folder 
 
 Now that we are logged-in to the VACC, lets explore. The first thing to do is to check if there are any files in the data folder we are currently in. When you log in to a cluster, you will land within a folder designated specifically for your use, and is referred to as your "home directory". We will begin introducing a few commands that are used to list, create, inspect, rename, and delete files and/or directories. 
 
@@ -166,7 +167,7 @@ You should see "unix_lesson" show up as the output of `ls`. This is a folder we 
 </p>
 
 ***
-## Exercise: Listing contents of data folder 
+## Listing contents of data folder 
 
 Let's look at what is inside the folder "unix_lesson" and explore this further. We are use to clicking on a folder name to open it, however, now we are forced to change our mindset and open a folder or "directory" differently within the shell environment. 
 
@@ -205,7 +206,7 @@ Anything with a "/" after its name is a directory. Things with an asterisk "*" a
 
 Each line of output represents a file or a directory. The directory lines start with `d`. 
 
-### How to get more information for arguments
+### How to get more information on Arguments
 Most commands will take additional arguments that control their behavior. How do we know what arguments are available for a particular command? The most commonly used shell commands have a manual available that can be accessed using the `man` command. Let's try this command with `ls`:
 
 ```bash
@@ -221,8 +222,8 @@ This will open the manual page for `ls` and you will lose the command prompt. It
 
 ***
 
-## Class Participation Assignment #1 
-For these "short" assignments you will have 24 hours to submit via Blackboard. **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
+## Homework Assignment #1 (20 points)
+For these "short" assignments you will have 48 hours to submit via Blackboard. **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
 
 ### Directions for Students: 
 Open a new Microsoft Word Document to submit answers to questions 1-3. The first four lines of your document should contain the following:  
@@ -233,8 +234,7 @@ Open a new Microsoft Word Document to submit answers to questions 1-3. The first
 
 ### Task 1: 
 * On Terminal, open the manual page for the `cp` command. Skim through the information. 
-
-Questions to Answer for Task 1:   
+  
 1)  What does the -u option stand for and what does it do?   
 2)  Which option would you use to explain what is being done (i.e. verbose)?   
     
@@ -247,7 +247,6 @@ Questions to Answer for Task 1:
 
 ### Task 2: 
 * Use the `-l` option for the `ls` command to display more information for each item in the `unix_lesson` folder. 
-
-Question to Answer for Task 2:   
-3) Submit a screenshot of your screen and underneath describe what additional information is provided that you don't see with the bare `ls` command. 
+ 
+3) Submit a screenshot of your terminal screen and underneath describe what additional information is provided that you didn't see with the bare `ls` command. 
 

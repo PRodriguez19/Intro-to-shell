@@ -184,7 +184,7 @@ $ # Run some random words, then hit "Ctrl + C". Observe what happens
 ****
 
 ## Homework Assignment #3 (20 points)
-For these "short" assignments you will have 24 hours to submit via Blackboard. **Late assignments will not be accepted.**  
+For these "short" assignments you will have 48 hours to submit via Blackboard. **Late assignments will not be accepted.**  
 
 ### Directions for Students: 
 Open a new Microsoft Word Document and submit answers to questions 1-3. The first four lines of your document should contain the following:  
