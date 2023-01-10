@@ -12,8 +12,8 @@
 ### Before the next class:
 
 Please complete Homework Assignment #1:
-   * **Remember to Copy over** your the answers to a Microsoft Word Document. 
-   * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
++ **Remember to Copy over** your the answers to a Microsoft Word Document. 
++ Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
 
 
 ***
@@ -23,13 +23,13 @@ Please complete Homework Assignment #1:
 | Time |  Topic  | 
 |:-----------|:----------|
 | ~ 50 mins |  [Introduction to Shell Part II ](../lessons/01_week1_part2_mmg232.md) |
-| ~ 10 mins |  Class Participation Assignment #2  |
+| ~ 10 mins |  Homework Assignment #2  |
 
 ### Before the next class:
 
 Please complete the Homework Assignment #2:
-   * **Remember to Copy over** your the answers to a Microsoft Word Document. 
-  * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
++ **Remember to Copy over** your the answers to a Microsoft Word Document. 
++ Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
 
 
 ***
@@ -43,9 +43,9 @@ Please complete the Homework Assignment #2:
 
 ### Before the next class:
 
-Please complete the Homework Assignment #3: The Shell - Wild Cards:
-   * **Remember to Copy over** your the answers to a Microsoft Word Document. 
-  * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
+Please complete the Homework Assignment #3:
++ **Remember to Copy over** your the answers to a Microsoft Word Document. 
++ Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.  
 
 *** 
 
@@ -58,9 +58,10 @@ Please complete the Homework Assignment #3: The Shell - Wild Cards:
 
 ### Before the next class:
 
-Please complete the Class Participation Assignment #2:
-   * **Remember to Copy over** your the answers to a Microsoft Word Document. 
-  * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.
+Please complete the Homework Assignment #3:
++ **Remember to Copy over** your the answers to a Microsoft Word Document. 
++ Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.  
+
 ***
 
 ## Tuesday, January 31st 
@@ -72,9 +73,10 @@ Please complete the Class Participation Assignment #2:
 
 ### Before the next class:
 
-Please complete the Class Participation Assignment #2:
-   * **Remember to Copy over** your the answers to a Microsoft Word Document. 
-  * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.
+Please complete the Homework Assignment #3:
++ **Remember to Copy over** your the answers to a Microsoft Word Document. 
++ Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.  
+
 ***
 
 ## Questions?
