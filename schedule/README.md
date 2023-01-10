@@ -39,8 +39,7 @@ Please complete the Homework Assignment #2:
 | Time |  Topic  | 
 |:-----------|:----------|
 | ~ 10 mins |  [Intro to RNA-Seq & FASTQ](../lectures/Intro_to_workshop.pdf) | 
-| ~ 30 mins |  [The Shell: Wild cards](../lessons/02_week2_mmg232_wildcards_shortcuts.md) |
-| ~ 30 mins |  [Working with files](../lessons/02_week2_mmg232_working_with_files.md) |
+| ~ 50 mins |  [Wild cards & Working with files](../lessons/02_week2_mmg232_wildcards_shortcuts.md) |
 
 ### Before the next class:
 
