@@ -1,17 +1,28 @@
+---
+Week: "2" 
+Lesson: "Writing and editing files"
+Date: "Thursday, January 26, 2023"
+---
+
+# Learning Objectives
+  - Implement tab completion when writing paths
+  - Use of the asterisk `*` wildcard to select multiple items
+  - List a few shortcuts 
+  - View the contents of a file
+
 ***
 
-## Writing files
+# Writing files
 
 We've been able to do a lot of work with files that already exist, but what if we want to write and/or create our own files? Obviously, we're not going to type in sequence information for a FASTA file, but you'll see as we go that there are a lot of situations in which we would need to write/create a file or edit an existing file.
 
-In order to create or edit files we will need to use a **text editor**. When we say, "text editor," we really do mean "text": these editors can
-only work with plain character data, not tables, images, or any other media. The types of text editors available can generally be grouped into two categories: **graphical user interface (GUI) text editors** and **command-line editors**.
+In order to create or edit files we will need to use a **text editor**. When we say, "text editor," we really do mean "text": these editors can only work with plain character data, not tables, images, or any other media. The types of text editors available can generally be grouped into two categories: **graphical user interface (GUI) text editors** and **command-line editors**.
 
-#### GUI text editors
+### GUI text editors
 
-A GUI is an interface that has buttons and menus that you can click on to issue commands to the computer and you can move about the interface just by pointing and clicking. You might be familar with GUI text editors, such as [BBEdit](http://www.barebones.com/products/bbedit/), [Sublime](http://www.sublimetext.com/), and [Notepad++](http://notepad-plus-plus.org/), which allow you to write and edit plain text documents. These editors often have features to easily search text, extract text, and highlight syntax from multiple programming languages. They are great tools, but since they are 'point-and-click', we cannot efficiently use them from the command line.
+A GUI is an interface that has buttons and menus that you can click on to issue commands to the computer and you can move about the interface just by pointing and clicking. You might be familar with GUI text editors, such as [BBEdit](http://www.barebones.com/products/bbedit/), [Sublime](http://www.sublimetext.com/), [Visual Studio Code](https://code.visualstudio.com/) and [Notepad++](http://notepad-plus-plus.org/), which allow you to write and edit plain text documents. These editors often have features to easily search text, extract text, and highlight syntax from multiple programming languages. They are great tools, but since they are 'point-and-click', we cannot efficiently use them from the command line.
 
-#### Command-line editors
+### Command-line editors
 
 When working remotely, we need a text editor that functions from the command line interface. With command-line editors you must navigate the interface using the arrow keys and shortcuts, since you do not have the option to 'point-and-click'. Some popular editors include [Emacs](http://www.gnu.org/software/emacs/), [Vim](http://www.vim.org/), or a graphical editor such as [Gedit](http://projects.gnome.org/gedit/). These are editors which are generally available for use on high-performance compute clusters. There are also simpler editors available for use on the cluster (e.g. [nano](http://www.nano-editor.org/)), but tend to have limited functionality.
 
