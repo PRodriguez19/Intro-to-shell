@@ -1,7 +1,7 @@
 ---
 Week: "2" 
 Lesson: "The Shell: Wild cards"
-Date: "Thursday, January 19, 2023"
+Date: "Tuesday, January 24, 2023"
 ---
 
 # Learning Objectives
@@ -222,7 +222,7 @@ $ ls'
 ctrl + c    # cancel current command
 ctrl + a    # start of line
 ctrl + e    # end of line
-ctrl + e    # clear your terminal screen
+ctrl + l    # clear your terminal screen
 history
 ```
 

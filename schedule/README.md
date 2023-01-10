@@ -1,4 +1,4 @@
-# Class Schedule 
+# MMG232: Class Schedule 
 
 ## Tuesday, January 17th 
 
@@ -11,7 +11,7 @@
 
 ### Before the next class:
 
-Please complete the Class Participation Assignment #1:
+Please complete Homework Assignment #1:
    * **Remember to Copy over** your the answers to a Microsoft Word Document. 
    * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
 
@@ -22,12 +22,12 @@ Please complete the Class Participation Assignment #1:
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~ 50 mins |  [Introduction to Shell Part II ](../lessons/01_week1_part1_mmg232.md) |
+| ~ 50 mins |  [Introduction to Shell Part II ](../lessons/01_week1_part2_mmg232.md) |
 | ~ 10 mins |  Class Participation Assignment #2  |
 
 ### Before the next class:
 
-Please complete the Class Participation Assignment #2:
+Please complete the Homework Assignment #2:
    * **Remember to Copy over** your the answers to a Microsoft Word Document. 
   * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
 
@@ -40,13 +40,13 @@ Please complete the Class Participation Assignment #2:
 |:-----------|:----------|
 | ~ 10 mins |  [Intro to RNA-Seq & FASTQ](../lectures/Intro_to_workshop.pdf) | 
 | ~ 30 mins |  [The Shell: Wild cards](../lessons/02_week2_mmg232_wildcards_shortcuts.md) |
-| ~ 30 mins |  [Working with files](../lessons/02_week2_mmg232_wildcards_shortcuts.md) |
+| ~ 30 mins |  [Working with files](../lessons/02_week2_mmg232_working_with_files.md) |
 
 ### Before the next class:
 
-Please complete the Class Participation Assignment #3:
+Please complete the Homework Assignment #3: The Shell - Wild Cards:
    * **Remember to Copy over** your the answers to a Microsoft Word Document. 
-  * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.
+  * **Upload the file** to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
 
 *** 
 
