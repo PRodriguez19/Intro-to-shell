@@ -77,11 +77,16 @@ GUI applications offered by VACC-OOD:
 
 ## How to log-in to VACC-OOD (You should always do this!):  
 1.  Use the [VACC-OOD](https://vacc-ondemand.uvm.edu) link to access the site https://vacc-ondemand.uvm.edu
-2.   Add your uvm netid and password 
+2. Add your uvm netid and password 
 3. You should be viewing the following dashboard
 
 <p align="center">
 <img src ="../img/dashboard.png" width="700">
+</p>
+
+4. To access the Terminal Go to <button>Clusters</button>  and click `>_VACC Shell Access`
+<p align="center">
+<img src ="../img/terminal_dashboard.png" width="700">
 </p>
 
 ## How to log-in without VACC-OOD (Advanced users)
