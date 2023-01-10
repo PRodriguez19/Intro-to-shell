@@ -193,11 +193,21 @@ Open a new Microsoft Word Document and submit answers to questions 1-3. The firs
 + Today's date
 + Class Participation Assignment #2 
 
-1.  Type `ls'` - Oh no! How would you escape this so you are able to get the output of `history` ? 
+1.  Type `ls'` then type `history` then hit <button>return</button>
 
-> Submit a screenshot of your terminal screen for this question only. Your answer must include the command used to "escape". 
+The output should look something like this: 
+```
+$ ls' 
+>history
+>
+```
 
-2. Now, you should be able to check the output of the `history` command. How many commands have you typed in so far after going through this exercise? 
+ Oh no! How would you escape this so you are able to move on to Question 2? 
+
+> Submit a screenshot of your terminal screen. Be sure to include the command used to "escape" `ls'`.  
+
+2. Great, now that you have "escaped" check the output of the `history` command. How many commands have you typed in so far after going through this exercise? 
+
 3.  Use the <button>up</button> arrow key to check the command you typed before the `ls'` (Question #1). What was it? 
 
 ****
