@@ -39,7 +39,7 @@ Please complete the Homework Assignment #2:
 | Time |  Topic  | 
 |:-----------|:----------|
 | ~ 10 mins |  [Intro to RNA-Seq & FASTQ](../lectures/Intro_to_workshop.pdf) | 
-| ~ 50 mins |  [Wild cards & Working with files](../lessons/02_week2_mmg232_wildcards_shortcuts.md) |
+| ~ 50 mins |  [Wild cards & Intro to viewing files](../lessons/02_week2_mmg232_wildcards_shortcuts.md) |
 
 ### Before the next class:
 
@@ -53,7 +53,8 @@ Please complete the Homework Assignment #3:
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~ 50 mins |  [Writing files ](../lessons/02_week2_mmg232_writing_files.md) |
+| ~ 40 mins |  [Writing and editing files](../lessons/02_week2_mmg232_writing_files.md) |
+| ~ 20 mins |  [Intro to RNA-Seq continued](../lectures/Intro_to_workshop.pdf) | 
 
 ### Before the next class:
 
@@ -67,12 +68,11 @@ Please complete the Homework Assignment #4:
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~ 50 mins |  [Introduction to Shell Part II ](../lessons/01_week1_part1_mmg232.md) |
-| ~ 10 mins |  Class Participation Assignment #2  |
+| ~ 60 mins |  [Searching and Redirection](../lessons/03_week3_mmg232_searching_files.md) |
 
 ### Before the next class:
 
-Please complete the Homework Assignment #3:
+Please complete the Homework Assignment #5:
 + **Remember to Copy over** your the answers to a Microsoft Word Document. 
 + Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.  
 
