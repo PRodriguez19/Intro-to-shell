@@ -4,8 +4,8 @@
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~10 mins |  [Intro to MMG232](../lectures/Intro_to_workshop.pdf) | 
-| ~20 mins | [Syllabus & Class Schedule Overview](https://bb.uvm.edu/)| 
+| ~10 mins |  [Intro to MMG232](../lectures/Lecture1-MMG232-Introduction.pdf) | 
+| ~20 mins | [Syllabus Overview](../lectures/MMG232_Syllabus_final.docx)| 
 | ~30 mins | [Introduction to Shell](../lessons/01_week1_mmg232.md) | 
 
 
