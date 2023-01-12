@@ -355,7 +355,7 @@ HSPH-Radhikas-MacBook-Pro:~ rsk394$
 *** 
 
 ## Homework Assignment #2 (20 points)
-For these "short" assignments you will have 48 hours to submit via Blackboard. **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
+**For this assignment you will have until 11:59PM on Monday, January 23rd to submit. Late assignments will not be accepted.**  
 
 ### Directions for Students: 
 Open a new Microsoft Word Document and submit a screenshot of steps 1-3 in the order described on your terminal using your VACC account. The first four lines of your document should contain the following:  

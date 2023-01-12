@@ -325,7 +325,7 @@ tail        # allows you to view end of file
 ***
 
 ## Homework Assignment #3 (40 points)
-For this "short" assignment you will have 48 hours to submit via Blackboard. **Late assignments will not be accepted.**  
+For this "short" assignment you will have 48 hours to submit via Blackboard (by 10:05am on Thursday, January 26th). **Late assignments will not be accepted.**  
 
 ### Directions for Students: 
 Open a new Microsoft Word Document and submit answers to questions 1-3. The first four lines of your document should contain the following:  
