@@ -6,7 +6,6 @@ Date: "Thursday, January 26, 2023"
 
 # Learning Objectives
   - Use vim and/or nano to create and edit files 
-  - 
 
 ***
 
@@ -26,7 +25,44 @@ Today we will be working with command-line editors. With command-line editors yo
 # Nano versus Vim 
 
 ## Introduction to nano 
+Nano is a popular text editor of UNIX/Linux operating systems. Nano is easy-to-use but is limited in editing. 
 
+To use nano: 
+
+```
+nano filename
+
+nano demo.txt
+```
+After running the nano command, a new window will pop up where you can edit the file. Below is how the interface looks like, notice that the name of file appears on the top: 
+
+<p align="center">
+<img src="../img/nano.png" width="600">
+</p>
+
+Go ahead and type the following:
+
+```
+Today is going to be a great day. 
+```
+
+At the bottom of the screen you will find some shortcuts on the nano editor. They use the <button>control</button> button. The most important one is: 
+
+<button>control</button> + X 
+
+This is to exit the editor. If there are changes, it will ask you whether to save them or not. Input Y for Yes, or N for No, then press <button>return</button>. 
+
+>### Basic nano commands
+>
+>| key              | action                 |
+>| ---------------- | ---------------------- |
+>| <button>control</button> + X     | exit fromt the editor |
+>| <button>control</button> + A      | Let's you jump from the beginning of the line |
+>| <button>control</button> + E     | Let's you jump from the end of the line  |
+>| <button>control</button> + Y      | Scroll page down |
+>| <button>control</button> + V      | Scroll page up |
+>| <button>control</button> + O      | Save the file |
+>| <button>control</button> + K      | It cuts the entire selected line |
 
 ## Introduction to Vim 
 
@@ -72,15 +108,14 @@ Upon creation of a file, vim is automatically in command mode. Let's _change to 
 
 After you have finished typing, **press <kbd>esc</kbd> to enter command mode.** 
 
-**Note the `--INSERT--` has now disappeared from the bottom of the screen.**
+>**Note the `--INSERT--` has now disappeared from the bottom of the screen.**
 
-> ### Review of Vim modes
-> 
-> | key              | action                 |
-> | ---------------- | ---------------------- |
-> | <button>i</button>     | insert mode - to write and edit text |
-> | <button>esc</button>     | command mode - to issue commands / shortcuts  |
-> 
+>### Review of Vim modes
+>
+>| key              | action                 |
+>| ---------------- | ---------------------- |
+>| <button>i</button>     | insert mode - to write and edit text |
+>| <button>esc</button>     | command mode - to issue commands / shortcuts  |
 
 
 ### Saving and Quitting
@@ -98,17 +133,10 @@ After you have saved the file, the total number of lines and characters in the f
 </p>
 
 
-Alternatively, we can **write to file (save changes) and quit** all at once by **typing <kbd>:wq</kbd>**. Now, you should have exited vim and returned back to your command prompt.
-
-To edit the newly created `draft.txt` file, you can open it again with vim: `vim draft.txt`. First, change to *insert mode* and type a few additional lines (you can move around the lines using the arrows on the keyboard). This time we decide to **quit without saving** by going into command mode by pressing the <button>esc</button> key, and then **typing <kbd>:q!</kbd>**.
- 
-<p align="center">
-<img src="../img/vim_quit.png" width="600">
-</p>
-
+Alternatively, we can **write to file (save changes) and quit** all at once by **typing <kbd>:wq</kbd>**. After typing `:wq` while on command mode, you will exist vim and be returned back to your command prompt.
 
 > ### Review of saving and quitting
-> 
+ >
 > | key (in command mode)  | action           |
 > | ---------------- | ---------------------- |
 > | <button>:w</button>     | to write to file (save) |
@@ -117,6 +145,11 @@ To edit the newly created `draft.txt` file, you can open it again with vim: `vim
 
 
 ### Shortcuts in Vim
+To edit the newly created `draft.txt` file, you can open it again with vim: `vim draft.txt`. First, change to *insert mode* and type a few additional lines (you can move around the lines using the arrows on the keyboard). This time we decide to **quit without saving** by going into command mode by pressing the <button>esc</button> key, and then **typing <kbd>:q!</kbd>**.
+ 
+<p align="center">
+<img src="../img/vim_quit.png" width="600">
+</p>
 
 While we cannot point and click to navigate the document, we can use the arrow keys to move around. However, navigating with arrow keys can be very slow, so Vim has shortcuts (which are completely unintuitive, but very useful as you get used to them over time). 
 
@@ -151,7 +184,7 @@ Once you have finished typing, you can display line numbers by changing to *comm
 | <button>w</button>     | to move to next word     |
 | <button>b</button>     | to move to previous word     |
 
-Practice some of the editing shortcuts, then **quit the document without saving any changes**.
+Practice some of the editing shortcuts, then **quit the document and remember to save changes**.
 
 **Editing the file**
 
@@ -164,20 +197,7 @@ Practice some of the editing shortcuts, then **quit the document without saving 
 | <button>/*pattern*</button>     | to search for a pattern (*n/N* to move to next/previous match)    |
 | <button>:%s/*search*/*replace*/g</button>     | to search for a pattern and replace for all occurences     |
 
-*** 
-
-## Homework Assignment #4 (50 points)
-
-### **Please note that you will have until next class (Tuesday, January 31st) to submit this assignment. Late submissions will not be accepted.**  
-
-### Directions for Students: 
-Open a new Microsoft Word Document and submit answers to questions 1-3. The first four lines of your document should contain the following:  
-+ Your name
-+ MMG232
-+ Today's date
-+ Class Participation Assignment #2 
-
-We have covered some basic commands in vim, but practice is key for getting comfortable with the program: 
+**Class Exercise**
 
 1. Open `spider.txt`, and delete the word "water" from line #2.
 2. Quit without saving.
@@ -188,7 +208,42 @@ We have covered some basic commands in vim, but practice is key for getting comf
 7. Redo your previous deletion.
 8. Delete the first and last words from each of the lines.
 9. Save the file.
-10. Open up the file and copy and paste the contents to a text editor on your local laptop to submit as homework.
+10. Open the file and take a screenshot of your terminal screen. Submit this as homework part A. 
+
+*** 
+
+## Homework Assignment #4 (30 points)
+
+### **Please note that you will have until next class (Tuesday, January 31st) to submit this assignment. Late submissions will not be accepted.**  
+
+### Directions for Students: 
+Open a new Microsoft Word Document and submit two screenshot (Part A and Part B). The first four lines of your document should contain the following:  
++ Your name
++ MMG232
++ Today's date
++ Class Participation Assignment #2 
+
+The scenario: 
+You got the following line of codes from a trusted source but need to modify it so you can submit it to the VACC-Bluemoon server. You decide its time to make your own script. Follow the steps below: 
+
+1. Create a new file called `script.sh` 
+2. Paste in the code you got from a trusted source:
+
+```
+STAR --runThreadN 6 \
+--runMode genomeGenerate \
+--genomeDir /scratch2/username/chr1_hg38_STAR_index/ \
+--genomeFastaFiles /reference_data_ensembl38/username/Homo_sapiens.GRCh38.dna.chromosome.1.fa \
+--sjdbGTFfile /reference_data_ensembl38/username/Homo_sapiens.GRCh38.92.gtf \
+```
+3. Save the file. 
+4. Replace every occurrence of "username" with your UVM netid. 
+5. Delete: "scratch2" folder 
+6. hange the --runThreadN from 6 to 4 
+7. You just realized that the fasta and gtf you downloaded from Ensembl is actually from GRCh19 not CRCh38. This needs to be changed in your code. 
+8. Save the file. 
+9. Open the file and take a screenshot of your terminal screen. Submit this as homework part B. 
+
 
 ## Citation
 

@@ -227,7 +227,7 @@ This will open the manual page for `ls` and you will lose the command prompt. It
 
 ***
 
-## Homework Assignment #1 (10 points)
+## Homework Assignment #1 (20 points)
 For these "short" assignments you will have 48 hours to submit via Blackboard (by 10:05am on Thursday, January 19th). **Late assignments will not be accepted.** My suggestion is to complete while in-class and submit prior to leaving for the day. I will try my best to leave ~10 minutes at the end of class for students to complete during class.  
 
 ### Directions for Students: 

@@ -338,7 +338,16 @@ $ cut -f 1,4 chr1-hg19_genes.gtf | sort -u | wc -l
 
 ***
 
-**Exercises**
+## Homework Assignment #5 (80 points)
+
+### **Please note that you will have until Tuesday, January 31st to submit this homework assignment. Late submissions will not be accepted.**  
+
+### Directions for Students: 
+Open a new Microsoft Word Document and submit answers to questions 1-3. The first four lines of your document should contain the following:  
++ Your name
++ MMG232
++ Today's date
++ Class Participation Assignment #2 
 
 Now that we know what type of information is inside the GTF file, let's use the commands we have learned so far to answer a simple question about our data: **how many unique exons are present on chromosome 1 using `chr1-hg19_genes.gtf`?**
 
