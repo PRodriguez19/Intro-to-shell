@@ -1,4 +1,4 @@
-# MMG232: Class Schedule 
+# Class Schedule 
 
 ## Tuesday, January 17th 
 
@@ -53,12 +53,11 @@ Please complete the Homework Assignment #3:
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~ 50 mins |  [Introduction to Shell Part II ](../lessons/01_week1_part1_mmg232.md) |
-| ~ 10 mins |  Class Participation Assignment #2  |
+| ~ 50 mins |  [Writing files ](../lessons/02_week2_mmg232_writing_files.md) |
 
 ### Before the next class:
 
-Please complete the Homework Assignment #3:
+Please complete the Homework Assignment #4:
 + **Remember to Copy over** your the answers to a Microsoft Word Document. 
 + Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.  
 
