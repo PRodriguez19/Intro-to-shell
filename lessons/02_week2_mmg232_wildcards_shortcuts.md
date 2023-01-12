@@ -324,7 +324,7 @@ tail        # allows you to view end of file
 
 ***
 
-## Homework Assignment #3 (30 points)
+## Homework Assignment #3 (40 points)
 For this "short" assignment you will have 48 hours to submit via Blackboard. **Late assignments will not be accepted.**  
 
 ### Directions for Students: 
@@ -351,13 +351,14 @@ $ ls'
 
 3.  Use the <button>up</button> arrow key to check the command you typed before the `ls'` (Question #1). What was it? 
 
-4. This is a multi-part question: 
-a. Change directories into `genomics_data`. You can do this using a full or relative path.
-b. Use the `less` command to open up the file `Encode-hesc-Nanog.bed`.
-c. Search for the string `chr11`; you'll see all instances in the file highlighted.
-d. Staying in the `less` buffer, use the shortcut to get to the end of the file. 
-> Report the three highlighted lines at the end of the file where you see `chr11` highlighted. 
-e. Exit the `less` buffer and come back to the command prompt.
+4. This is a multi-part question:   
+a. Change directories into `genomics_data`. You can do this using a full or relative path.  
+b. Use the `less` command to open up the file `Encode-hesc-Nanog.bed`.  
+c. Search for the string `chr11`; you'll see all instances in the file highlighted.  
+d. Staying in the `less` buffer, use the shortcut to get to the end of the file.     
+> Report the three highlighted lines at the end of the file where you see `chr11` highlighted.  
+ 
+e. Exit the `less` buffer and come back to the command prompt.  
 
 5. Print to screen the last 5 lines of the file `Encode-hesc-Nanog.bed`. Submit a screenshot of the output of Terminal.
 
