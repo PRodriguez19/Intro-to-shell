@@ -38,7 +38,7 @@ Please complete the Homework Assignment #2:
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~ 10 mins |  [Intro to RNA-Seq & FASTQ](../lectures/Intro_to_workshop.pdf) | 
+| ~ 10 mins |  [Intro to RNA-Seq & FASTQ](../lectures/Lecture2-MMG232-rnaseq-introduction.pdf) | 
 | ~ 50 mins |  [Wild cards & Intro to viewing files](../lessons/02_week2_mmg232_wildcards_shortcuts.md) |
 
 ### Before the next class:
