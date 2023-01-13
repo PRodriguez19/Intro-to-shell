@@ -3,14 +3,8 @@ Week: "3"
 Lesson: "Searching and Redirection"
 Date: "Tuesday, January 31, 2023"
 ---
-title: "The Shell: Searching and Redirection"
-author: "Sheldon  McKay, Bob Freeman, Mary Piper, Radhika Khetani, Meeta Mistry, Jihe Liu, Will Gammerdinger"
-date: "October 2021"
----
 
-Approximate time: 60 minutes
-
-## Learning objectives
+# Learning objectives
 
 - Search for characters or patterns in a text file using the `grep` command
 - Write to and append a file using output redirection
@@ -18,11 +12,17 @@ Approximate time: 60 minutes
 
 ## Searching files with `grep` command
 
-We went over how to search within a file using `less`. We can also search within files without even opening them, using `grep`. Simply put `grep` is a command-line utility for searching plain-text data sets for lines matching a pattern or **reg**ular **ex**pression (regex). 
+We went over how to search within a file using `less`. But we can also search within files without even opening them, using `grep`. Simply put `grep` is a command-line utility for searching plain-text data sets for lines matching a pattern or **reg**ular **ex**pression (regex). 
 
 > Why the word "grep"? It is a shortened form of **g**lobally search for a **r**egular **e**xpression and **p**rint matching lines (g/re/p).
 
-The syntax for `grep` is as follows: `grep  search_term  filename`. The pattern that we want to search is specified in `search_term` slot, and the file we want to search within is specified in the `filename` slot. Let's give it a try by searching the FASTQ files in the `raw_fastq` directory. 
+The syntax for `grep` is as follows: 
+```
+grep  search_term  filename
+```
+ >The pattern that we want to search is specified in the `search_term` slot, and the file we want to search within is specified in the `filename` slot. 
+ 
+Let's give it a try by searching the FASTQ files in the `raw_fastq` directory. 
 
 FASTQ files contain the sequencing reads (nucleotide sequences) output from a sequencing facility. Each sequencing read in a FASTQ file is associated with four lines, with the first line (header line) always starting with an `@` symbol. A whole FASTQ record for a single read should appear similar to the following:
 
@@ -40,14 +40,12 @@ FASTQ files contain the sequencing reads (nucleotide sequences) output from a se
 > |3|Read name (same as line 1) preceded by a '+' or just a '+' sign|
 > |4|String of characters which represent the quality score of each nucleotide in line 2; must have same number of characters as line 2|
 >
-> You can find more information about FASTQ files in [this lesson](https://hbctraining.github.io/Intro-to-rnaseq-hpc-salmon-flipped/lessons/05_qc_running_fastqc_interactively.html) from our [RNA-seq workshop](https://hbctraining.github.io/Intro-to-rnaseq-hpc-salmon-flipped/).
 
-Suppose we want to see how many reads in our file `Mov10_oe_1.subset.fq` contain "bad" data, i.e. reads with 10 consecutive Ns (`NNNNNNNNNN`).
+Importantly, we all know that DNA is made up from four bases A, T, C, and G. But what happens if the sequencer is unable to make a decision on which base it is? It will instead designate a `N`. 
+Now let's suppose we want to see how many reads in our file `Mov10_oe_1.subset.fq` contain "bad" data, i.e. reads with 10 consecutive Ns (`NNNNNNNNNN`).
 
 ```bash
-$ cd ~/unix_lesson/raw_fastq
-
-$ grep NNNNNNNNNN Mov10_oe_1.subset.fq
+grep NNNNNNNNNN Mov10_oe_1.subset.fq
 ```
 
 We get back a lot of reads or lines of text!  
@@ -57,7 +55,7 @@ What if we wanted to see the whole FASTQ record for each of these reads? We woul
 Looks like the `-B` and `-A` arguments for grep will be useful to return the matched line plus one before (`-B 1`) and two lines after (`-A 2`). Since each record is four lines, using these arguments will return the whole record. Within the whole record, the second line will be the actual sequence that has the pattern we searched for.
 
 ```bash
-$ grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq
+grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq
 ```
 
 ```
@@ -74,11 +72,11 @@ CACAAATCGGCTCAGGAGGCTTGTAGAAAAGCTCAGCTTGACANNNNNNNNNNNNNNNNNGNGNACGAAACNNNNGNNNN
 
 ***
 
-**Exercises**
+**Class exercises**
 
 1. Search for the sequence CTCAATGAGCCA in `Mov10_oe_1.subset.fq`. How many sequences do you find?
 
-2. In addition to finding the sequence, how can you modify the command so that your search also returns the name of the sequence?
+2. In addition to finding the sequence, how can you modify the command so that your search also returns the name of the sequence? Remember the name of sequence is Line 1 of the FASTQ only. 
 
 3. If you want to search for that sequence in **all** Mov10 replicate fastq files, what command would you use?
 
@@ -96,13 +94,13 @@ CACAAATCGGCTCAGGAGGCTTGTAGAAAAGCTCAGCTTGACANNNNNNNNNNNNNNNNNGNGNACGAAACNNNNGNNNN
 
 ***
 
-### More about searching text files with `grep`
+## More about searching text files with `grep`
 
-#### Group separators (`--`), and how to remove them
+### Group separators (`--`), and how to remove them
 You will notice that when we use the `-B` and/or `-A` arguments with the `grep` command, the output has some additional lines with dashes (`--`), these dashes work to separate your returned "groups" of lines and are referred to as "group separators". This might be problematic if you are trying to maintain the FASTQ file structure or if you simply do not want them in your output. Using the argument `--no-group-separator` with `grep` will disable this behavior:
 
 ```bash
-$ grep -B 1 -A 2 --no-group-separator NNNNNNNNNN Mov10_oe_1.subset.fq
+grep -B 1 -A 2 --no-group-separator NNNNNNNNNN Mov10_oe_1.subset.fq
 ```
 
 Now your output should be returned as:
@@ -118,7 +116,7 @@ CACAAATCGGCTCAGGAGGCTTGTAGAAAAGCTCAGCTTGACANNNNNNNNNNNNNNNNNGNGNACGAAACNNNNGNNNN
 ?@@DDDDDB1@?:E?;3A:1?9?E9?<?DGCDGBBDBF@;8DF#########################################################
 ```
 
-#### Which line number has a match?
+### Which line number has a match?
 Another useful option when using `grep` is the `-n` option, which will print out the line number from the file for the match. Adding this option to our previous command would work like this:
 
 ```bash
@@ -140,14 +138,17 @@ This would return the output:
 
 A small thing you should note is that when using the `-n` option, lines that have a `:` after the line number correspond to the lines with the match (e.g `861214:CACTTGTAAGGGCAGGCCCCCTTCACCCTCCCGCTCCTGGGGGANNNNNNNNNNANNN...`), while lines with a `-` after the line number are the surrounding lines retrieved when using the `-A` and/or `-B` options (e.g. `861213-@HWI-ST330:304:H045HADXX:1:1101:1111:61397`).
 
-#### Only returning lines that **DO NOT** match
-One last `grep` option you might find quite useful is the `-v` option, which does an inverted match. This will return everything that does ***not*** match the pattern. In order to demonstrate this let's first view a smaller file that you have.
+### Only returning lines that **DO NOT** match
+One last `grep` option you might find quite useful is the `-v` option, which does an inverted match. This will return everything that does ***not*** match the pattern. In order to demonstrate this let's view a smaller file called a metadata file.   
+
+First there's a lot of stuff on our terminal screen. Let's clear it. 
+
+Now lets navigate to where this metadata file is located. Below is the path to this file. 
 
 ```bash
-$ cat ~/unix_lesson/other/Mov10_rnaseq_metadata.txt 
+/unix_lesson/other/Mov10_rnaseq_metadata.txt 
 ```
-
-This is the metadata file for the FASTQ data we are looking at. This should return:
+Now, lets look at the metadata file. We can do this using `nano` 
 
 ```
 sample	celltype
@@ -158,10 +159,12 @@ IR.1	normal
 IR.2	normal
 IR.3	normal
 ```
+>These metadata files are useful for categorizing our datasets into certain groups. We will discuss the concept of metadata files later, for now - let's get back to grep. 
+
 Now, let's consider the case that we didn't want to output the "normal" cell type. We can use the `-v` option in `grep` like this:
 
 ```bash
-$ grep -v normal ~/unix_lesson/other/Mov10_rnaseq_metadata.txt 
+grep -v normal Mov10_rnaseq_metadata.txt 
 ```
 
 This will return all of lines that don't have "normal" in the line.
@@ -175,40 +178,42 @@ OE.3	Mov10_oe
 
 ## Redirection
 
-When we use `grep`, the matching lines print to the Terminal (also called Standard Output or "stdout"). If the result of the `grep` search is a few lines, we can view them easily, but if the output is very long, the lines will just keep printing and we won't be able to see anything except the last few lines. You have experienced this when you searched for the pattern `NNNNNNNNNN`. How can we capture them instead?
+When we use `grep`, the matching lines print to the Terminal (also called Standard Output or "stdout"). If the result of the `grep` search is a few lines, we can view them easily, but if the output is very long, the lines will just keep printing and we won't be able to see anything except the last few lines. You have experienced this when you searched for the pattern `NNNNNNNNNN`. So how can we capture them instead and create a new document? 
 
-We can do that with something called "redirection". The idea is that we're redirecting the output from the Terminal (all the stuff that went whizzing by) to something else. In this case, we want to save it to a file, so that we can look at it later.
+We can do that with something called "redirection". The idea is that we're redirecting the output from the Terminal to something else. In this case, we want to save it to a file, so that we can look at it later.
 
-### Redirecting with ">"
+### Redirecting with ">" AKA "Greater-than sign" 
 
 **The redirection command for writing something to file is `>`.**
 
 Let's try it out and put all the sequences that contain 'NNNNNNNNNN' from the `Mov10_oe_1.subset.fq` into another file called `bad_reads.txt`.
 
+First we need to navigate back into the directory that contains these fastq files.  
+
 ```bash
-$ grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq > bad_reads.txt
+grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq > bad_reads.txt
 ```
 
 The prompt will go away for a little bit and then you will get it back, but nothing will be printed on the Terminal. But, you should have a new file called `bad_reads.txt`!
 
 ```bash
-$ ls -l
+ ls -l 
 ```
 
 Take a look at the file and see if it contains what you think it should. 
 
 > NOTE: If we already had a file named `bad_reads.txt` in our directory, it would have overwritten it without any warning!
 
-### Redirecting (and appending) with ">>"
+## Redirecting (and appending) with ">>"
 
 **The redirection command for appending something to an existing file is `>>`.**
 
 If we use `>>`, it will append to the existing content in a file, rather than overwrite it. This can be useful for saving more than one search. For example, the following command will append the bad reads from Mov10_oe_2 to the bad_reads.txt file that we just generated.
     
 ```bash
-$ grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_2.subset.fq >> bad_reads.txt
+ grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_2.subset.fq >> bad_reads.txt
 
-$ ls -l
+ ls 
 ```
 
 Did the size of the `bad_reads.txt` file change?
@@ -216,7 +221,7 @@ Did the size of the `bad_reads.txt` file change?
 Since our `bad_reads.txt` file isn't a raw_fastq file, we should move it to a different location within our directory. Let's move it to the `other` folder using the command `mv`. 
 
 ```bash
-$ mv bad_reads.txt ../other/
+mv bad_reads.txt ../other/
 ```
 
 ### Redirecting with pipes "|" (or piping)
@@ -225,29 +230,38 @@ $ mv bad_reads.txt ../other/
 
 **The pipe key** (<kbd>|</kbd>) is very likely not something you use very often (it is on the same key as the back slash (<kbd>\\</kbd>), right above the <button>Enter/Return</button> key). 
 
-What `|` does is take the output from one command, e.g. the output from `grep` that went whizzing by and runs it through the command specified after it. When it was all whizzing by before, we wished we could just take a look at it! Maybe we could use `less` instead of the rapid scroll. Well, it turns out that we can! We can **pipe the output `grep` command** to `less` to slowly scroll through, or to `head` to just see the first few lines.
+What `|` does is take the output from one command, and runs it through the command specified after it. 
+
+First, to really see the benefit let's type the following command again: 
 
 ```bash
-$ grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq | less
+grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq 
 ```
 
-Now we can use the arrows to scroll up and down and use `q` to get out.
+>Notice that we are at the **end** of the document automatically. It just whizzed on by! And if we wanted to find the first line, it get's messy and "jumpy" - there are even gaps! 
 
-Or we could just take a glance to see what the output looks like.
+Now let's **pipe the output of `grep` command** to `less`. This will allow us to slowly scroll through the entire document using the up and down arrows! 
 
 ```bash
-$ grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq | head -n 5
+grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq | less
+```
+
+Remember to use `q` to get out.
+
+Or let's say we are interested in the first few lines, we could do the following:
+
+```bash
+grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq | head -n 5
 ```
 
 Another thing we can also do is count the number of lines output by `grep`. 
 
-The `wc` command stands for ***w**ord **c**ount*. This command counts the number of lines, words and characters in the text input given to it. The `-l` argument will only count the number of lines instead of counting everything.
+We will introduce another command called `wc`. The `wc` command stands for ***w**ord **c**ount*. This command counts the number of lines, words and characters in the text input given to it. The `-l` argument will only count the number of lines instead of counting everything.
 
 ```bash
-$ grep NNNNNNNNNN Mov10_oe_1.subset.fq | wc -l
+grep NNNNNNNNNN Mov10_oe_1.subset.fq | wc -l
 ```
-
-*Try it out without the `-l` to see the full output.* 
+> Pause: What is this command telling us? There are a total of 30 lines that contain `NNNNNNNNNN` in the document Mov10_oe_1.subset.fq 
 
 > **Tip** - Similar to `grep`, you can type `wc --help` or `man wc` to see all options.
 
@@ -261,10 +275,10 @@ The philosophy behind the three redirection operators (`>`, `>>`, `|`) you have 
 
 ## Practice with searching and piping/redirection
 
-Let's use the new commands in our toolkit and a few new ones to examine the "gene annotation" file, **chr1-hg19_genes.gtf**. We will be using this file to find the genomic coordinates of all known exons on chromosome 1.
+Let's use the new commands in our toolkit and a few new ones to examine the "gene annotation" file, **chr1-hg19_genes.gtf**. We will be using this file to find the genomic coordinates of all known exons on chromosome 1. This file is located in the following directory: 
 
 ```bash
-$ cd ~/unix_lesson/reference_data/
+~/unix_lesson/reference_data/
 ```
 
 ### Introduction to the GTF file format
@@ -272,7 +286,7 @@ $ cd ~/unix_lesson/reference_data/
 Let's explore our `chr1-hg19_genes.gtf` file a bit. What information does it contain?
 
 ```bash
-$ less chr1-hg19_genes.gtf
+less chr1-hg19_genes.gtf
 ```
 
 	chr1    unknown exon    14362   14829   .       -       .       gene_id "WASH7P"; gene_name "WASH7P"; transcript_id "NR_024540"; tss_id "TSS7245";
@@ -291,31 +305,42 @@ The columns in the **GTF file contain the genomic coordinates (location) of gene
 Given our understanding of splice isoforms, we know that a given exon can be part of 2 or more different transcripts generated from the same gene. In a GTF file, this exon will be represented multiple times, once for each transcript (or splice isoform). For example, 
 
 ```bash
-$ grep PLEKHN1 chr1-hg19_genes.gtf | head -n 5
+grep PLEKHN1 chr1-hg19_genes.gtf | head -n 5 | less -S
 ```
 
 This search returns two different transcripts of the same gene, NM_001160184 and NM_032129, that contain the same exon.
 
-### Two new commands!
+>GTF file format
+> |Line|Description|
+> |----|-----------|
+> |1| chromosome number|
+> |2| source, name of program that generated the feature - its "unknown" above|
+> |3|feature type name|
+> |4|start position of feature|
+> |5|end position of feature|
+> |6|score|
+> |7|strand, defined at + (forward) or - (reverse)|
+> |8|frame|
+> |9|attribute, provides additional information about each feature|
 
-Before our practice, let's learn two new commands. 
+## Two new commands!
 
 * **`cut` is a command that extracts columns from files.** 
 
 We will use `cut` with the `-f` argument to specify which specific fields or columns from the dataset we want to extract. Let's say we want to get the 1st column (chromosome number) and the 4th column (starting genomic position) from `chr1-hg19_genes.gtf` file, we can say:
 
 ```bash
-$ cut -f 1,4 chr1-hg19_genes.gtf  | head
+cut -f 1,4 chr1-hg19_genes.gtf  | head
 ```
 
 > The `cut` command assumes our data columns are separated by tabs (i.e. tab-delimited). The `chr1-hg19_genes.gtf` is a tab-delimited file, so the default `cut` command works for us. However, data can be separated by other types of delimiters like "," or ";". If your data is not tab delimited, there is an argument you can add to your `cut` command, `-d` to specify the delimiter (e.g. `-d ","` with a .csv file).
 
 * **`sort` is a command used to sort the contents of a file in a particular order.** It has arguments that let you pick which column to sort by (`-k`), what kind of sorting you want to do (numeric `n`) and also if the result of the sorting should only return unique (`-u`) values. These are just 2 of the many features of the sort command. 
 
-Let's do a quick test of how the `-u` argument returns only unique lines (and remove duplicates).
+Let's run the following command first: 
 
 ```bash
-$ cut -f 1,4 chr1-hg19_genes.gtf | wc -l
+cut -f 1,4 chr1-hg19_genes.gtf | wc -l
 ```
 *How many lines are returned to you?*
 
@@ -327,7 +352,7 @@ $ cut -f 1,4 chr1-hg19_genes.gtf | wc -l
 Now apply the `sort -u` command before counting the lines.
 
 ```bash
-$ cut -f 1,4 chr1-hg19_genes.gtf | sort -u | wc -l
+cut -f 1,4 chr1-hg19_genes.gtf | sort -u | wc -l
 ```
 *How many lines do you see now?*
 
@@ -335,6 +360,11 @@ $ cut -f 1,4 chr1-hg19_genes.gtf | sort -u | wc -l
 	<summary><b><i>Click here to check your output</i></b></summary>
 	<p>Your command should have returned 27,852 lines.</p>
 </details>
+
+***
+## Summary
+
+Add command summary here! 
 
 ***
 
@@ -406,12 +436,6 @@ Now, to count how many unique exons are on chromosome 1, we will add back the `s
 	<code>grep exon chr1-hg19_genes.gtf | cut -f 1,4,5,7 | sort -u | wc -l</code><br>
 	The output returns 22,769 lines, indicating that repetitive lines have been removed.<br></p>
 </details>
-
-***
-
-### Summary!
-
-For what we did in one line of code in the exercise at the end, we could have done it in multiple steps by saving the output of each command to a new file. But that would not be as efficient as using pipes! All we needed was the number of unique exons, and the intermediate output was not useful. Avoiding the storage of the data from each of the intermediate steps prevents clutter, and helps us avoid wasting precious storage space! 
 
 ---
 ## Citation
