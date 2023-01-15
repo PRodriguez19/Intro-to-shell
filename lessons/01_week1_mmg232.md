@@ -127,18 +127,25 @@ ssh username@vacc-user1.uvm.edu
 Once logged in, you should see a new command prompt: 
 
 <p align="center">
-<img src="../img/login3.png" width="700">
+<img src="../img/login.png" width="700">
 </p>
-
-The command prompt on VACC will have some characters before the `$`, something like `[username@vacc-user1 ~]`, this is telling you your username and the name of the login node you have connected to. 
-
-***Once again, the dollar sign is a prompt, which shows us that the shell is waiting for input. Moving forward, when typing commands, either from these lessons or from other sources, do not type in the prompt, only the command that follows it.***
 
 ***
 # Navigating the File System
 ## Copying example data folder 
 
-Now that we are logged-in to the VACC, lets explore. The first thing to do is to check if there are any files in the data folder we are currently in. When you log in to a cluster, you will land within a folder designated specifically for your use, and is referred to as your "home directory". We will begin introducing a few commands that are used to list, create, inspect, rename, and delete files and/or directories. 
+Now that we are logged-in to the VACC, lets explore terminal. Your screen should look similar to the following: 
+
+<p align="center">
+<img src="../img/login3.png" width="700">
+</p>
+
+The "$" is called the **"command prompt"**. 
+The command prompt on VACC will have some characters before the `$`, something like `[username@vacc-user1 ~]`, this is telling you your username and the name of the login node you have connected to. 
+
+***The dollar sign is a prompt which shows us that the shell is waiting for input. Moving forward, when typing commands, either from these lessons or from other sources, do not type in the command prompt $, only the command that follows it.***
+
+The first thing to do is to check if there are any files in the data folder we are currently in. When you log in to a cluster, you will land within a folder designated specifically for your use, and is referred to as your "home directory". We will begin introducing a few commands that are used to list, create, inspect, rename, and delete files and/or directories. 
 
 Let's list the contents of our home directory using a command called `ls`.
 
@@ -153,25 +160,23 @@ Ask for a screenshot
 Now let's bring in a data folder from a different location on the cluster to our home directory by using the `cp` command. **Copy and paste the following command** all the way from `cp` and including the period symbol at the end `.`
 
 ```bash
-$ cp -r /users/p/d/pdrodrig/MMG232/unix_lesson/ .
+cp -r /users/p/d/pdrodrig/unix_lesson/ .
 ```
 
 > Let's break this down.  
-'cp' is the command for copy. This command required you to specify the location of the item you want to copy (/users/p/d/pdrodrig/MMG232/unix_lesson/) and the location of the destination (.); please note the space between the two in the command. The “-r” is an option that modifies the copy command to do something slightly different than usual. The "." means "here", i.e. the destination location is where you currently are.
+'cp' is the command for copy. This command required you to specify the location of the item you want to copy (/users/p/d/pdrodrig/unix_lesson/) and the location of the destination (.); please note the space between the two in the command. The “-r” is an option that modifies the copy command to do something slightly different than usual. The "." means "here", i.e. the destination location is where you currently are.
 
-Now let's see if we can see this data folder we brought in can be "listed".
+Now, you should see "unix_lesson" show up as the output of `ls`. This is a folder we should all have in our home directory. 
 
-```bash
+```
 ls
 ```
-
-You should see "unix_lesson" show up as the output of `ls`. This is a folder we should all have in our home directory. 
 
 <p align="center">
 <img src="../img/unix_lesson.png" width="700">
 </p>
 
-***
+
 ## Listing contents of data folder 
 
 Let's look at what is inside the folder "unix_lesson" and explore this further. We are use to clicking on a folder name to open it, however, now we are forced to change our mindset and open a folder or "directory" differently within the shell environment. 
@@ -179,13 +184,13 @@ Let's look at what is inside the folder "unix_lesson" and explore this further. 
 To look inside the `unix_lesson` directory, we need to change which directory we are *in*. To do this we can use the `cd` command, which stands for "change directory". 
 
 ```bash
-$ cd unix_lesson
+cd unix_lesson
 ```
 
 Notice the change in your command prompt. The "~" symbol from before should have been replaced by the string `unix_lesson`. This means that our `cd` command ran successfully and we are now *in* the new directory. Let's see what is in here by listing the contents:
 
 ```bash
-$ ls
+ls
 ```
 
 You should see:
@@ -202,8 +207,10 @@ There are five items listed when you run `ls`, but how do you know if these are 
 To answer this question, we can modify the default behavior of `ls` by adding an **"argument"** to get more information. 
 
 ```bash
-$ ls -F
+ls -F
+```
 
+```
 genomics_data/  other/  raw_fastq/  README.txt  reference_data/
 ```
 
@@ -215,7 +222,7 @@ Each line of output represents a file or a directory. The directory lines start 
 Most commands will take additional arguments that control their behavior. How do we know what arguments are available for a particular command? The most commonly used shell commands have a manual available that can be accessed using the `man` command. Let's try this command with `ls`:
 
 ```bash
-$ man ls
+man ls
 ```
 
 This will open the manual page for `ls` and you will lose the command prompt. It will bring you to a so-called "buffer" page, a page you can navigate with your mouse or if you want to use your keyboard we have listed some basic key strokes:
