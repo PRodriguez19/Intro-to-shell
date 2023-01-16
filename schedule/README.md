@@ -91,21 +91,10 @@ Office phone number: 802-656-1718 (Monday-Friday; 8am to 5pm)
 Cheat sheets:
 * [http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/](http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
 * [https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md](https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md)
-* [tldr_ : Simplified version of the `man` pages (online and searchable)](https://tldr.ostera.io/)
-
-Online tutorials:
-* [Explain Shell](http://explainshell.com)
-* [Introduction to the Command Line for Genomics](https://datacarpentry.org/shell-genomics/)
-* [BASH Programming - Introduction HOW-TO](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
-* [Bioinformatics from the Command Line](https://medium.com/ngs-sh)
 
 General help:
 * Google it! - if you don't know how to do something, try Googling it, other people have probably had the same question.
 * Learn by doing! There's no real other way to learn this than by trying it out.
-  * Use vim on your laptop
-  * Move around the directory structure on your laptop using the Terminal/Shell counts
-  * Open folders and files using the command `open`
-  * Automate something you don't really need to automate
 * Use `man bash` to get more information about bash (bourne-again shell)
 
 ***
