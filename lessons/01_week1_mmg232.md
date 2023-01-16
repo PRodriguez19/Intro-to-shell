@@ -155,7 +155,6 @@ $ ls
 > **Tip** - `ls` stands for "**l**i**s**t" and it lists the contents of a directory. 
 
 **Question for students: What folders are you currently seeing in your home directory?**  
-Ask for a screenshot 
 
 Now let's bring in a data folder from a different location on the cluster to our home directory by using the `cp` command. **Copy and paste the following command** all the way from `cp` and including the period symbol at the end `.`
 
