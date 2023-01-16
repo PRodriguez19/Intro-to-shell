@@ -364,7 +364,20 @@ cut -f 1,4 chr1-hg19_genes.gtf | sort -u | wc -l
 ***
 ## Summary
 
-Add command summary here! 
+```
+grep          # Allows for searching within files without opening them
+               +   grep search_term filename 
+
+>          	  # Redirect output to another file  
+
+>>            # append to an existing file rather than overwrite it  
+
+|             # Pipe key 
+				+ takes the output and runs it through the command specified after it 
+
+cut           # used to extract specific columns from a tab-deliminated file 
+
+```
 
 ***
 

@@ -17,7 +17,7 @@ In order to create or edit files we will need to use a **text editor**. When we 
 
 ## GUI text editors
 
-A GUI is an interface that has buttons and menus that you can click on to issue commands to the computer and you can move about the interface just by pointing and clicking. You might be familar with GUI text editors, such as [BBEdit](http://www.barebones.com/products/bbedit/) and [Visual Studio Code](https://code.visualstudio.com/), which allow you to write and edit plain text documents. These editors often have features to easily search text, extract text, and highlight syntax from multiple programming languages. They are great tools, and indeed you should download one to use to create your own scripts in the future! 
+A GUI is an interface that has buttons and menus that you can click on to issue commands to the computer and you can move about the interface just by pointing and clicking. You might be familiar with GUI text editors, such as [BBEdit](http://www.barebones.com/products/bbedit/) and [Visual Studio Code](https://code.visualstudio.com/), which allow you to write and edit plain text documents. These editors often have features to easily search text, extract text, and highlight syntax from multiple programming languages. They are great tools, and indeed you should download one to use to create your own scripts in the future! 
 
 ## Command-line editors
 Today we will be working with command-line editors. With command-line editors you must navigate the interface using the arrow keys and shortcuts, since you do not have the option to 'point-and-click'. Some popular editors include [Emacs](http://www.gnu.org/software/emacs/), [Vim](http://www.vim.org/), or a graphical editor such as [Gedit](http://projects.gnome.org/gedit/). These are editors which are generally available for use on high-performance compute clusters. There are also simpler editors available for use on the cluster (e.g. [nano](http://www.nano-editor.org/)), but tend to have limited functionality.
@@ -56,7 +56,7 @@ This is to exit the editor. If there are changes, it will ask you whether to sav
 >
 >| key              | action                 |
 >| ---------------- | ---------------------- |
->| <button>control</button> + X     | exit fromt the editor |
+>| <button>control</button> + X     | exit from the editor |
 >| <button>control</button> + A      | Let's you jump from the beginning of the line |
 >| <button>control</button> + E     | Let's you jump from the end of the line  |
 >| <button>control</button> + Y      | Scroll page down |
@@ -171,7 +171,7 @@ Once you have finished typing, you can display line numbers by changing to *comm
 | <button>:set nonumber</button>     | to remove line numbers    |
 
 
-**Save the document.** Check to see what mode you are currently in. **While in command mode**, try moving around the file `spider.txt` and familarizing yourself with some of these shortcuts!  
+**Save the document.** Check to see what mode you are currently in. **While in command mode**, try moving around the file `spider.txt` and familiarizing yourself with some of these shortcuts!  
 
 **Navigating around the file**
 
@@ -195,7 +195,7 @@ Practice some of the editing shortcuts, then **quit the document and remember to
 | <button>u</button>     | to undo |
 | <button>Ctrl + r</button>     | to redo     |
 | <button>/*pattern*</button>     | to search for a pattern (*n/N* to move to next/previous match)    |
-| <button>:%s/*search*/*replace*/g</button>     | to search for a pattern and replace for all occurences     |
+| <button>:%s/*search*/*replace*/g</button>     | to search for a pattern and replace for all occurrences     |
 
 **Class Exercise**
 
@@ -239,7 +239,7 @@ STAR --runThreadN 6 \
 3. Save the file. 
 4. Replace every occurrence of "username" with your UVM netid. 
 5. Delete: "scratch2" folder 
-6. hange the --runThreadN from 6 to 4 
+6. Change the --runThreadN from 6 to 4 
 7. You just realized that the fasta and gtf you downloaded from Ensembl is actually from GRCh19 not CRCh38. This needs to be changed in your code. 
 8. Save the file. 
 9. Open the file and take a screenshot of your terminal screen. Submit this as homework part B. 
