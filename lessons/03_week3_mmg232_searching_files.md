@@ -375,7 +375,7 @@ grep          # Allows for searching within files without opening them
 |             # Pipe key 
 				+ takes the output and runs it through the command specified after it 
 
-cut           # used to extract specific columns from a tab-deliminated file 
+cut           # used to extract specific columns from a tab-delimited file 
 
 ```
 
