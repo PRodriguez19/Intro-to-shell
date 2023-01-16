@@ -340,22 +340,6 @@ $ rm -ri fastq_backup
 
 ***
 
-## Homework Assignment #2 (20 points)
-**For this assignment you will have until 11:59PM on Monday, January 23rd to submit. Late assignments will not be accepted.**  
-
-### Directions for Students: 
-Open a new Microsoft Word Document and submit a screenshot of steps 1-3 in the order described on your terminal using your VACC account. The first four lines of your document should contain the following:  
-+ Your name
-+ MMG232
-+ Today's date
-+ Class Participation Assignment #2 
-
-1. Create a new folder in `unix_lesson` called `selected_fastq`
-2. Copy over the Irrel_kd_2.subset.fq and Mov10_oe_2.subset.fq from `raw_fastq` to the `~/unix_lesson/selected_fastq` folder
-3. Rename the `selected_fastq` folder and call it `exercise1`
-
-*** 
-
 ## Commands
 
 ```
@@ -382,6 +366,23 @@ mv          # Move
 rm          # Remove
               +   used to delete files and directories 
 ```
+***
+
+## Homework Assignment #2 (20 points)
+**For this assignment you will have until 11:59PM on Monday, January 23rd to submit. Late assignments will not be accepted.**  
+
+### Directions for Students: 
+Open a new Microsoft Word Document and submit a screenshot of steps 1-3 in the order described on your terminal using your VACC account. The first four lines of your document should contain the following:  
++ Your name
++ MMG232
++ Today's date
++ Homework Assignment #2
+
+1. Create a new folder in `unix_lesson` called `selected_fastq`
+2. Copy over the Irrel_kd_2.subset.fq and Mov10_oe_2.subset.fq from `raw_fastq` to the `~/unix_lesson/selected_fastq` folder
+3. Rename the `selected_fastq` folder and call it `exercise1`
+
+*** 
 
 ## Citation
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*

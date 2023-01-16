@@ -332,7 +332,7 @@ Open a new Microsoft Word Document and submit answers to questions 1-3. The firs
 + Your name
 + MMG232
 + Today's date
-+ Class Participation Assignment #2 
++ Homework Assignment #3
 
 1.  Type `ls'` then type `history` then hit <button>return</button>
 

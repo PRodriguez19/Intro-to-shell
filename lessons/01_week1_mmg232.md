@@ -242,7 +242,7 @@ Open a new Microsoft Word Document to submit answers to questions 1-3. The first
 + Your name
 + MMG232
 + Today's date
-+ Class Participation Assignment #1   
++ Homework Assignment #1  
 
 ### Task 1: 
 * On Terminal, open the manual page for the `cp` command. Skim through the information. 

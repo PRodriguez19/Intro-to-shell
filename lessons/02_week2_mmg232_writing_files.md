@@ -221,7 +221,7 @@ Open a new Microsoft Word Document and submit two screenshot (Part A and Part B)
 + Your name
 + MMG232
 + Today's date
-+ Class Participation Assignment #2 
++ Homework Assignment #4
 
 The scenario: 
 You got the following line of codes from a trusted source but need to modify it so you can submit it to the VACC-Bluemoon server. You decide its time to make your own script. Follow the steps below: 
