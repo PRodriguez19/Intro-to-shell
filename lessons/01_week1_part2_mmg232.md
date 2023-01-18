@@ -3,12 +3,107 @@ Week: "1"
 Lesson: "Intro to VACC & Command Line Part II"
 Date: "Thursday, January 19, 2023"
 ---
-# Starting Exercise: 
-If you are able to complete the below tasks on your own, then you have successfully learned the lessons of Tuesday, January 17th. If not, please revisit the lesson titled **01_week1_mmg232.md**. All lessons will build upon each other therefore, it is crucial to keep up with the course content. 
+# Instructions on installing FileZilla: An FTP Client Software
+FileZilla is a widely used FTP client that is free and open source. This will allow you to securely transfer files from your local desktop onto a server (for us its the VACC). 
 
-+ Log-in to VACC-OOD and open terminal 
-+ Navigate into `unix_lesson` folder 
-+ List contents of `unix_lesson` folder 
+This is a *temporary fix* until the permissions are changed and I have access to securly transfer files into your VACC account. 
+
+>*Before proceeding: if you are uncomfortable with downloading filezilla on your local desktop altogether, there is another way for us to go about this - but it requires me to individually put my password into your computer's so it can be time-consuming for each person but completely doable.*
+
+Please download FileZilla Client using this [link](https://filezilla-project.org/)  
+This is a really nice step-by-step [6-min youtube video](https://youtu.be/adxmlHDim6c) that will show you how to download FileZilla Client onto your laptop. 
+
+Around the 2-min timepoint of the video, it states to "Click on File and then select Site Manager". 
+To configure your site manager, you will need to create a new site called "VACC".
+
+Below is an image of how my site manager looks like. 
+>No Port was indicated, I also did not change the transfer settings. 
+>Once you've entered all the information as shown, click Connect. 
+
+<p align="center">
+<img src="../img/filezilla.png" width="600">
+</p>
+
+Around the 3:32-min timepoint of the video, it says "...you should now be connected to your server and be ready to transfer files.." 
+
+The dataset you will need to download onto your local desktop is: 
+[Introduction to Shell: Dataset](https://www.dropbox.com/s/t3lkyz1pz021222/unix_lesson.tar.gz?dl=1)  
+**I suggest moving the dataset from your Downloads folder to your Desktop.**
+
+Now, using Filezilla - transfer the dataset folder you just downloaded into your VACC account. If you feel uncomfortable doing this, no worries, we will go over these steps tomorrow in class. 
+
+Again, this is a temporary fix. I am waiting to chat with the folks at the VACC so we can avoid this in the future. Thank you for bearing with me! 
+
+
+## STOP HERE - We will go over the rest tomorrow! 
+
+```
+scp –r 
+pdrodrig@vacc-user1.uvm.edu:/users/p/d/pdrodrig/vacc-ondemand/data/unix_lesson . 
+```
+
+*** 
+# Lesson for Thursday, January 19th 
+
+# Learning Objectives for Today's Lesson
+-  Understand the organization of the Filesystem 
+-  Distinguish between Full versus Relative paths
+-  listing, copying, creating, moving and removing data
+
+## Listing contents of data folder 
+
+Now that you have your data folder, let's look at what is inside "unix_lesson" and explore this further. We are use to clicking on a folder name to open it, however, now we are forced to change our mindset and open a folder or "directory" differently within the shell environment. 
+
+To look inside the `unix_lesson` directory, we need to change which directory we are *in*. To do this we can use the `cd` command, which stands for "change directory". 
+
+```bash
+cd unix_lesson
+```
+
+Notice the change in your command prompt. The "~" symbol from before should have been replaced by the string `unix_lesson`. This means that our `cd` command ran successfully and we are now *in* the new directory. Let's see what is in here by listing the contents:
+
+```bash
+ls
+```
+
+You should see:
+
+```
+genomics_data  other  raw_fastq  README.txt  reference_data
+```
+Notice that `ls` has printed the name of the files and directories in the current directory in alphabetical order, arranged neatly into columns. 
+
+### Arguments
+
+There are five items listed when you run `ls`, but how do you know if these are files or directories with more items inside? 
+
+To answer this question, we can modify the default behavior of `ls` by adding an **"argument"** to get more information. 
+
+```bash
+ls -F
+```
+
+```
+genomics_data/  other/  raw_fastq/  README.txt  reference_data/
+```
+
+Anything with a "/" after its name is a directory. Things with an asterisk "*" after them are programs.  If there are no "decorations" after the name, it's a normal text file.
+
+Each line of output represents a file or a directory. The directory lines start with `d`. 
+
+### How to get more information on Arguments
+Most commands will take additional arguments that control their behavior. How do we know what arguments are available for a particular command? The most commonly used shell commands have a manual available that can be accessed using the `man` command. Let's try this command with `ls`:
+
+```bash
+man ls
+```
+
+This will open the manual page for `ls` and you will lose the command prompt. It will bring you to a so-called "buffer" page, a page you can navigate with your mouse or if you want to use your keyboard we have listed some basic key strokes:
+* 'spacebar' to go forward 
+* 'b' to go backward
+* Up or down arrows to go forward or backward, respectively
+
+**To get out of the `man` "buffer" page and to be able to type commands again on the command prompt, press the `q` key!**
 
 ***
 
@@ -368,20 +463,41 @@ rm          # Remove
 ```
 ***
 
-## Homework Assignment #2 (20 points)
+## Homework Assignment #1 & 2 (40 points)
 **For this assignment you will have until 11:59PM on Monday, January 23rd to submit. Late assignments will not be accepted.**  
 
 ### Directions for Students: 
-Open a new Microsoft Word Document and submit a screenshot of steps 1-3 in the order described on your terminal using your VACC account. The first four lines of your document should contain the following:  
+Open a new Microsoft Word Document, the first four lines of your document should contain the following:  
 + Your name
 + MMG232
 + Today's date
-+ Homework Assignment #2
++ Homework Assignment # 1 & 2
+ 
 
-1. Create a new folder in `unix_lesson` called `selected_fastq`
-2. Copy over the Irrel_kd_2.subset.fq and Mov10_oe_2.subset.fq from `raw_fastq` to the `~/unix_lesson/selected_fastq` folder
-3. Rename the `selected_fastq` folder and call it `exercise1`
+### Task 1: 
+* On Terminal, open the manual page for the `cp` command. Skim through the information. 
+  
+1)  What does the -u option stand for and what does it do?   
+2)  Which option would you use to explain what is being done (i.e. verbose)?   
+    
+* Quit the `man` buffer page and come back to your command prompt.  
 
+> **Tip** - Shell commands can get extremely complicated. No one can possibly learn all of these arguments, of course. So you will probably find yourself referring to the manual page frequently.
+
+> **Tip** - If the manual page within the Terminal is hard to read , the manual exists online too. For example, here is the linux manual page for `cp`. https://man7.org/linux/man-pages/man1/cp.1.html In addition to the arguments, you can also find good examples online; ***Google is your friend.***
+
+
+### Task 2: 
+* Use the `-l` option for the `ls` command to display more information for each item in the `unix_lesson` folder. 
+ 
+3) Submit a screenshot of your terminal screen and underneath describe what additional information is provided that you didn't see with the bare `ls` command. 
+
+
+**For #4-6, submit a screenshot of your terminal screen. Be sure to clear your terminal screen using <button>control</button> + L before proceeding**  
+
+4) Create a new folder in `unix_lesson` called `selected_fastq`  
+5) Copy over the Irrel_kd_2.subset.fq and Mov10_oe_2.subset.fq from `raw_fastq` to the `selected_fastq` folder  
+6) Rename the `selected_fastq` folder and call it `exercise1`  
 *** 
 
 ## Citation

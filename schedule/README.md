@@ -11,10 +11,7 @@
 
 ### Before the next class:
 
-Please complete Homework Assignment #1:
-+ **Remember to Copy over** your the answers to a Microsoft Word Document. 
-+ Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
-
+Homework assignment #1 has been moved for Thursday's lecture. 
 
 ***
 
@@ -27,7 +24,7 @@ Please complete Homework Assignment #1:
 
 ### Before the next class:
 
-Please complete the Homework Assignment #2:
+Please complete Homework Assignment #1 and #2:
 + **Remember to Copy over** your the answers to a Microsoft Word Document. 
 + Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
 
