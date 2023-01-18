@@ -79,7 +79,7 @@ Please complete the Homework Assignment #5:
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~ 40 mins |  [Shell Script](../lessons/03_week3_mmg232_shell-scripts_variable.md) |
+| ~ 40 mins |  [Shell Script]
 | ~ 20 mins |  [Loops](../lessons/03_week3_mmg232_searching_files.md) |
 
 ### Before the next class:
