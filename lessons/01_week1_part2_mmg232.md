@@ -45,7 +45,7 @@ pdrodrig@vacc-user1.uvm.edu:/users/p/d/pdrodrig/vacc-ondemand/data/unix_lesson .
 *** 
 # Lesson for Thursday, January 19th 
 
-# Learning Objectives for Today's Lesson
+## Learning Objectives for Today's Lesson
 -  Understand the organization of the Filesystem 
 -  Distinguish between Full versus Relative paths
 -  listing, copying, creating, moving and removing data
