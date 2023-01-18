@@ -23,6 +23,10 @@ Full link: https://vacc-ondemand.uvm.edu
 ## To begin: Click on Class schedule 
 * [Class schedule](schedule/) 
 
+## Seminars at UVM 2023: 
+For an up-to-date list of seminars/conferences/etc. occuring at UVM please use the link below:  
+[UVM events](UVM_events_2023/)
+
 ---
 
 ### Citation
