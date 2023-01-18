@@ -52,7 +52,14 @@ pdrodrig@vacc-user1.uvm.edu:/users/p/d/pdrodrig/vacc-ondemand/data/unix_lesson .
 
 ## Listing contents of data folder 
 
-Now that you have your data folder, let's look at what is inside "unix_lesson" and explore this further. We are use to clicking on a folder name to open it, however, now we are forced to change our mindset and open a folder or "directory" differently within the shell environment. 
+First, notice the file you downloaded has the file ending of .tar.gz which means that this is a compressed file that needs to be decompressed to view the contents. 
+
+To decompress the folder type the following command: 
+```
+tar -xvzf unix_lessn.tar.gz
+```
+
+Now let's look at what is inside `unix_lesson`. We are use to clicking on a folder name to open it, however, now we are forced to change our mindset and open a folder or "directory" differently within the shell environment. 
 
 To look inside the `unix_lesson` directory, we need to change which directory we are *in*. To do this we can use the `cd` command, which stands for "change directory". 
 
@@ -60,7 +67,7 @@ To look inside the `unix_lesson` directory, we need to change which directory we
 cd unix_lesson
 ```
 
-Notice the change in your command prompt. The "~" symbol from before should have been replaced by the string `unix_lesson`. This means that our `cd` command ran successfully and we are now *in* the new directory. Let's see what is in here by listing the contents:
+Notice the change in your command prompt. The "~" symbol from before should have been replaced by the string `unix_lesson`. This means that our `cd` command ran successfully and we are now *in* the new directory. Let's see what's inside by listing the contents:
 
 ```bash
 ls
@@ -75,7 +82,7 @@ Notice that `ls` has printed the name of the files and directories in the curren
 
 ### Arguments
 
-There are five items listed when you run `ls`, but how do you know if these are files or directories with more items inside? 
+There are five items listed when you run `ls`, but how do you know if these are files or folders with more files inside of it? 
 
 To answer this question, we can modify the default behavior of `ls` by adding an **"argument"** to get more information. 
 
@@ -89,9 +96,8 @@ genomics_data/  other/  raw_fastq/  README.txt  reference_data/
 
 Anything with a "/" after its name is a directory. Things with an asterisk "*" after them are programs.  If there are no "decorations" after the name, it's a normal text file.
 
-Each line of output represents a file or a directory. The directory lines start with `d`. 
 
-### How to get more information on Arguments
+### How to get more information about Arguments
 Most commands will take additional arguments that control their behavior. How do we know what arguments are available for a particular command? The most commonly used shell commands have a manual available that can be accessed using the `man` command. Let's try this command with `ls`:
 
 ```bash
