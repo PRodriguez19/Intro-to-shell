@@ -75,6 +75,21 @@ Please complete the Homework Assignment #5:
 
 ***
 
+## Thursday, February 2nd 
+
+| Time |  Topic  | 
+|:-----------|:----------|
+| ~ 40 mins |  [Shell Script](../lessons/03_week3_mmg232_shell-scripts_variable.md) |
+| ~ 20 mins |  [Loops](../lessons/03_week3_mmg232_searching_files.md) |
+
+### Before the next class:
+
+Please complete the Homework Assignment #6:
++ **Remember to Copy over** your the answers to a Microsoft Word Document. 
++ Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.  
+
+***
+
 ## Questions?
 Please email me if you have questions or would like to schedule a meeting  
 
