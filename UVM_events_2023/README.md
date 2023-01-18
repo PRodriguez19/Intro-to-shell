@@ -13,7 +13,7 @@ Zoom Link: https://uvmcom.zoom.us/j/94701144303
 
 
 ## Dr. Andrew Garner of New England Biolabs 
-February 1st, 2023 
-MedEd 200 
-9:30 am 
-https://www.neb.com/research-labs/gardner-lab 
+February 1st, 2023   
+MedEd 200   
+9:30 am   
+https://www.neb.com/research-labs/gardner-lab   
