@@ -106,13 +106,6 @@ This will open the manual page for `ls` and you will lose the command prompt. It
 **To get out of the `man` "buffer" page and to be able to type commands again on the command prompt, press the `q` key!**
 
 ***
-
-# Learning Objectives for Today's Lesson
--  Understand the organization of the Filesystem 
--  Distinguish between Full versus Relative paths
--  Copying, creating, moving and removing data
-
-*** 
 # Navigating the Filesystem
 A filesystem organizes a computer's files and directories into a tree structure. 
 
