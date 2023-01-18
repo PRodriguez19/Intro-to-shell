@@ -56,7 +56,7 @@ First, notice the file you downloaded has the file ending of .tar.gz which means
 
 To decompress the folder type the following command: 
 ```
-tar -xvzf unix_lessn.tar.gz
+tar -xvzf unix_lesson.tar.gz
 ```
 
 Now let's look at what is inside `unix_lesson`. We are use to clicking on a folder name to open it, however, now we are forced to change our mindset and open a folder or "directory" differently within the shell environment. 
@@ -249,7 +249,7 @@ $ ls Mov10_oe_1<tab>
 
 ## Relative paths
 
-We have talked about **full** paths so far, but there is a way to specify paths to folders and files without having to worry about the root directory. And you have used this before when we were learning about the `cd` command.
+We have talked about **full** paths so far, but there are other ways to specify paths to folders and files without having to worry about the root directory. 
 
 Let's change directories back to our home directory, and once more change directories from `~` (home) to `raw_fastq` in a single step. (*Feel free to use your tab-completion to complete your path!*)
 
@@ -280,14 +280,6 @@ You should now be in the `unix_lesson` directory (check command prompt or run `p
 >     <P>When you are at the root directory, since there is no parent to the root directory!</P>
 >   </details>
 
-When using relative paths, you might need to check what the branches are downstream of the folder you are in. There is a really handy command (`tree`) that can help you see the structure of any directory.
-
-```bash
-$ tree
-```
-
-If you are aware of the directory structure, you can string together as long a list of directories as you like using either **relative** or **full** paths.
-
 
 ## Synopsis of Full versus Relative paths
 
@@ -301,7 +293,7 @@ You can usually use either a full path or a relative path depending on what is m
 It can get really complex, real fast!  
 
 ```
-/users/p/d/pdrodrig/software/bin/samtools merge WT_Ikaros_rep2_merged.bam /gpfs2/scratch/jrboyd/pipelines/cutruntools/output_mm10_cutnrun_bcell_stim_032621/aligned.aug10/sorted/WTU_Ikaros_H100_rep1_2_S23_L002_aligned_reads.bam /users/p/d/pdrodrig/cutnrun_bcell/unmerged_bams/WT_H100_IK_rep1.IK2_S2_L001_aligned_reads.bam;
+samtools merge /users/p/d/pdrodrig/software/bin/samtools merge WT_Ikaros_rep2_merged.bam /gpfs2/scratch/jrboyd/pipelines/cutruntools/output_mm10_cutnrun_bcell_stim_032621/aligned.aug10/sorted/WTU_Ikaros_H100_rep1_2_S23_L002_aligned_reads.bam /users/p/d/pdrodrig/cutnrun_bcell/unmerged_bams/WT_H100_IK_rep1.IK2_S2_L001_aligned_reads.bam;
 ```
 > Lets break this down! 
 
