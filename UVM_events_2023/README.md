@@ -3,10 +3,10 @@
 Here is a list of events occuring at UVM that may interest MMG232 students! 
 
 ## UVM Biomedical Enginnering Research Conference   
-Wednesday, January 18, 2023
-HSRF 200
-12-1PM 
-Zoom Link: https://uvmcom.zoom.us/j/94701144303 
+Wednesday, January 18, 2023  
+HSRF 200  
+12-1PM    
+Zoom Link: https://uvmcom.zoom.us/j/94701144303   
 + Scoot Raymond MD, PhD - "Bioinspired Transradial Catheter for Cerebral Angiography" 
 + Gerry Herrera, PhD - "Understanding How the Urinary Bladder Senses Fullness" 
 + Matthew Caporizzo, PhD - "Engineering Biomimetic Platforms to Study Heart Disease" 
