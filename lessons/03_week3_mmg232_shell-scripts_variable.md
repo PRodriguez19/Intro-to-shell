@@ -189,7 +189,7 @@ wc -l $file
 
 ***
 
-### Assigning the output from a command to a variable
+## Assigning the output from a command to a variable
 
 When creating shell scripts, variables are used to store information that can be used later in the script (once or many times over). The value stored can be hard-coded in as we have done above, assigning the variable a numeric or character value. Alternatively, the value stored can be the output of another command. We will demonstrate this using a new command called `basename`.
 
@@ -220,7 +220,7 @@ You should now see that only `Mov10_oe_1.subset` is returned.
 
 ***
 
-**Exercise**
+**Class Exercise**
 
 1. How would you modify the above `basename` command above to only return `Mov10_oe_1`?
 2. Use `basename` with the file `Irrel_kd_1.subset.fq` as input. Return only `Irrel_kd_1` to the terminal.
@@ -252,7 +252,7 @@ $ echo $samplename
 ```
 
 > #### The `basename` command
-> It is hard to see the utility of this command by just running it at command-line, but it is very useful command when creating scripts for analysis. Within a script it is common to create an output file and the `basename` allows us to easily create a prefix to use for naming the output files. We will demonstrate this in more detail during our ["Loops and Automation" lesson](06_loops_and_automation.md).
+> It is hard to see the utility of this command by just running it at command-line, but it is very useful command when creating scripts for analysis. Within a script it is common to create an output file and the `basename` allows us to easily create a prefix to use for naming the output files. We will demonstrate this in more detail shortly. 
 
 
 ## Shell scripting with bash variables
@@ -337,53 +337,13 @@ echo "Report complete!"
 
 ***
 
-**Exercise**
-
-1. Run the script `directory_info.sh`. Report what gets printed to the screen.
-2. Open up the script `directory_info.sh` using vim. Change the approproiate line of code so that our directory of interest is `~/unix_lesson/genomics_data`. Save and exit Vim.
-3. Run the script with the changes and report what gets printed to the screen.
-
-	
-	<details>
-		<summary><b><i>Answers</i></b></summary>
-		<p><i>Question 1</i><br>
-		<code>sh directory_info.sh</code></p>
-	<pre> Reporting on the directory raw_fastq ...
-	These are the contents of raw_fastq
-	total 384128
-	-rw-rw-r-- 1 mm573 mm573 55169229 Sep 30 10:40 Irrel_kd_1.subset.fq
-	-rw-rw-r-- 1 mm573 mm573 47460403 Sep 30 10:40 Irrel_kd_2.subset.fq
-	-rw-rw-r-- 1 mm573 mm573 36268325 Sep 30 10:40 Irrel_kd_3.subset.fq
-	-rw-rw-r-- 1 mm573 mm573 75706556 Sep 30 10:40 Mov10_oe_1.subset.fq
-	-rw-rw-r-- 1 mm573 mm573 68676755 Sep 30 10:40 Mov10_oe_2.subset.fq
-	-rw-rw-r-- 1 mm573 mm573 42742047 Sep 30 10:40 Mov10_oe_3.subset.fq
-	The total number of files in this directory is:
-	6
-	Report complete!</pre>
-		<p><i>Question 2</i><br>
-		Change:<br>
-		<code>dirPath=~/unix_lesson/raw_fastq</code> to:<br>
-		<code>dirPath=~/unix_lesson/genomics_data</code></p>
-		<p><i>Question 3</i><br>
-		<code>sh directory_info.sh</code></p>
-	<pre> Reporting on the directory genomics_data ...
-	These are the contents of genomics_data
-	total 26244
-	-rwxrwxr-- 1 mm573 mm573   130904 Sep 30 10:40 Encode-hesc-Nanog.bed
-	-rw-rw-r-- 1 mm573 mm573 21893006 Sep 30 10:40 na12878_q20_annot.vcf
-	The total number of files in this directory is:
-	2
-	Report complete!</pre>
-	</details>
-				
-
-***
 ## Summary   
 
-In this lesson, we described shell scripts and introduced a few related concepts that are helpful when you are starting out. It is important to understand each of the indvidual concepts, but also to see how they all come together to add flexibility and efficency to your script. Later in the workshop we will further illustrate the power of scripts and how they can make our lives (when coding) much easier. Any type of data you will want to analyze will inevitably involve not just one step, but many steps and perhaps many different tools/software programs. Compiling these into a shell script is the first step in creating your analysis workflow!
+In today's lesson, we described shell scripts and introduced a few related concepts that are helpful when you are starting out. It is important to understand each of the indvidual concepts, but also to see how they all come together to add flexibility and efficency to your script. Later on we will further illustrate the power of scripts and how they can make our lives (when coding) much easier. Any type of data you will want to analyze will inevitably involve not just one step, but many steps and perhaps many different tools/software programs. Compiling these into a shell script is the first step in creating your analysis workflow!
 
 ## Homework Assignment #6 
 
+Part A: 
 In today's lesson you made the following variable:
 ```bash
 file=Mov10_oe_1.subset.fq
@@ -394,24 +354,16 @@ file=Mov10_oe_1.subset.fq
 	1. Display the contents of the file using `cat`.
 	2. Retrieve only the lines which contain normal samples. (*Hint: use `grep`*).  
 
-	<details>
-	<summary><b><i>Answers</i></b></summary>
-		<p><i>Question 1</i><br>
-		<code>head -n 4 $file</code><br>
-		@HWI-ST330:304:H045HADXX:1:1101:1162:205<br></p>
-		<p><code>tail -n 4 $file</code><br>
-		@HWI-ST330:304:H045HADXX:2:2212:15724:100530</p>
-		<i>Question 2</i><br>
-		<code>meta=Mov10_rnaseq_metadata.txt</code>
-		<p><i>Part i</i><br>
-		<code>cat ../other/$meta</code> (relative path) or <br> 
-		<code>cat ~/unix_lesson/other/$meta</code> (full path)<br></p>
-		<p><i>Part ii</i><br>
-		<code>grep normal ../other/$meta</code> (relative path) or<br>
-       		<code>grep normal ~/unix_lesson/other/$meta</code> (full path)<br></p>
-	</details>
-	
-	
+
+Part B: 
+In today's lesson you made the following script: directory_info.sh: 
+
+1. Run the script `directory_info.sh`. Report what gets printed to the screen.
+2. Open up the script `directory_info.sh` using vim. Change the approproiate line of code so that our directory of interest is `~/unix_lesson/genomics_data`. Save and exit Vim.
+3. Run the script with the changes and report what gets printed to the screen.
+
+***
+
 ***
 ## Citation
 ---
