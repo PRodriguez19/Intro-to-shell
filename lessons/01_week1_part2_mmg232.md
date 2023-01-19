@@ -55,7 +55,6 @@ tar -xvzf unix_lesson.tar.gz
 scp –r 
 pdrodrig@vacc-user1.uvm.edu:/users/p/d/pdrodrig/vacc-ondemand/data/unix_lesson . 
 ```
-
 *** 
 
 ## Learning Objectives for Today's Lesson
