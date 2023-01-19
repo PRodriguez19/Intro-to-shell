@@ -56,7 +56,11 @@ scp –r
 pdrodrig@vacc-user1.uvm.edu:/users/p/d/pdrodrig/vacc-ondemand/data/unix_lesson . 
 ```
 *** 
+## Using VACC-OOD OFF-campus
+**To use the https://vacc-ondemand.uvm.edu/pun/sys/dashboard OFF-campus you will need to VPN first**  
+See https://www.uvm.edu/it/kb/article/install-cisco-vpn/ for more information!
 
+***
 ## Learning Objectives for Today's Lesson
 -  Understand the organization of the Filesystem 
 -  Distinguish between Full versus Relative paths
