@@ -3,7 +3,16 @@ Week: "1"
 Lesson: "Intro to VACC & Command Line Part II"
 Date: "Thursday, January 19, 2023"
 ---
-# Instructions on installing FileZilla: An FTP Client Software
+# Lesson for Thursday, January 19th 
+
+## Shared Directory 
+
+To access the course materials, please use the following command: 
+```
+cp -r /gpfs1/cl/mmg232/course_materials/unix_lesson .
+```
+
+## Instructions on installing FileZilla: An FTP Client Software
 FileZilla is a widely used FTP client that is free and open source. This will allow you to securely transfer files from your local desktop onto a server (for us its the VACC). 
 
 This is a *temporary fix* until the permissions are changed and I have access to securly transfer files into your VACC account. 
@@ -34,16 +43,13 @@ Now, using Filezilla - transfer the dataset folder you just downloaded into your
 
 Again, this is a temporary fix. I am waiting to chat with the folks at the VACC so we can avoid this in the future. Thank you for bearing with me! 
 
-
-## STOP HERE - We will go over the rest tomorrow! 
-
+## scp 
 ```
 scp –r 
 pdrodrig@vacc-user1.uvm.edu:/users/p/d/pdrodrig/vacc-ondemand/data/unix_lesson . 
 ```
 
 *** 
-# Lesson for Thursday, January 19th 
 
 ## Learning Objectives for Today's Lesson
 -  Understand the organization of the Filesystem 
