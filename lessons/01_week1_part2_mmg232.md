@@ -43,6 +43,13 @@ Now, using Filezilla - transfer the dataset folder you just downloaded into your
 
 Again, this is a temporary fix. I am waiting to chat with the folks at the VACC so we can avoid this in the future. Thank you for bearing with me! 
 
+Notice the file you downloaded has the file ending of .tar.gz which means that this is a compressed file that needs to be decompressed to view the contents. 
+
+To decompress the folder type the following command: 
+```
+tar -xvzf unix_lesson.tar.gz
+```
+
 ## scp 
 ```
 scp –r 
@@ -57,13 +64,6 @@ pdrodrig@vacc-user1.uvm.edu:/users/p/d/pdrodrig/vacc-ondemand/data/unix_lesson .
 -  listing, copying, creating, moving and removing data
 
 ## Listing contents of data folder 
-
-First, notice the file you downloaded has the file ending of .tar.gz which means that this is a compressed file that needs to be decompressed to view the contents. 
-
-To decompress the folder type the following command: 
-```
-tar -xvzf unix_lesson.tar.gz
-```
 
 Now let's look at what is inside `unix_lesson`. We are use to clicking on a folder name to open it, however, now we are forced to change our mindset and open a folder or "directory" differently within the shell environment. 
 
