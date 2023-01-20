@@ -335,15 +335,25 @@ ls | wc -l
 echo "Report complete!"
 ```
 
-***
 
 ## Summary   
 
 In today's lesson, we described shell scripts and introduced a few related concepts that are helpful when you are starting out. It is important to understand each of the indvidual concepts, but also to see how they all come together to add flexibility and efficency to your script. Later on we will further illustrate the power of scripts and how they can make our lives (when coding) much easier. Any type of data you will want to analyze will inevitably involve not just one step, but many steps and perhaps many different tools/software programs. Compiling these into a shell script is the first step in creating your analysis workflow!
 
+***
+
 ## Homework Assignment #6 
 
-Part A: 
+### **Please note that you will have until Monday, February 6th at 11:59PM to submit this homework assignment. Late submissions will not be accepted.**  
+
+### Directions for Students: 
+Open a new Microsoft Word Document and submit answers to questions below. The first four lines of your document should contain the following:  
++ Your name
++ MMG232
++ Today's date
++ Homework Assignment #6
+
+### Part A: 
 In today's lesson you made the following variable:
 ```bash
 file=Mov10_oe_1.subset.fq
@@ -355,18 +365,17 @@ file=Mov10_oe_1.subset.fq
 	2. Retrieve only the lines which contain normal samples. (*Hint: use `grep`*).  
 
 
-Part B: 
+### Part B: 
 In today's lesson you made the following script: directory_info.sh: 
 
 1. Run the script `directory_info.sh`. Report what gets printed to the screen.
 2. Open up the script `directory_info.sh` using vim. Change the approproiate line of code so that our directory of interest is `~/unix_lesson/genomics_data`. Save and exit Vim.
 3. Run the script with the changes and report what gets printed to the screen.
 
-***
 
 ***
 ## Citation
----
+
 *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
 
 * *The materials used in this lesson were derived from work that is Copyright © Data Carpentry (http://datacarpentry.org/). 
