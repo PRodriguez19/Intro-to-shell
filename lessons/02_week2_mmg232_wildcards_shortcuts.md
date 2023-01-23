@@ -19,12 +19,35 @@ Date: "Tuesday, January 24, 2023"
 
 Navigate to the `~/unix_lesson/raw_fastq` directory. This directory contains FASTQ files from a next-generation sequencing dataset. 
 
-The "*" character is a shortcut for "everything". Thus, if you enter `ls *`, you will see all of the contents of a given directory. Now try this command:
+Let's see what is inside:  
 
 ```bash
-$ ls *fq
+ls
 ```
-> This lists every file that ends with a `fq`. 
+```
+Irrel_kd_1.subset.fq	Irrel_kd_3.subset.fq	Mov10_oe_2.subset.fq
+Irrel_kd_2.subset.fq	Mov10_oe_1.subset.fq	Mov10_oe_3.subset.fq
+```
+
+Now, lets make a directory - call it **fastq**
+
+```bash
+mkdir fastq
+```
+Do 'ls' one more time to see if everything is inside as you expect -  
+
+```
+fastq                 Irrel_kd_3.subset.fq  Mov10_oe_3.subset.fq
+Irrel_kd_1.subset.fq  Mov10_oe_1.subset.fq
+Irrel_kd_2.subset.fq  Mov10_oe_2.subset.fq
+```
+
+The "*" character is a shortcut for "everything". You can use it by typing in shift + 8.  Now try this command:
+
+```bash
+ls *.fq
+```
+> Notice, this lists every file that ends with a `fq` and our newly made directory **fastq** is missing. 
 
 ```
 Irrel_kd_1.subset.fq	Irrel_kd_3.subset.fq	Mov10_oe_2.subset.fq
@@ -34,7 +57,7 @@ Irrel_kd_2.subset.fq	Mov10_oe_1.subset.fq	Mov10_oe_3.subset.fq
 Now try this next command.  
 
 ```bash
-$ ls /usr/bin/*.sh
+ls /usr/bin/*.sh
 ```
 
 ```
@@ -42,10 +65,15 @@ $ ls /usr/bin/*.sh
 /usr/bin/gvmap.sh    /usr/bin/lprsetup.sh  /usr/bin/setup-nsssysinit.sh
 ```
 
-This lists every file in `/usr/bin` directory that ends in the characters `.sh`. "*" can be placed anywhere in your pattern. For example:
+This lists every file in `/usr/bin` directory that ends in the characters `.sh`. 
+
+Let's quickly try it without `*.sh` - notice that you have so many more options! 
+
+
+Also, the wildcard "*" can be placed anywhere in your pattern. For example:
 
 ```bash
-$ ls Mov10*fq
+ls Mov10*fq
 ```
 
 This lists only the files that begin with 'Mov10' and end with `fq`.
@@ -54,7 +82,7 @@ This lists only the files that begin with 'Mov10' and end with `fq`.
 Mov10_oe_1.subset.fq  Mov10_oe_2.subset.fq  Mov10_oe_3.subset.fq
 ```
 
-So how does this actually work? The Shell (bash) considers an asterisk "*" to be a wildcard character that can match one or more occurrences of any character, including no character. 
+So how does this actually work? The Shell (bash) considers an asterisk "*" to be a wildcard character that can match one or more occurrences of any character, including no character. In the example above the * took place of 13 characters! 
 
 > **Tip** - An asterisk/star is only one of the many wildcards in Unix, but this is the most powerful one and we will be using this one the most for our exercises.
 
@@ -111,48 +139,43 @@ navigating to a different directory.
 
 ****
 
-### Shortcuts
+# Shortcuts
 
 There are some very useful shortcuts that you should also know about. 
 
-#### Home directory or "~"
+## Home directory or "~"
 
 Dealing with the home directory is very common. In shell, the tilde character, "~", is a shortcut for your home directory. We should all be in the `raw_fastq` directory, if not navigate here: 
-
-```bash
-$ cd
-$ cd unix_lesson/raw_fastq
-```
 
 Then enter the command:
 
 ```bash
-$ ls ~
+ls ~
 ```
 
-This prints the contents of your home directory, without you having to type the full path. This is because the tilde "~" is equivalent to "/home/username", as we had mentioned in the previous lesson.
+This prints the contents of your home directory, without you having to type the full path. This is because the tilde "~" is equivalent to "/users/username", as we had mentioned in the previous lesson.
 
-#### Parent directory or ".."
+## Parent directory or ".."
 
 Another shortcut you encountered in the previous lesson is "..":
 
 ```bash
-$ ls ..
+ls ..
 ```
 
 The shortcut `..` always refers to the parent directory of whatever directory you are in currently. So, `ls ..` will print the contents of `unix_lesson`. You can also chain these `..` together, separated by `/`:
 
 ```bash
-$ ls ../..
+ls ../..
 ```
 
 This prints the contents of `/users/username`, which is two levels above your current directory. 
 
-#### Current directory or "."
+## Current directory or "."
 
 Finally, the special directory `.` always refers to your current directory. So, `ls` and `ls .` will do the same thing - they print the contents of the current directory. This may seem like a useless shortcut, but recall that we used it earlier when we copied over the data to our home directory.
 
-#### Command History
+## Command History
 
 You can easily access previous commands by hitting the <button>up</button> arrow key on your keyboard, this way you can step backwards through your command history. On the other hand, the <button>down</button> arrow key takes you forward in the command history.
 
@@ -168,32 +191,37 @@ You should see a numbered list of commands, including the `history` command you 
 
 > **NOTE:** So far we have only run very short commands that have very few or no arguments. It would be faster to just retype it than to check the history. However, as you start to run analyses on the command-line you will find that the commands are longer and more complex, and the `history` command will be very useful then!
 
-#### Cancel a command
+## Cancel a command
 
 Sometimes as you enter a command, you realize that you don't want to continue or run the current line. Instead of deleting everything you have entered (which could be very long), you could quickly cancel the current line and start a fresh prompt with <button>Ctrl</button> + <button>C</button>.
 
 ```bash
-$ # Run some random words, then hit "Ctrl + C". Observe what happens
+fastqc Mov10_oe_1.subset.fq 
 ```
+then I hit <button>Ctrl</button> + <button>C</button>
 
-**Other handy command-related shortcuts**
-
-- <button>Ctrl</button> + <button>A</button> will bring you to the start of the command you are writing.
-- <button>Ctrl</button> + <button>E</button> will bring you to the end of the command.
-- <button>Ctrl</button> + <button>L</button> will clear your terminal screen. 
+```
+Approx 5% complete for Mov10_oe_1.subset.fq
+Approx 10% complete for Mov10_oe_1.subset.fq
+Approx 15% complete for Mov10_oe_1.subset.fq
+Approx 20% complete for Mov10_oe_1.subset.fq
+Approx 25% complete for Mov10_oe_1.subset.fq
+Approx 30% complete for Mov10_oe_1.subset.fq
+Approx 35% complete for Mov10_oe_1.subset.fq
+```
 
 ****
 
 # Examining Files
 
-We now know how to move around the file system and look at the contents of directories, but how do we look at the contents of files? On your laptop, to view a file all you need to do is double click it to open it. What is the command-line version of this? Let's explore a few commands.  
+Now let's explore a few more commands to examine files. 
 
 ## `cat` command
 
-The easiest way to examine a file is to just print out all of its contents using the command `cat`. We can test this out by printing the contents of `~/unix_lesson/other/sequences.fa`. Enter the command followed by the filename, including the path when necessary:
+The easiest way to examine a file is to print out all of its contents using the command `cat`. We can test this out by printing the contents of `~/unix_lesson/other/sequences.fa`. Enter the command followed by the filename, including the path when necessary:
 
 ```bash
-$ cat ~/unix_lesson/other/sequences.fa
+cat sequences.fa
 ```
 
 The `cat` command prints out the all the contents of `sequences.fa` to the screen.
@@ -222,6 +250,8 @@ QIKDLLVSSSTDLDTTLVLVNAIYFKGMWKTAFNAEDTREMPFHVTKQESKPVQMMCMNNSFNVATLPAE
 
 ```
 
+> This is a FASTA file. FASTA format is a text-based format for representing either nucleotide or peptide sequences. The header row always begins with the ">" symbol. 
+
 Question: What command would I use to clear my terminal screen? 
 
 <details>
@@ -231,20 +261,34 @@ Question: What command would I use to clear my terminal screen?
 
 ## `less` command
 
-`cat` is a terrific command, but when the file is really big, it can be annoying to use. In practice, when you are running your analyses on the command-line you will most likely be dealing with large files. In our case, we have FASTQ files. Let's take a look at the list of raw_fastq files and add the `-h` modifier to see how big the files are. 
+`cat` is a terrific command, but when the file is really big, it can be annoying to use. Let's move into raw_fastq to actually try this out. 
 
-```bash
-$ ls -lh ~/unix_lesson/raw_fastq
+```bash 
+cat Mov10_oe_1.subset.fq
 ```
+>YIKES! Let's not do that...
 
-> The `ls` command has a modifier `-h` when paired with `-l`, will list the files and also print sizes of files in human readable format. 
-
-In the fourth column you wll see the size of each of these files, and you can see they are quite large, so we probably do not want to use the `cat` command to look at them. Instead, we can use the `less` command. 
-
-Move into our `raw_fastq` directory and enter the following command:
+In practice, when you are running your analyses on the command-line you will most likely be dealing with large files so you need to learn how to view them. First, lets take a look at the list of raw_fastq files and add the `-h` modifier to see how big they are. 
 
 ```bash
-$ less Mov10_oe_1.subset.fq
+ls -lh 
+```
+> The `ls` command has a modifier `-h` when paired with `-l`, will list the files and also print sizes of files in human readable format. In the fourth column you wll see the size of each of these files. 
+
+What does this mean? 
+
+| Unit             | Size                |
+| ---------------- | ---------------------- |
+| 1 Byte (B) | 8 bits          |
+| 1 Kilobyte (KB)    | 1024 Bytes       |
+| 1 Megabyte (MB)     | 1024 Kilobytes |
+| 1 Gigabyte (GB)    | 1024 Megabytes      |
+| 1 Terabyte (TB)    | 1024 Gigabytes               |
+
+These are quite large, so we probably do not want to use the `cat` command to look at them. Instead, we can use the `less` command. 
+
+```bash
+less Mov10_oe_1.subset.fq
 ```
 Rather than printing to screen, the `less` command opens the file in a new buffer allowing you to navigate through it. Does this look familiar? You might remember encountering a similar interface when you used the `man` command. This is because `man` is using the `less` command to open up the documentation files! The keys used to move around the file are identical to the `man` command. Below we have listed some additional shortcut keys for navigating through your file when using `less`.
 
@@ -286,20 +330,35 @@ There's another way that we can look at files, and just look at part of them. In
 The commands are `head` and `tail` and they just let you look at the beginning and end of a file respectively.
 
 ```bash
-$ head Mov10_oe_1.subset.fq
+head Mov10_oe_1.subset.fq
 ```
 
 ```bash
-$ tail Mov10_oe_1.subset.fq
+tail Mov10_oe_1.subset.fq
 ```
 
 By default, the first or last 10 lines will be printed to screen. The `-n` option can be used with either of these commands to specify the number `n` lines of a file to display. For example, let's print the first/last line of the file:
 
 ```bash
-$ head -n 1 Mov10_oe_1.subset.fq
+head -n 1 Mov10_oe_1.subset.fq
 
-$ tail -n 1 Mov10_oe_1.subset.fq
+tail -n 1 Mov10_oe_1.subset.fq
 ```
+
+## Putting everything together 
+Navigate to `other/` and type the following: 
+
+```bash
+head -n 10 sequences.fa | less
+```
+
+- <button>Ctrl</button> + <button>Z</button> will allow you to quit and return back to your original screen
+
+for the actual command itself, you can edit by using: 
+- <button>Ctrl</button> + <button>A</button> will bring you to the start of the command you are writing.
+- <button>Ctrl</button> + <button>E</button> will bring you to the end of the command.
+- <button>Ctrl</button> + <button>L</button> will clear your terminal screen. 
+
 
 *** 
 
@@ -328,7 +387,7 @@ tail        # allows you to view end of file
 **For this "short" assignment you will have 72 hours to submit via Blackboard (by 11:59am on Friday, January 27th). Late assignments will not be accepted.**  
 
 ### Directions for Students: 
-Open a new Microsoft Word Document and submit answers to questions 1-3. The first four lines of your document should contain the following:  
+Open a new Microsoft Word Document and submit answers to the questions below. The first four lines of your document should contain the following:  
 + Your name
 + MMG232
 + Today's date
@@ -351,14 +410,12 @@ $ ls'
 
 3.  Use the <button>up</button> arrow key to check the command you typed before the `ls'` (Question #1). What was it? 
 
-4. This is a multi-part question:   
+4. This is a multi-part question: 
 a. Change directories into `genomics_data`. You can do this using a full or relative path.  
 b. Use the `less` command to open up the file `Encode-hesc-Nanog.bed`.  
 c. Search for the string `chr11`; you'll see all instances in the file highlighted.  
 d. Staying in the `less` buffer, use the shortcut to get to the end of the file.     
-> Report the three highlighted lines at the end of the file where you see `chr11` highlighted.  
- 
-e. Exit the `less` buffer and come back to the command prompt.  
+> **Report** the three highlighted lines at the end of the file where you see `chr11` highlighted.   Exit the `less` buffer and come back to the command prompt.  
 
 5. Print to screen the last 5 lines of the file `Encode-hesc-Nanog.bed`. Submit a screenshot of the output of Terminal.
 
