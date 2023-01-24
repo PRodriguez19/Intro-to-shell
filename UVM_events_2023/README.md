@@ -10,13 +10,10 @@ HSRF 400, 12:00 pm
 Monday, January 23rd   
 
 ## Department of Biochemistry Seminar Series
-
-“Threonyl tRNA synthetases as antibiotic targets and resistance mechanisms.”
-
-Dr. Jonathon David Liston, Ph.D.
-
-John Innes Centre, Department of Molecular Microbiology, Norwich, UK
-
+### “Threonyl tRNA synthetases as antibiotic targets and resistance mechanisms.”
+Dr. Jonathon David Liston, Ph.D.  
+John Innes Centre, Department of Molecular Microbiology, Norwich, UK  
+January 27, 2023  
 Given Building, C443 Classroom and [Zoom](https://uvmcom.zoom.us/j/94221436991?from=addon#success)  
 12:00 - 1:00 pm
 
