@@ -11,13 +11,13 @@ Date: "Thursday, January 26, 2023"
 
 # Writing files
 
-We've been able to do a lot of work with files that already exist, but what if we want to write and/or create our own files? Obviously, we're not going to type in sequence information for a FASTA file, but you'll see as we go that there are a lot of situations in which we would need to write/create a file or edit an existing file.
+We've been able to do a lot of work with files that already exist, but what if we want to write and/or create our own files? 
 
 In order to create or edit files we will need to use a **text editor**. When we say, "text editor," we really do mean "text": these editors can only work with plain character data, not tables, images, or any other media. The types of text editors can generally be grouped into two categories: **graphical user interface (GUI) text editors** and **command-line editors**.
 
 ## GUI text editors
 
-A GUI is an interface that has buttons and menus that you can click on to issue commands to the computer and you can move about the interface just by pointing and clicking. You might be familiar with GUI text editors, such as [BBEdit](http://www.barebones.com/products/bbedit/) and [Visual Studio Code](https://code.visualstudio.com/), which allow you to write and edit plain text documents. These editors often have features to easily search text, extract text, and highlight syntax from multiple programming languages. They are great tools, and indeed you should download one to use to create your own scripts in the future! 
+A GUI is an interface that has buttons and menus that you can click on to issue commands to the computer and you can move about the interface just by pointing and clicking. These include [BBEdit](http://www.barebones.com/products/bbedit/) and [Visual Studio Code](https://code.visualstudio.com/), which allow you to write and edit plain text documents. These editors often have features to easily search text, extract text, and highlight syntax from multiple programming languages. They are great tools, and indeed you should download one to use to create your own scripts in the future! 
 
 ## Command-line editors
 Today we will be working with command-line editors. With command-line editors you must navigate the interface using the arrow keys and shortcuts, since you do not have the option to 'point-and-click'. Some popular editors include [Emacs](http://www.gnu.org/software/emacs/), [Vim](http://www.vim.org/), or a graphical editor such as [Gedit](http://projects.gnome.org/gedit/). These are editors which are generally available for use on high-performance compute clusters. There are also simpler editors available for use on the cluster (e.g. [nano](http://www.nano-editor.org/)), but tend to have limited functionality.
@@ -223,7 +223,7 @@ Open a new Microsoft Word Document and submit two screenshot (Part A and Part B)
 + Today's date
 + Homework Assignment #4
 
-The scenario: 
+Task 1: Making your own script
 You got the following line of codes from a trusted source but need to modify it so you can submit it to the VACC-Bluemoon server. You decide its time to make your own script. Follow the steps below: 
 
 1. Create a new file called `script.sh` 
@@ -244,6 +244,9 @@ STAR --runThreadN 6 \
 8. Save the file. 
 9. Open the file and take a screenshot of your terminal screen. Submit this as homework part B. 
 
+Task 2: Downloading a GUI text editor for script creation
+Sometimes, using nano and vim are just not the best option for script generation - instead they are best suited for script editing! To generate your own scripts, its best to use a GUI text editor. 
+For this task, please download either Visual Studio Code (https://code.visualstudio.com/download), BBEdit 
 
 ## Citation
 
