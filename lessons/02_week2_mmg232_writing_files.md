@@ -91,7 +91,7 @@ Vim is another text editor, but it is much more powerful than nano because it of
 > </p>
 
 
-### Vim Interface
+## Vim Interface
 
 You can create a document by calling a text editor (in our case `vim`) and providing the name of the document you wish to create. 
 
@@ -99,7 +99,7 @@ Change directories to the `~/unix_lesson/other` folder and create a document usi
 
 ```bash
 	
-$ vim draft.txt
+vim draft.txt
 ```
 <p align="center">
 <img src="../img/vim.png" width="600">
@@ -116,7 +116,9 @@ Vim has **_two basic modes_** that will allow you to create documents and edit y
 - **_insert (or edit) mode:_** will allow you to write and edit text
 
 
-Upon creation of a file, vim is automatically in command mode. Let's _change to insert mode_ by typing <kbd>i</kbd>. **Note the `--INSERT--` at the bottom left hand of the screen.** Now type in a few lines of text:
+Upon creation of a file, vim is automatically in command mode. Let's _change to insert mode_ by typing <kbd>i</kbd>. **Note the `--INSERT--` at the bottom left hand of the screen.** 
+
+Now type in a few lines of text:
 
 <p align="center">
 <img src="../img/vim_insert.png" width="600">
@@ -169,7 +171,10 @@ To edit the newly created `draft.txt` file, you can open it again with vim: `vim
 
 While we cannot point and click to navigate the document, we can use the arrow keys to move around. However, navigating with arrow keys can be very slow, so Vim has shortcuts (which are completely unintuitive, but very useful as you get used to them over time). 
 
-Create a new file called `spider.txt` using `vim`. Go into *insert mode* and enter the text as shown below in the screenshot: 
+
+First, lets create a new file called `spider.txt` using `vim`. 
+
+Go into *insert mode* and enter the text as shown below in the screenshot: 
 
 <p align="center">
 <img src="../img/vim_spider.png" width="600">
@@ -187,7 +192,9 @@ Once you have finished typing, you can display line numbers by changing to *comm
 | <button>:set nonumber</button>     | to remove line numbers    |
 
 
-**Save the document.** Check to see what mode you are currently in. **While in command mode**, try moving around the file `spider.txt` and familiarizing yourself with some of these shortcuts!  
+**Save the document using <button>:w</button>** 
+
+Now **while in command mode**, try moving around the file `spider.txt` and familiarizing yourself with some of these shortcuts!  
 
 **Navigating around the file**
 
@@ -215,16 +222,16 @@ Practice some of the editing shortcuts, then **quit the document and remember to
 
 **Class Exercise**
 
-1. Open `spider.txt`, and delete the word "water" from line #2.
+1. Open `spider.txt`, and delete the word "water" from line #2. Note, you will need to be at the first letter of the word, to delete the entire word!
 2. Quit without saving.
 3. Open `spider.txt` again, and replace every occurrence of "spider" with "unicorn".
-4. Delete: "Down came the rain." 
+4. Delete the line: "Down came the rain." 
 5. Save the file.
 6. Undo your previous deletion.
 7. Redo your previous deletion.
 8. Delete the first and last words from each of the lines.
 9. Save the file.
-10. Open the file and take a screenshot of your terminal screen. Submit this as homework part A. 
+10. Open the file and take a screenshot of your terminal screen. Submit this as homework Part A. 
 
 
 ## GUI text editors
@@ -244,7 +251,9 @@ Open a new Microsoft Word Document and submit two screenshot (Part A and Part B)
 + Today's date
 + Homework Assignment #4
 
-Task 1: Making your own script
+Part A: Class Exercise Step #10 output. 
+
+Part B: Making your own script
 You got the following line of codes from a trusted source but need to modify it so you can submit it to the VACC-Bluemoon server. You decide its time to make your own script. Follow the steps below: 
 
 1. Create a new file called `script.sh` 
@@ -259,15 +268,12 @@ STAR --runThreadN 6 \
 ```
 3. Save the file. 
 4. Replace every occurrence of "username" with your UVM netid. 
-5. Delete: "scratch2" folder 
+5. Delete the line containing --runMode
 6. Change the --runThreadN from 6 to 4 
-7. You just realized that the fasta and gtf you downloaded from Ensembl is actually from GRCh19 not CRCh38. This needs to be changed in your code. 
+7. You just realized that the fasta and gtf you downloaded from Ensembl is actually from GRCh19 not GRCh38. This also needs to be changed in your code. 
 8. Save the file. 
-9. Open the file and take a screenshot of your terminal screen. Submit this as homework part B. 
+9. Open the file and take a screenshot of your terminal screen. Submit this as homework Part B. 
 
-Task 2: Downloading a GUI text editor for script creation
-Sometimes, using nano and vim are just not the best option for script generation - instead they are best suited for script editing! To generate your own scripts, its best to use a GUI text editor. 
-For this task, please download either Visual Studio Code (https://code.visualstudio.com/download), BBEdit 
 
 ## Citation
 
