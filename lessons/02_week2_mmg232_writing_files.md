@@ -13,37 +13,44 @@ Date: "Thursday, January 26, 2023"
 
 We've been able to do a lot of work with files that already exist, but what if we want to write and/or create our own files? 
 
-In order to create or edit files we will need to use a **text editor**. When we say, "text editor," we really do mean "text": these editors can only work with plain character data, not tables, images, or any other media. The types of text editors can generally be grouped into two categories: **graphical user interface (GUI) text editors** and **command-line editors**.
+In order to create or edit files we will need to use a **text editor**. When we say, "text editor," we really do mean "text": these editors can only work with plain character data, not tables, images, or any other media. The types of text editors can generally be grouped into two categories:  **command-line editors** and **graphical user interface editors**. 
 
-## GUI text editors
-
-A GUI is an interface that has buttons and menus that you can click on to issue commands to the computer and you can move about the interface just by pointing and clicking. These include [BBEdit](http://www.barebones.com/products/bbedit/) and [Visual Studio Code](https://code.visualstudio.com/), which allow you to write and edit plain text documents. These editors often have features to easily search text, extract text, and highlight syntax from multiple programming languages. They are great tools, and indeed you should download one to use to create your own scripts in the future! 
 
 ## Command-line editors
-Today we will be working with command-line editors. With command-line editors you must navigate the interface using the arrow keys and shortcuts, since you do not have the option to 'point-and-click'. Some popular editors include [Emacs](http://www.gnu.org/software/emacs/), [Vim](http://www.vim.org/), or a graphical editor such as [Gedit](http://projects.gnome.org/gedit/). These are editors which are generally available for use on high-performance compute clusters. There are also simpler editors available for use on the cluster (e.g. [nano](http://www.nano-editor.org/)), but tend to have limited functionality.
+First, lets start with command-line editors. Some popular editors include [Emacs](http://www.gnu.org/software/emacs/), [Vim](http://www.vim.org/), or a graphical editor such as [Gedit](http://projects.gnome.org/gedit/). These are editors which are generally available for use on high-performance compute clusters. There are also simpler editors available for use on the cluster (e.g. [nano](http://www.nano-editor.org/)), but tend to have limited functionality. We will discuss one simple and more advanced CLI editors. 
 
 # Nano versus Vim 
 
-## Introduction to nano 
+## Introduction to Nano 
 Nano is a popular text editor of UNIX/Linux operating systems. Nano is easy-to-use but is limited in editing. 
 
 To use nano: 
 
 ```
 nano filename
-
-nano demo.txt
 ```
-After running the nano command, a new window will pop up where you can edit the file. Below is how the interface looks like, notice that the name of file appears on the top: 
+We will try it out on the following file - please download using the following command: 
+
+```bash
+cp -r /gpfs1/cl/mmg232/course_materials/get-pip.py .
+```
+
+After running the nano command, a new window will pop up where you can edit the file. 
+
+```bash
+nano get-pip.py
+```
+
+Below is how the interface looks like, notice that the name of file appears on the top: 
 
 <p align="center">
 <img src="../img/nano.png" width="600">
 </p>
 
-Go ahead and type the following:
+Go ahead and type the following on the first line: 
 
 ```
-Today is going to be a great day. 
+#Today is going to be a great day. 
 ```
 
 At the bottom of the screen you will find some shortcuts on the nano editor. They use the <button>control</button> button. The most important one is: 
@@ -52,15 +59,24 @@ At the bottom of the screen you will find some shortcuts on the nano editor. The
 
 This is to exit the editor. If there are changes, it will ask you whether to save them or not. Input Y for Yes, or N for No, then press <button>return</button>. 
 
->### Basic nano commands
+Let's try some other commands in `nano`. 
+>Press the UP arrow to retrieve the last command. 
+
+Try jumping to the beginning and end of the line using <button>control</button> + A or <button>control</button> + E , respectively. 
+
+Next, try scrolling the page down or up using <button>control</button> + V or <button>control</button> + Y , respectively. 
+
+Finally, go ahead and 'cut-out' the first line we wrote using <button>control</button> + K. Go ahead and Save and Exit the file.  
+
+>### Summary Basic nano commands
 >
 >| key              | action                 |
 >| ---------------- | ---------------------- |
 >| <button>control</button> + X     | exit from the editor |
 >| <button>control</button> + A      | Let's you jump from the beginning of the line |
 >| <button>control</button> + E     | Let's you jump from the end of the line  |
->| <button>control</button> + Y      | Scroll page down |
->| <button>control</button> + V      | Scroll page up |
+>| <button>control</button> + V      | Scroll page down |
+>| <button>control</button> + Y      | Scroll page up |
 >| <button>control</button> + O      | Save the file |
 >| <button>control</button> + K      | It cuts the entire selected line |
 
@@ -210,11 +226,16 @@ Practice some of the editing shortcuts, then **quit the document and remember to
 9. Save the file.
 10. Open the file and take a screenshot of your terminal screen. Submit this as homework part A. 
 
+
+## GUI text editors
+
+A GUI is an interface that has buttons and menus that you can click on to issue commands to the computer and you can move about the interface just by pointing and clicking. These include [BBEdit](http://www.barebones.com/products/bbedit/) and [Visual Studio Code](https://code.visualstudio.com/), which allow you to write and edit plain text documents. These editors often have features to easily search text, extract text, and highlight syntax from multiple programming languages. They are great tools, and indeed you should download one to use to create your own scripts in the future! 
+
 *** 
 
 ## Homework Assignment #4 (30 points)
 
-### **Please note that you will have until next class (Tuesday, January 31st) to submit this assignment. Late submissions will not be accepted.**  
+### **Please note that you will have until next class (Monday, January 30th - 11:59PM) to submit this assignment. Late submissions will not be accepted.**  
 
 ### Directions for Students: 
 Open a new Microsoft Word Document and submit two screenshot (Part A and Part B). The first four lines of your document should contain the following:  
