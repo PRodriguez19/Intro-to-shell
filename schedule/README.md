@@ -48,16 +48,7 @@ Please complete the Homework Assignment #3:
 
 ## Thursday, January 26th 
 
-| Time |  Topic  | 
-|:-----------|:----------|
-| ~ 40 mins |  [Writing and editing files](../lessons/02_week2_mmg232_writing_files.md) |
-| ~ 20 mins |  [Intro to RNA-Seq continued](../lectures/Intro_to_workshop.pdf) | 
-
-### Before the next class:
-
-Please complete the Homework Assignment #4:
-+ **Remember to Copy over** your the answers to a Microsoft Word Document. 
-+ Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.  
+**Class was cancelled due**
 
 ***
 
@@ -65,11 +56,12 @@ Please complete the Homework Assignment #4:
 
 | Time |  Topic  | 
 |:-----------|:----------|
+| ~ 20 mins |  [Writing and editing files](../lessons/02_week2_mmg232_writing_files.md) |
 | ~ 60 mins |  [Searching and Redirection](../lessons/03_week3_mmg232_searching_files.md) |
 
 ### Before the next class:
 
-Please complete the Homework Assignment #5:
+Please complete the Homework Assignment #4 and 5:
 + **Remember to Copy over** your the answers to a Microsoft Word Document. 
 + Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted.  
 
