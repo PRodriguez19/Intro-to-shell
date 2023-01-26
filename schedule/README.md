@@ -57,7 +57,7 @@ Please complete the Homework Assignment #3:
 | Time |  Topic  | 
 |:-----------|:----------|
 | ~ 20 mins |  [Writing and editing files](../lessons/02_week2_mmg232_writing_files.md) |
-| ~ 60 mins |  [Searching and Redirection](../lessons/03_week3_mmg232_searching_files.md) |
+| ~ 50 mins |  [Searching and Redirection](../lessons/03_week3_mmg232_searching_files.md) |
 
 ### Before the next class:
 
