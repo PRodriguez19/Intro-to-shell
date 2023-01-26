@@ -48,7 +48,7 @@ Please complete the Homework Assignment #3:
 
 ## Thursday, January 26th 
 
-**Class was cancelled due**
+**Class was cancelled**
 
 ***
 
