@@ -82,7 +82,7 @@ Please complete the Homework Assignment #6:
 
 ***
 
-## Thursday, February 7th 
+## Tuesday, February 7th 
 
 We will be switching to another github repository. This website will become available shortly. 
 
