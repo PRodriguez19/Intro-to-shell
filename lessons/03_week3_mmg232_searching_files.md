@@ -12,7 +12,13 @@ Date: "Tuesday, January 31, 2023"
 
 ## Searching files with `grep` command
 
-We went over how to search within a file using `less`. But we can also search within files without even opening them, using `grep`. Simply put `grep` is a command-line utility for searching plain-text data sets for lines matching a pattern or **reg**ular **ex**pression (regex). 
+We went over how to search within a file using `less`. 
+
+```bash
+less Mov10_oe_1.subset.fq
+```
+
+But we can also search within files without even opening them, using `grep`. Simply put `grep` is a command-line utility for searching plain-text data sets for lines matching a pattern or **reg**ular **ex**pression (regex). 
 
 > Why the word "grep"? It is a shortened form of **g**lobally search for a **r**egular **e**xpression and **p**rint matching lines (g/re/p).
 
@@ -286,15 +292,20 @@ Let's use the new commands in our toolkit and a few new ones to examine the "gen
 Let's explore our `chr1-hg19_genes.gtf` file a bit. What information does it contain?
 
 ```bash
-less chr1-hg19_genes.gtf
+head -10 chr1-hg19_genes.gtf | less -S 
 ```
-
-	chr1    unknown exon    14362   14829   .       -       .       gene_id "WASH7P"; gene_name "WASH7P"; transcript_id "NR_024540"; tss_id "TSS7245";
-	chr1    unknown exon    14970   15038   .       -       .       gene_id "WASH7P"; gene_name "WASH7P"; transcript_id "NR_024540"; tss_id "TSS7245";
-	chr1    unknown exon    15796   15947   .       -       .       gene_id "WASH7P"; gene_name "WASH7P"; transcript_id "NR_024540"; tss_id "TSS7245";
-	chr1    unknown exon    16607   16765   .       -       .       gene_id "WASH7P"; gene_name "WASH7P"; transcript_id "NR_024540"; tss_id "TSS7245";
-	chr1    unknown exon    16858   17055   .       -       .       gene_id "WASH7P"; gene_name "WASH7P"; transcript_id "NR_024540"; tss_id "TSS7245";
-
+```
+chr1    unknown exon    14362   14829   .       -       .       gene_id "WASH7P"
+chr1    unknown exon    14970   15038   .       -       .       gene_id "WASH7P"
+chr1    unknown exon    15796   15947   .       -       .       gene_id "WASH7P"
+chr1    unknown exon    16607   16765   .       -       .       gene_id "WASH7P"
+chr1    unknown exon    16858   17055   .       -       .       gene_id "WASH7P"
+chr1    unknown exon    17233   17368   .       -       .       gene_id "WASH7P"
+chr1    unknown exon    17606   17742   .       -       .       gene_id "WASH7P"
+chr1    unknown exon    17915   18061   .       -       .       gene_id "WASH7P"
+chr1    unknown exon    18268   18366   .       -       .       gene_id "WASH7P"
+chr1    unknown exon    24738   24891   .       -       .       gene_id "WASH7P
+```
 
 > **The GTF (Gene Transfer Format) file** is a tab-delimited file with information arranged in a very specific manner, usually for NGS analysis. That information is specifically about all the various entities or features found in a genome; in this case, on chromosome 1. 
 >
@@ -302,13 +313,6 @@ less chr1-hg19_genes.gtf
 
 The columns in the **GTF file contain the genomic coordinates (location) of gene features (exon, start_codon, stop_codon, CDS) along with the associated gene_names, transcript_ids and protein_ids (p_id)**. 
 
-Given our understanding of splice isoforms, we know that a given exon can be part of 2 or more different transcripts generated from the same gene. In a GTF file, this exon will be represented multiple times, once for each transcript (or splice isoform). For example, 
-
-```bash
-grep PLEKHN1 chr1-hg19_genes.gtf | head -n 5 | less -S
-```
-
-This search returns two different transcripts of the same gene, NM_001160184 and NM_032129, that contain the same exon.
 
 >GTF file format
 > |Line|Description|
@@ -323,17 +327,31 @@ This search returns two different transcripts of the same gene, NM_001160184 and
 > |8|frame|
 > |9|attribute, provides additional information about each feature|
 
-## Two new commands!
+Given our understanding of splice isoforms, we know that a given exon can be part of 2 or more different transcripts generated from the same gene. In a GTF file, this exon will be represented multiple times, once for each transcript (or splice isoform). For example, 
+
+```bash
+grep PLEKHN1 chr1-hg19_genes.gtf | less -S
+```
+
+This search returns two different transcripts of the same gene, NM_001160184 and NM_032129, that contain the same exon.
+
+## Two new commands - cut & sort 
 
 * **`cut` is a command that extracts columns from files.** 
 
-We will use `cut` with the `-f` argument to specify which specific fields or columns from the dataset we want to extract. Let's say we want to get the 1st column (chromosome number) and the 4th column (starting genomic position) from `chr1-hg19_genes.gtf` file, we can say:
+We will use `cut` with the `-f` argument to specify which specific fields or columns from the dataset we want to extract. Let's say we want to get the 1st column (chromosome number) and the 4th column (starting genomic position) and 5th column (ending genomic position) from `chr1-hg19_genes.gtf` file, we can say:
 
 ```bash
-cut -f 1,4 chr1-hg19_genes.gtf  | head
+grep PLEKHN1 chr1-hg19_genes.gtf | cut -f 1,4,5 | head
+```
+How can we output this to a different document? 
+
+```bash
+grep PLEKHN1 chr1-hg19_genes.gtf | cut -f 1,4,5 > coordinates_PLEKHN1.txt
 ```
 
-> The `cut` command assumes our data columns are separated by tabs (i.e. tab-delimited). The `chr1-hg19_genes.gtf` is a tab-delimited file, so the default `cut` command works for us. However, data can be separated by other types of delimiters like "," or ";". If your data is not tab delimited, there is an argument you can add to your `cut` command, `-d` to specify the delimiter (e.g. `-d ","` with a .csv file).
+> Note: The `cut` command assumes our data columns are separated by tabs (i.e. tab-delimited). The `chr1-hg19_genes.gtf` is a tab-delimited file, so the default `cut` command works for us. However, data can be separated by other types of delimiters like "," or ";". If your data is not tab delimited, there is an argument you can add to your `cut` command, `-d` to specify the delimiter (e.g. `-d ","` with a .csv file).
+
 
 * **`sort` is a command used to sort the contents of a file in a particular order.** It has arguments that let you pick which column to sort by (`-k`), what kind of sorting you want to do (numeric `n`) and also if the result of the sorting should only return unique (`-u`) values. These are just 2 of the many features of the sort command. 
 
@@ -348,6 +366,12 @@ cut -f 1,4 chr1-hg19_genes.gtf | wc -l
 	<summary><b><i>Click here to check your output</i></b></summary>
 	<p>Your command should have returned 76,767 lines.</p>
 </details>
+
+Pipe the output to less - notice all the duplicates! 
+
+```bash
+cut -f 1,4 chr1-hg19_genes.gtf | less
+```
 
 Now apply the `sort -u` command before counting the lines.
 
@@ -383,7 +407,7 @@ cut           # used to extract specific columns from a tab-delimited file
 
 ## Homework Assignment #5 (50 points)
 
-### **Please note that you will have until Tuesday, January 31st to submit this homework assignment. Late submissions will not be accepted.**  
+### **Please note that you will have until Friday, February 3rd (11:59PM) to submit this homework assignment. Late submissions will not be accepted.**  
 
 ### Directions for Students: 
 Open a new Microsoft Word Document and submit answers to questions below. The first four lines of your document should contain the following:  

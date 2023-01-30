@@ -242,7 +242,7 @@ A GUI is an interface that has buttons and menus that you can click on to issue 
 
 ## Homework Assignment #4 (40 points)
 
-### **Please note that you will have until next class (Monday, January 30th - 11:59PM) to submit this assignment. Late submissions will not be accepted.**  
+### **Please note that you will have until next class (Friday, February 3rd - 11:59PM) to submit this assignment. Late submissions will not be accepted.**  
 
 ### Directions for Students: 
 Open a new Microsoft Word Document and submit two screenshot (Part A and Part B). The first four lines of your document should contain the following:  
