@@ -11,7 +11,7 @@ Date: "Thursday, February 2, 2023"
 
 ## Shell scripts
 
-Over the past 2.5 weeks, you have been introduced to a number of commands used to explore data files. To demonstrate the function of each command we have run them one at a time at the command prompt. The command prompt is useful for testing out commands and also performing simple tasks like exploring and organizing the file system. When we are running analyses which require a series of tasks to be run, there is a more efficent way to do this. 
+Over the past 2.5 weeks, you have been introduced to a number of commands used to explore data files. To demonstrate the function of each command we have run them one at a time at the command prompt. The command prompt is useful for testing out commands and also performing simple tasks like exploring and organizing the file system. When we are running analyses which require a series of tasks to be run, there is a more efficient way to do this. 
 
 Shell scripts are **text files that contain commands we know we want to run**. In today's lesson, you will be introduced to both a simple example and an advanced shell script example.
 
