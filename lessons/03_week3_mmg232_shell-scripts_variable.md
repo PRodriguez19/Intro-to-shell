@@ -17,7 +17,7 @@ Shell scripts are **text files that contain commands we know we want to run**. I
 
 > ### Review of Vim modes
 >
-> ***You will be using Vim for this lesson, so before you get started, make sure you review the modes in vim.***
+> ***You will be using nano and vim for this lesson, so before you get started, make sure you review the modes in vim.***
 >
 > | key              | action                 |
 > | ---------------- | ---------------------- |
@@ -28,88 +28,67 @@ Shell scripts are **text files that contain commands we know we want to run**. I
 
 We are finally ready to see what makes the shell such a powerful programming environment. To create our first script, we are going to take some of the commands we have run previously and save them into a file so that we can **re-run all those operations** again later, by typing just **one single command**. For historical reasons, a bunch of commands saved in a file is referred to as shell script, but make no mistake, this is actually a small program! 
 
-Interestingly, when working with Shell or on the command line you can give files any extension (.txt, .tsv, .csv, etc.). Similarly, for a shell script you don't need a specific extension. However, it is **best practice to give shell scripts the extension `.sh`**. This is helpful to your future self and your collaborators to identify that a given file is a shell script.
+Interestingly, when working with Shell or on the command line you can give files any extension (.txt, .tsv, .csv, etc.). Similarly, for a shell script you don't need a specific extension. However, it is **best practice to give shell scripts the extension `.sh`** (bash shell script file). 
 
-Move into the `other` directory and create a new file using `vim`. We will call our script `listing.sh`:
+Move into the `raw_fastq` directory and create a new file using. 
+
+We will call this script `difference.sh`: 
 
 ```bash
-vim listing.sh
+nano difference.sh
 ```
 
+Using this script we will answer the question, what is the difference between using redirect (<) versus append(<<): 
+
+We will recall the "grab" command from yesterday called `grep` with the same arguments: 
+
+```
+grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq > redirect.txt 
+wc -l redirect.txt 
+```
 This shell script will do two things:
+1. Create a file called redirect.txt 
+2. Give us the word count for redirect.txt 
 
-1. Tell us our current working directory
-2. List the contents of the directory 
+Now, lets add some verbosity to our script by using the `echo` command (verbosity is a good thing here!). The `echo` command is used to display a line of text that is passed in as an argument. This is a bash command that is mostly used in shell scripts to output status to the screen or to a file. 
 
-We already know the commands for doing both of these things, so let's go into the insert mode in vim, and add the 2 commands into our script:
-
-```bash
-pwd
-ls -l 
 ```
-
-Now, we could save and quit and this shell script would run perfectly fine. But, we will add some verbosity to our script by using the `echo` command (verbosity is a good thing here!). The `echo` command is used to display a line of text that is passed in as an argument. This is a bash command that is mostly used in shell scripts to output status to the screen or to a file. 
-
-Place the following `echo` statements on the lines before each of the commands:
-
-```bash
-echo "Your current working directory is:"
-pwd
-
-echo "These are the contents of this directory:"
-ls -l 
-```
-
-Now we are all set! You can move to the command mode in vim now and save the file and exit `vim`. This should bring you back to the command prompt. Check and see that the new script file you created is in this directory:
-
-```bash
-ls 
+grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq > redirect.txt 
+echo "The word count for redirect.txt is:" 
+wc -l redirect.txt 
 ```
 
 To run the shell script you can use the `bash` or `sh` command, followed by the name of your script:
 
 ```bash
-sh listing.sh
+sh difference.sh
 ```
 
-> Did it work like you expected?
+Let's now add to this to the script:
 
-This is a very simple shell script, just to introduce you to the concept. Before we jump into more scripts which better demonstrate their utility, we will take a moment to cover some key concepts to help get you there.
+```
+grep -B 1 -A 2 NNNNNNNNNN Mov10_oe_1.subset.fq >> append.txt 
+echo "The word count for append.txt is:" 
+wc -l append.txt 
+```
+The ouput should look like this: 
+```
+The word count for redirect.txt is:
+     148 redirect.txt
+The word count for append.txt is:
+     148 append.txt
+```
 
+Now what happens if we run this script once more? 
 
-## **Class Exercise**
-**The answers are provided but PLEASE try to do this on your own first. Give it an honest effort!**
+```
+The word count for redirect.txt is:
+     148 redirect.txt
+The word count for append.txt is:
+     296 append.txt
+```
 
-1. Open up the script `listing.sh` using vim. Add the command which prints to screen the contents of the file `Mov10_rnaseq_metadata.txt`.
-2. Add an echo statement for the command, which tells the user "This is information about the files in our dataset:"
-3. Run the new script. Report the contents of the new script and the output you got after running it.
-
-	<details>
-		<summary><b><i>Answers</i></b></summary>
-		<p><i>Question 1</i><br>
-		Add this command to <code>listing.sh</code> using vim:<br>
-		<code>cat Mov10_rnaseq_metadata.txt</code></p>
-		<p><i>Question 2</i><br>
-		Add this command to <code>listing.sh</code> using vim:<br>
-		<code>echo "This is information about the files in our dataset:"</code></p>
-		<p><i>Question 3</i><br>
-		<code>sh listing.sh</code></p>
-		<p><pre> Your current working directory is:
-	/Users/princess/Desktop/unix_lesson/other
-	These are the contents of this directory:
-	total 24
-	-rwxr-xr-x  1 princess  staff    93 Jan 17 12:48 Mov10_rnaseq_metadata.txt
-	-rw-r--r--  1 princess  staff   198 Jan 17 14:00 listing.sh
-	-rwxr-xr-x  1 princess  staff  1057 Jan 17 12:48 sequences.fa
-	This is information about the files in our dataset:
-	sample	celltype
-	OE.1	Mov10_oe
-	OE.2	Mov10_oe
-	OE.3	Mov10_oe
-	IR.1	normal
-	IR.2	normal
-	IR.3	normal</pre>
-	</details>
+Notice that the redirect.txt document, has the same word count as before while append.txt document doubled. The append command can not tell that the same material is being copied over and over again, and it will continue to do this. Therefore, you can end up with a document of duplicates depending on how the command/script is run. Meanwhile, the redirect will completely replace any contents that were written before - whether it was the same or not. 
 
 ***
 
@@ -153,7 +132,7 @@ Therefore, when defining the variable (i.e. setting the value) you can just type
 > `declare -p | grep num`
 >
 
-### Using variables as input to commands
+## Use variables as input to commands
 
 So far, it is hard to see the utility of a variable and why we need it. One important aspect of the variable is that the value stored inside it can be used as input to commands. To demonstrate this we will create a new variable called `file`. We will store a character string as the value of the variable, specifically the name of one of the files in the `raw_fastq` directory:
 
@@ -172,19 +151,6 @@ Now let's use this variable `file` as input to one of the commands we previously
 ```bash
 wc -l $file
 ```
-
-**What do you see in the terminal? What you were expecting `wc -l` to return to you?**
-
-The `wc -l` command is used to count and report the number of lines in a file. Here, we provided a file but we did not get a number reported. Instead we got the error `wc: Mov10_oe_1.subset.fq: No such file or directory`. This is because the file that we listed does not exist in our current working directory. To get around this we can do one of two things.
-
-* Change directories to where the file lives: 
-
-```bash
-cd ..
-cd raw_fastq
-wc -l $file
-```
-
 > **NOTE:** The variables we create in a session are system-wide, and independent of where you are in the filesystem. This is why we can reference it from any directory. However, it is only available for your current session. If you exit the cluster and login again at a later time, the variables you have created will no longer exist.
 
 ***
@@ -196,13 +162,13 @@ When creating shell scripts, variables are used to store information that can be
 The **`basename` command** is used for extracting the base name from a file path, which is accomplished using **string splitting**. Let's try an example, by first moving back to your home directory:
 
 ```bash
-$ cd
+cd
 ```
 
 Then we will run the `basename` command on one of the FASTQ files. Be sure to specify the path to the file:
 
 ```bash
-$ basename ~/unix_lesson/raw_fastq/Mov10_oe_1.subset.fq
+basename ~/unix_lesson/raw_fastq/Mov10_oe_1.subset.fq
 ```
 
 **What is returned to you?**
@@ -212,7 +178,7 @@ The path was split into all text leading up to the last `/` (which is `~/unix_le
 Now, suppose we wanted to also **trim off the file extension** (i.e. remove `.fq` leaving only the file *base name*). We can do this by **adding a parameter** to the command to specify what string of characters we want trimmed.
 
 ```bash
-$ basename ~/unix_lesson/raw_fastq/Mov10_oe_1.subset.fq .fq
+basename ~/unix_lesson/raw_fastq/Mov10_oe_1.subset.fq .fq
 ```
 
 You should now see that only `Mov10_oe_1.subset` is returned. 
@@ -242,20 +208,20 @@ The `basename` command returns a character string and this is totally something 
 The command that we are running is wrapped in backticks (one at the beginning and one at the end), and then we assign it to the variable as we would any other value. Let's try this with the `Mov10_oe_1.subset.fq` example from above:
 
 ```bash
-$ samplename=`basename ~/unix_lesson/raw_fastq/Mov10_oe_1.subset.fq .fq`
+samplename=`basename ~/unix_lesson/raw_fastq/Mov10_oe_1.subset.fq .fq`
 ```
 
 Once you press return you should be back at the command prompt. Check to see what got stored in the `samplename` variable:
 
 ```bash
-$ echo $samplename
+echo $samplename
 ```
 
 > #### The `basename` command
 > It is hard to see the utility of this command by just running it at command-line, but it is very useful command when creating scripts for analysis. Within a script it is common to create an output file and the `basename` allows us to easily create a prefix to use for naming the output files. We will demonstrate this in more detail shortly. 
 
 
-## Shell scripting with bash variables
+## Shell scripting with bash variables using Jupyter notebook 
 
 Now it's time to put all of these concepts together to create a more advanced version of the script that we started with at the beginning of this lesson! This script will allow the user to get information on any given directory. These are the steps we will code into our shell script:
 
@@ -271,11 +237,11 @@ It seems like a lot, but you are equipped with all the necessary concepts and co
 Let's get started by moving into the `other` directory and creating a script called `directory_info.sh`:
 
 ```bash
-$ cd ~/unix_lesson/other
-$ vim directory_info.sh
+cd ~/unix_lesson/other
+directory_info.sh
 ```
 
-In this script, we will be adding **comments by using the hashtag symbol `#`**. Almost all lines in your script that begin with `#` will not be interpreted as code by Shell. Comments are crucial for proper documentation of your scripts. This will allow your collaborators or your future self to know what each line of code is doing. 
+In this script, we will be adding **comments by using the hashtag symbol `#`**. Lines in your script that begin with `#` will not be interpreted as code by Shell. Comments are crucial for proper documentation of your scripts. This will allow your collaborators or your future self to know what each line of code is doing. 
 
 We will begin with a first comment describing the **usage of this script**. This lets anyone who is using the script know what it does and what they need to provide (if anything). In our case we need the user to provide a path to the directory of interest. This will be assigned to a variable for use later in the script.
 
@@ -342,9 +308,9 @@ In today's lesson, we described shell scripts and introduced a few related conce
 
 ***
 
-## Homework Assignment #6 
+## Homework Assignment #6 (40 points)
 
-### **Please note that you will have until Monday, February 6th at 11:59PM to submit this homework assignment. Late submissions will not be accepted.**  
+### **Please note that you will have until Tuesday, February 7th at 11:59PM to submit this homework assignment. Late submissions will not be accepted.**  
 
 ### Directions for Students: 
 Open a new Microsoft Word Document and submit answers to questions below. The first four lines of your document should contain the following:  
