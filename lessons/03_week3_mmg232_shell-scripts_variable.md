@@ -335,7 +335,7 @@ file=Mov10_oe_1.subset.fq
 In today's lesson you made the following script: directory_info.sh: 
 
 1. Run the script `directory_info.sh`. Report what gets printed to the screen.
-2. Open up the script `directory_info.sh` using vim. Change the approproiate line of code so that our directory of interest is `~/unix_lesson/genomics_data`. Save and exit Vim.
+2. Open up the script `directory_info.sh`. Change the approproiate line of code so that our directory of interest is `~/unix_lesson/genomics_data`. Save and exit. 
 3. Run the script with the changes and report what gets printed to the screen.
 
 
