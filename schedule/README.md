@@ -74,6 +74,8 @@ Please complete the Homework Assignment #4 and 5:
 | ~ 50 mins |  [Shell Scripting](../lessons/03_week3_mmg232_shell-scripts_variable.md)
 | ~ 20 mins |  Homework Assignment #6 |
 
+[Shell Scripting lecture ppt](../lectures/Lecture3-MMG232.pdf)
+
 ### Before the next class:
 
 Please complete the Homework Assignment #6:
@@ -84,7 +86,7 @@ Please complete the Homework Assignment #6:
 
 ## Tuesday, February 7th 
 
-We will be switching to another github repository. This website will become available shortly. 
+We will be switching to another github repository. This website will become available on Monday, February 6th. 
 
 ***
 
