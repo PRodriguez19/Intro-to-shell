@@ -4,7 +4,7 @@
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~20 mins |  [Intro to MMG3320](../lectures/Lecture1-MMG3320-Introductionn.pdf) | 
+| ~20 mins |  [Intro to MMG3320](../lectures/Lecture1-MMG3320-Introduction.pdf) | 
 | ~20 mins | [Syllabus Overview](../lectures/MMG232_Syllabus_final.docx)| 
 | ~10 mins | [Introduction to Shell](../lessons/01_week1_mmg232.md) | 
 
