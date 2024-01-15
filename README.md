@@ -1,7 +1,7 @@
-# MMG232: Advanced Bioinformatics 
+# MMG3320/5320: Advanced Bioinformatics 
 ## Teaching Materials 
 
-This repository contains teaching materials from [hbctraining](https://github.com/hbctraining) but has been modified to support students enrolled in MMG232: Advanced Bioinformatics at the University of Vermont. The full citation for this work is provided below. 
+This repository contains teaching materials from [hbctraining](https://github.com/hbctraining) but has been modified to support students enrolled in MMG3320/5320: Advanced Bioinformatics at the University of Vermont. The full citation for this work is provided below. 
 
 ## Unit 1: Introduction to the command line interface 
 
@@ -23,9 +23,6 @@ Full link: https://vacc-ondemand.uvm.edu
 ## To begin: Click on Class schedule 
 * [Class schedule](schedule/) 
 
-## Seminars at UVM 2023: 
-For an up-to-date list of seminars/conferences/etc. occuring at UVM please use the link below:  
-[UVM events](UVM_events_2023/)
 
 ---
 
