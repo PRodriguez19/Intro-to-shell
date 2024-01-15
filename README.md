@@ -1,4 +1,5 @@
 # MMG3320/5320: Advanced Bioinformatics 
+
 ## Teaching Materials 
 
 This repository contains teaching materials from [hbctraining](https://github.com/hbctraining) but has been modified to support students enrolled in MMG3320/5320: Advanced Bioinformatics at the University of Vermont. The full citation for this work is provided below. 
