@@ -1,26 +1,26 @@
 # Class Schedule 
 
-## Tuesday, January 17th 
+## Tuesday, January 16th 
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~10 mins |  [Intro to MMG3320/5320](../lectures/Lecture1-MMG232-Introduction.pdf) | 
+| ~20 mins |  [Intro to MMG3320](../lectures/Lecture1-MMG3320-Introductionn.pdf) | 
 | ~20 mins | [Syllabus Overview](../lectures/MMG232_Syllabus_final.docx)| 
-| ~30 mins | [Introduction to Shell](../lessons/01_week1_mmg232.md) | 
+| ~10 mins | [Introduction to Shell](../lessons/01_week1_mmg232.md) | 
 
 
 ***
 
-## Thursday, January 19th 
+## Thursday, January 18th 
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~ 50 mins |  [Introduction to Shell Part II ](../lessons/01_week1_part2_mmg232.md) |
+| ~ 50 mins |  [Introduction to Shell Part II ] |
 | ~ 10 mins |  Homework Assignment |
 
 ### Before the next class:
 
-Please complete Homework Assignment #1 and #2:
+Please complete Homework Assignment:
 + **Remember to Copy over** your the answers to a Microsoft Word Document. 
 + Upload the file to [Blackboard](https://bb.uvm.edu/). Late submissions will not be accepted. 
 
