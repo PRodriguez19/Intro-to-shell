@@ -5,7 +5,8 @@
 | Time |  Topic  | 
 |:-----------|:----------|
 | ~20 mins | [Intro to MMG3320](../lectures/Lecture1-MMG3320-Introduction.pdf) | 
-| ~20 mins | [Syllabus Overview](../lectures/MMG232_Syllabus_final.docx)| 
+| ~20 mins | [Syllabus Overview](../lectures/MMG3320_Syllabus_undergraduate.pdf)| 
+| see above | [Graduate Syllabus Overview](../lectures/MMG5320_Syllabus_graduate.pdf)|
 | ~10 mins | [Introduction to Shell](../lessons/01_week1_mmg3320.md) | 
 
 
