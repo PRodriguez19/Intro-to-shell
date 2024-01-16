@@ -4,7 +4,7 @@
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~20 mins |  [Intro to MMG3320](../lectures/Lecture1-MMG3320-Introduction.pdf) | 
+| ~20 mins | [Intro to MMG3320](../lectures/Lecture1-MMG3320-Introduction.pdf) | 
 | ~20 mins | [Syllabus Overview](../lectures/MMG232_Syllabus_final.docx)| 
 | ~10 mins | [Introduction to Shell](../lessons/01_week1_mmg3320.md) | 
 
@@ -20,10 +20,10 @@
 
 
 ## Questions?
-Please email me if you have questions or would like to schedule a meeting  
+Please email me if you have questions or would like to schedule a meeting. I will try my best to respond within 24 hours.   
 
 Email: princess.rodriguez@med.uvm.edu  
-Office: Given Courtyard S357  
+Office: Given Courtyard S453  
 Office phone number: 802-656-1718 (Monday-Friday; 8am to 5pm)
 
 *** 
