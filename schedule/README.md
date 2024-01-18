@@ -17,6 +17,7 @@
 | Time |  Topic  | 
 |:-----------|:----------|
 | ~ 60 mins |  [Introduction to Shell Part II ](../lessons/02_week1_mmg3320.md)|
+| ~ 15 mins |  Homework #1|
 
 
 ## Questions?
