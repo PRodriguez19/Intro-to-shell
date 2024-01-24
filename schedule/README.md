@@ -19,6 +19,22 @@
 | ~ 60 mins |  [Introduction to Shell Part II ](../lessons/02_week1_mmg3320.md)|
 | ~ 15 mins |  Homework #1|
 
+***
+
+## Tuesday, January 23rd 
+
+**Class was cancelled**
+
+***
+
+## Thursday, January 25th 
+
+| Time |  Topic  | 
+|:-----------|:----------|
+| ~ 60 mins |  [Wild cards & Intro to viewing files ](../lessons/03_week2_mmg3320.md)|
+
+Remote Learning via Microsoft Teams 
+
 
 ## Questions?
 Please email me if you have questions or would like to schedule a meeting. I will try my best to respond within 24 hours.   
