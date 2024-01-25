@@ -33,11 +33,11 @@
 |:-----------|:----------|
 | ~ 60 mins |  [Wild cards & Intro to viewing files ](../lessons/03_week2_mmg3320.md)|
 
-Remote Learning via Microsoft Teams 
+[Remote Learning via Microsoft Teams Link](https://teams.microsoft.com/l/meetup-join/19%3aUVKd-rN88Bj5WieSLdk8G-CH8JH6toRsxMy7HxDUWeE1%40thread.tacv2/1706118930323?context=%7b%22Tid%22%3a%221c177758-4d6b-43dc-aaeb-3b9c42562967%22%2c%22Oid%22%3a%22c4dfbfa2-c05b-4c3c-920d-808dcfc1a418%22%7d)
 
 
 ## Questions?
-Please email me if you have questions or would like to schedule a meeting. I will try my best to respond within 24 hours.   
+Please email me if you have questions or would like to schedule a meeting. I will try my best to respond within 24 hours.  
 
 Email: princess.rodriguez@med.uvm.edu  
 Office: Given Courtyard S453  
