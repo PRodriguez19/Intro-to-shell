@@ -41,7 +41,7 @@
 
 | Time |  Topic  | 
 |:-----------|:----------|
-| ~ 60 mins |  [Writing and editing files ]|
+| ~ 60 mins |  [Writing and editing files ](../lessons/04_week3_mmg3320.md)|
 
 
 [Remote Learning via Microsoft Teams Link](https://teams.microsoft.com/l/meetup-join/19%3aUVKd-rN88Bj5WieSLdk8G-CH8JH6toRsxMy7HxDUWeE1%40thread.tacv2/1706118930323?context=%7b%22Tid%22%3a%221c177758-4d6b-43dc-aaeb-3b9c42562967%22%2c%22Oid%22%3a%22c4dfbfa2-c05b-4c3c-920d-808dcfc1a418%22%7d)
@@ -57,7 +57,6 @@ Office phone number: 802-656-1718 (Monday-Friday; 8am to 5pm)
 *** 
 
 ## Other Resources
-(../lessons/04_week3_mmg3320.md)
 Cheat sheets:
 * [http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/](http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
 * [https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md](https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md)
