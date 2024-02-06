@@ -58,6 +58,16 @@
 
 ***
 
+## Tuesday, February 6th
+
+| Time |  Topic  | 
+|:-----------|:----------|
+| ~ 60 mins |  [Intro to Shell Scripting](../lessons/06_week4_mmg3320.md)|
+
+**In-person from now on, thank you all for the accommodation**
+
+***
+
 ## Questions?
 Please email me if you have questions or would like to schedule a meeting. I will try my best to respond within 24 hours.  
 
