@@ -68,6 +68,15 @@
 
 ***
 
+
+## Thursday, February 8th
+
+| Time |  Topic  | 
+|:-----------|:----------|
+| ~ 60 mins |  [Loops](../lessons/07_week4_mmg3320.md)|
+
+***
+
 ## Questions?
 Please email me if you have questions or would like to schedule a meeting. I will try my best to respond within 24 hours.  
 
